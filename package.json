@@ -1,0 +1,13 @@
+{
+  "name": "jose-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Jose Alcaraz's personal portfolio: static, bilingual (EN/ES), minified build via esbuild.",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}

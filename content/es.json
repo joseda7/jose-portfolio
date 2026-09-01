@@ -1,0 +1,351 @@
+{
+  "meta": {
+    "lang": "es",
+    "siteTitle": "Jose Alcaraz - Ingeniero de Software",
+    "description": "Jose Alcaraz es ingeniero de software y construye productos web. Conoce su trayectoria, experiencia y proyectos.",
+    "ogImage": "/assets/images/og-cover.jpg",
+    "canonicalPath": "/",
+    "alternateLangPath": "/en/"
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "contact": "Contacto",
+    "langSwitchLabel": "English",
+    "menuLabel": "Menú",
+    "themeToggleLabel": "Cambiar modo oscuro"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "Jose Alcaraz",
+    "tagline": "Ingeniero de software construyendo cosas que importan.",
+    "ctaLabel": "Contáctame",
+    "ctaHref": "#contact"
+  },
+  "about": {
+    "heading": "Sobre mí",
+    "paragraphs": [
+      "Hola, desde donde estés en la tierra.",
+      "Aquí te cuento algunas cosas sobre mí, pensando en que más adelante podamos hacer algo juntos. Desde que a los 6 años me enseñó papá a usar Microsoft Paint, no he parado de solucionar problemas a través de **arte y tecnología**.",
+      "Mientras estudiaba ingeniería aprendí lenguaje C, ganando bases para después programar mi primer juego en JS, que sin saberlo esa sería mi entrada a mi primer trabajo como desarrollador de aplicaciones y juegos web.",
+      "{{yearsSince}} años después, hoy me pregunto: ¿Para qué un hijo, esposo, padre, colombiano, ingeniero electrónico y front-end; diseñaría logotipos e ilustraría mientras lee de astronomía, o compondría canciones que no parezcan hechas por IA?",
+      "Pienso lento pero seguro, a veces en voz alta. Voy pidiendo ayuda y pregunto mucho \"¿para qué...?\". Prefiero enamorarme del problema antes que de la solución.",
+      "Gracias por haber llegado hasta aquí. Si crees que tal vez un día podamos hacer algo juntos, **[escríbeme](mailto:jose.david.alcaraz7@gmail.com)** sin mente que ahora soy yo quien quisiera escuchar de tí.",
+      "_Ultreia et suseia,_",
+      "Jose."
+    ],
+    "photo": "/assets/images/headshot.png",
+    "photoAlt": "Foto de Jose Alcaraz"
+  },
+  "experience": {
+    "heading": "Experiencia",
+    "items": [
+      {
+        "role": "Puesto de ejemplo",
+        "company": "Empresa de ejemplo",
+        "location": "Ciudad, País",
+        "start": "2023",
+        "end": "Actualidad",
+        "summary": "Resumen de ejemplo de responsabilidades e impacto en este puesto.",
+        "highlights": [
+          "Logro o aporte de ejemplo.",
+          "Logro o aporte de ejemplo."
+        ]
+      },
+      {
+        "role": "Puesto de ejemplo",
+        "company": "Empresa de ejemplo",
+        "location": "Ciudad, País",
+        "start": "2021",
+        "end": "2023",
+        "summary": "Resumen de ejemplo de responsabilidades e impacto en este puesto.",
+        "highlights": [
+          "Logro o aporte de ejemplo.",
+          "Logro o aporte de ejemplo."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "heading": "Proyectos",
+    "categories": [
+      {
+        "key": "frontend",
+        "label": "Front-end",
+        "items": [
+          {
+            "title": "Proyecto de Front-end de ejemplo 1",
+            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "tags": [
+              "JavaScript",
+              "CSS"
+            ],
+            "image": "/assets/images/projects/frontend-1.webp",
+            "imageAlt": "Captura de pantalla del Proyecto de Front-end de ejemplo 1",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Proyecto de Front-end de ejemplo 2",
+            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "tags": [
+              "JavaScript",
+              "CSS"
+            ],
+            "image": "/assets/images/projects/frontend-2.webp",
+            "imageAlt": "Captura de pantalla del Proyecto de Front-end de ejemplo 2",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Proyecto de Front-end de ejemplo 3",
+            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "tags": [
+              "JavaScript",
+              "CSS"
+            ],
+            "image": "/assets/images/projects/frontend-3.webp",
+            "imageAlt": "Captura de pantalla del Proyecto de Front-end de ejemplo 3",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Proyecto de Front-end de ejemplo 4",
+            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "tags": [
+              "JavaScript",
+              "CSS"
+            ],
+            "image": "/assets/images/projects/frontend-4.webp",
+            "imageAlt": "Captura de pantalla del Proyecto de Front-end de ejemplo 4",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Proyecto de Front-end de ejemplo 5",
+            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "tags": [
+              "JavaScript",
+              "CSS"
+            ],
+            "image": "/assets/images/projects/frontend-5.webp",
+            "imageAlt": "Captura de pantalla del Proyecto de Front-end de ejemplo 5",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Proyecto de Front-end de ejemplo 6",
+            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "tags": [
+              "JavaScript",
+              "CSS"
+            ],
+            "image": "/assets/images/projects/frontend-6.webp",
+            "imageAlt": "Captura de pantalla del Proyecto de Front-end de ejemplo 6",
+            "href": "#",
+            "repo": "#"
+          }
+        ]
+      },
+      {
+        "key": "visual-arts",
+        "label": "Artes visuales",
+        "items": [
+          {
+            "title": "Proyecto de Artes Visuales de ejemplo 1",
+            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "tags": [
+              "Ilustración",
+              "Diseño"
+            ],
+            "image": "/assets/images/projects/visual-arts-1.webp",
+            "imageAlt": "Captura de pantalla del Proyecto de Artes Visuales de ejemplo 1",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Proyecto de Artes Visuales de ejemplo 2",
+            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "tags": [
+              "Ilustración",
+              "Diseño"
+            ],
+            "image": "/assets/images/projects/visual-arts-2.webp",
+            "imageAlt": "Captura de pantalla del Proyecto de Artes Visuales de ejemplo 2",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Proyecto de Artes Visuales de ejemplo 3",
+            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "tags": [
+              "Ilustración",
+              "Diseño"
+            ],
+            "image": "/assets/images/projects/visual-arts-3.webp",
+            "imageAlt": "Captura de pantalla del Proyecto de Artes Visuales de ejemplo 3",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Proyecto de Artes Visuales de ejemplo 4",
+            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "tags": [
+              "Ilustración",
+              "Diseño"
+            ],
+            "image": "/assets/images/projects/visual-arts-4.webp",
+            "imageAlt": "Captura de pantalla del Proyecto de Artes Visuales de ejemplo 4",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Proyecto de Artes Visuales de ejemplo 5",
+            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "tags": [
+              "Ilustración",
+              "Diseño"
+            ],
+            "image": "/assets/images/projects/visual-arts-5.webp",
+            "imageAlt": "Captura de pantalla del Proyecto de Artes Visuales de ejemplo 5",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Proyecto de Artes Visuales de ejemplo 6",
+            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "tags": [
+              "Ilustración",
+              "Diseño"
+            ],
+            "image": "/assets/images/projects/visual-arts-6.webp",
+            "imageAlt": "Captura de pantalla del Proyecto de Artes Visuales de ejemplo 6",
+            "href": "#",
+            "repo": "#"
+          }
+        ]
+      },
+      {
+        "key": "music",
+        "label": "Música",
+        "items": [
+          {
+            "title": "Proyecto de Música de ejemplo 1",
+            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "tags": [
+              "Audio",
+              "Producción"
+            ],
+            "image": "/assets/images/projects/music-1.webp",
+            "imageAlt": "Captura de pantalla del Proyecto de Música de ejemplo 1",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Proyecto de Música de ejemplo 2",
+            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "tags": [
+              "Audio",
+              "Producción"
+            ],
+            "image": "/assets/images/projects/music-2.webp",
+            "imageAlt": "Captura de pantalla del Proyecto de Música de ejemplo 2",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Proyecto de Música de ejemplo 3",
+            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "tags": [
+              "Audio",
+              "Producción"
+            ],
+            "image": "/assets/images/projects/music-3.webp",
+            "imageAlt": "Captura de pantalla del Proyecto de Música de ejemplo 3",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Proyecto de Música de ejemplo 4",
+            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "tags": [
+              "Audio",
+              "Producción"
+            ],
+            "image": "/assets/images/projects/music-4.webp",
+            "imageAlt": "Captura de pantalla del Proyecto de Música de ejemplo 4",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Proyecto de Música de ejemplo 5",
+            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "tags": [
+              "Audio",
+              "Producción"
+            ],
+            "image": "/assets/images/projects/music-5.webp",
+            "imageAlt": "Captura de pantalla del Proyecto de Música de ejemplo 5",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Proyecto de Música de ejemplo 6",
+            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "tags": [
+              "Audio",
+              "Producción"
+            ],
+            "image": "/assets/images/projects/music-6.webp",
+            "imageAlt": "Captura de pantalla del Proyecto de Música de ejemplo 6",
+            "href": "#",
+            "repo": "#"
+          }
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "heading": "Habilidades",
+    "groups": [
+      {
+        "label": "Lenguajes",
+        "items": [
+          "JavaScript",
+          "Python",
+          "SQL"
+        ]
+      },
+      {
+        "label": "Herramientas",
+        "items": [
+          "Git",
+          "Docker",
+          "Linux"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Hablemos",
+    "intro": "¿Interesado en trabajar juntos? Escríbeme.",
+    "email": "jose.alcaraz@tmrw.com",
+    "formHref": "#",
+    "socials": [
+      {
+        "label": "LinkedIn",
+        "href": "#"
+      },
+      {
+        "label": "GitHub",
+        "href": "#"
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 Jose Alcaraz"
+  }
+}

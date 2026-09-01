@@ -1,0 +1,32 @@
+<div class="layout">
+    <section class="pane pane--content" aria-label="{{about.heading}}">
+        <header class="pane-header">
+            <img class="avatar" src="{{about.photo}}" alt="{{about.photoAlt}}" width="32" height="32">
+            <div class="pane-header__meta fade-target">
+                <span class="pane-header__name">{{hero.name}}</span>
+            </div>
+        </header>
+
+        <div class="essay fade-target">
+            <div class="essay-body">
+                {{{aboutParagraphsHtml}}}
+            </div>
+            <footer class="pane-footer">
+                <p>{{footer.copyright}}</p>
+                <a class="lang-switch" href="{{meta.alternateLangPath}}">{{nav.langSwitchLabel}}</a>
+            </footer>
+        </div>
+    </section>
+
+    <nav class="category-nav" aria-label="{{projects.heading}}">
+        <ul>
+            {{{categoryNavHtml}}}
+        </ul>
+    </nav>
+
+    <section class="pane pane--gallery" aria-label="{{projects.heading}}">
+        <div class="gallery">
+            {{{galleryHtml}}}
+        </div>
+    </section>
+</div>

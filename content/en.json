@@ -1,0 +1,351 @@
+{
+  "meta": {
+    "lang": "en",
+    "siteTitle": "Jose Alcaraz - Software Engineer",
+    "description": "Jose Alcaraz is a software engineer building web products. Explore his background, experience, and projects.",
+    "ogImage": "/assets/images/og-cover.jpg",
+    "canonicalPath": "/en/",
+    "alternateLangPath": "/"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact",
+    "langSwitchLabel": "Español",
+    "menuLabel": "Menu",
+    "themeToggleLabel": "Toggle dark mode"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Jose Alcaraz",
+    "tagline": "Software engineer building things that matter.",
+    "ctaLabel": "Get in touch",
+    "ctaHref": "#contact"
+  },
+  "about": {
+    "heading": "About",
+    "paragraphs": [
+      "Hi wherever you are on earth.",
+      "Here I share with you a few things about me, thinking that maybe in the future we could do something cool together. Ever since my dad taught me to use Microsoft Paint when I was 6, I haven't stopped solving problems through art and technology.",
+      "While I was studying engineering I learned language C, which gave me the foundation to later program my first web game in JS, and without knowing it, that would be my way into my first job as a web app and game developer.",
+      "{{yearsSince}} years later, today I ask myself: why would a son, husband, father, Colombian, electronic and front-end engineer design logos and illustrate for while reading about astronomy, or write songs that don't sound like AI made them?",
+      "Usually I'm thinking slowly but surely, sometimes out loud. I ask for help along the way, and I ask \"what for...?\" a lot. I'd rather fall in love with the problem than with the solution.",
+      "Thank you for making it this far. If you think that maybe one day we could do something together, write to me — and keep in mind that now I'm the one who wants to hear about you.",
+      "_Ultreia et suseia,_",
+      "Jose."
+    ],
+    "photo": "/assets/images/headshot.png",
+    "photoAlt": "Photo of Jose Alcaraz"
+  },
+  "experience": {
+    "heading": "Experience",
+    "items": [
+      {
+        "role": "Placeholder Role",
+        "company": "Placeholder Company",
+        "location": "City, Country",
+        "start": "2023",
+        "end": "Present",
+        "summary": "Placeholder summary of responsibilities and impact in this role.",
+        "highlights": [
+          "Placeholder highlight or achievement.",
+          "Placeholder highlight or achievement."
+        ]
+      },
+      {
+        "role": "Placeholder Role",
+        "company": "Placeholder Company",
+        "location": "City, Country",
+        "start": "2021",
+        "end": "2023",
+        "summary": "Placeholder summary of responsibilities and impact in this role.",
+        "highlights": [
+          "Placeholder highlight or achievement.",
+          "Placeholder highlight or achievement."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "heading": "Projects",
+    "categories": [
+      {
+        "key": "frontend",
+        "label": "Front-end",
+        "items": [
+          {
+            "title": "Placeholder Front-end Project 1",
+            "description": "Placeholder description of what this project does and why it's interesting.",
+            "tags": [
+              "JavaScript",
+              "CSS"
+            ],
+            "image": "/assets/images/projects/frontend-1.webp",
+            "imageAlt": "Screenshot of Placeholder Front-end Project 1",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Placeholder Front-end Project 2",
+            "description": "Placeholder description of what this project does and why it's interesting.",
+            "tags": [
+              "JavaScript",
+              "CSS"
+            ],
+            "image": "/assets/images/projects/frontend-2.webp",
+            "imageAlt": "Screenshot of Placeholder Front-end Project 2",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Placeholder Front-end Project 3",
+            "description": "Placeholder description of what this project does and why it's interesting.",
+            "tags": [
+              "JavaScript",
+              "CSS"
+            ],
+            "image": "/assets/images/projects/frontend-3.webp",
+            "imageAlt": "Screenshot of Placeholder Front-end Project 3",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Placeholder Front-end Project 4",
+            "description": "Placeholder description of what this project does and why it's interesting.",
+            "tags": [
+              "JavaScript",
+              "CSS"
+            ],
+            "image": "/assets/images/projects/frontend-4.webp",
+            "imageAlt": "Screenshot of Placeholder Front-end Project 4",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Placeholder Front-end Project 5",
+            "description": "Placeholder description of what this project does and why it's interesting.",
+            "tags": [
+              "JavaScript",
+              "CSS"
+            ],
+            "image": "/assets/images/projects/frontend-5.webp",
+            "imageAlt": "Screenshot of Placeholder Front-end Project 5",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Placeholder Front-end Project 6",
+            "description": "Placeholder description of what this project does and why it's interesting.",
+            "tags": [
+              "JavaScript",
+              "CSS"
+            ],
+            "image": "/assets/images/projects/frontend-6.webp",
+            "imageAlt": "Screenshot of Placeholder Front-end Project 6",
+            "href": "#",
+            "repo": "#"
+          }
+        ]
+      },
+      {
+        "key": "visual-arts",
+        "label": "Visual arts",
+        "items": [
+          {
+            "title": "Placeholder Visual Arts Project 1",
+            "description": "Placeholder description of what this project does and why it's interesting.",
+            "tags": [
+              "Illustration",
+              "Design"
+            ],
+            "image": "/assets/images/projects/visual-arts-1.webp",
+            "imageAlt": "Screenshot of Placeholder Visual Arts Project 1",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Placeholder Visual Arts Project 2",
+            "description": "Placeholder description of what this project does and why it's interesting.",
+            "tags": [
+              "Illustration",
+              "Design"
+            ],
+            "image": "/assets/images/projects/visual-arts-2.webp",
+            "imageAlt": "Screenshot of Placeholder Visual Arts Project 2",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Placeholder Visual Arts Project 3",
+            "description": "Placeholder description of what this project does and why it's interesting.",
+            "tags": [
+              "Illustration",
+              "Design"
+            ],
+            "image": "/assets/images/projects/visual-arts-3.webp",
+            "imageAlt": "Screenshot of Placeholder Visual Arts Project 3",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Placeholder Visual Arts Project 4",
+            "description": "Placeholder description of what this project does and why it's interesting.",
+            "tags": [
+              "Illustration",
+              "Design"
+            ],
+            "image": "/assets/images/projects/visual-arts-4.webp",
+            "imageAlt": "Screenshot of Placeholder Visual Arts Project 4",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Placeholder Visual Arts Project 5",
+            "description": "Placeholder description of what this project does and why it's interesting.",
+            "tags": [
+              "Illustration",
+              "Design"
+            ],
+            "image": "/assets/images/projects/visual-arts-5.webp",
+            "imageAlt": "Screenshot of Placeholder Visual Arts Project 5",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Placeholder Visual Arts Project 6",
+            "description": "Placeholder description of what this project does and why it's interesting.",
+            "tags": [
+              "Illustration",
+              "Design"
+            ],
+            "image": "/assets/images/projects/visual-arts-6.webp",
+            "imageAlt": "Screenshot of Placeholder Visual Arts Project 6",
+            "href": "#",
+            "repo": "#"
+          }
+        ]
+      },
+      {
+        "key": "music",
+        "label": "Music",
+        "items": [
+          {
+            "title": "Placeholder Music Project 1",
+            "description": "Placeholder description of what this project does and why it's interesting.",
+            "tags": [
+              "Audio",
+              "Production"
+            ],
+            "image": "/assets/images/projects/music-1.webp",
+            "imageAlt": "Screenshot of Placeholder Music Project 1",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Placeholder Music Project 2",
+            "description": "Placeholder description of what this project does and why it's interesting.",
+            "tags": [
+              "Audio",
+              "Production"
+            ],
+            "image": "/assets/images/projects/music-2.webp",
+            "imageAlt": "Screenshot of Placeholder Music Project 2",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Placeholder Music Project 3",
+            "description": "Placeholder description of what this project does and why it's interesting.",
+            "tags": [
+              "Audio",
+              "Production"
+            ],
+            "image": "/assets/images/projects/music-3.webp",
+            "imageAlt": "Screenshot of Placeholder Music Project 3",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Placeholder Music Project 4",
+            "description": "Placeholder description of what this project does and why it's interesting.",
+            "tags": [
+              "Audio",
+              "Production"
+            ],
+            "image": "/assets/images/projects/music-4.webp",
+            "imageAlt": "Screenshot of Placeholder Music Project 4",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Placeholder Music Project 5",
+            "description": "Placeholder description of what this project does and why it's interesting.",
+            "tags": [
+              "Audio",
+              "Production"
+            ],
+            "image": "/assets/images/projects/music-5.webp",
+            "imageAlt": "Screenshot of Placeholder Music Project 5",
+            "href": "#",
+            "repo": "#"
+          },
+          {
+            "title": "Placeholder Music Project 6",
+            "description": "Placeholder description of what this project does and why it's interesting.",
+            "tags": [
+              "Audio",
+              "Production"
+            ],
+            "image": "/assets/images/projects/music-6.webp",
+            "imageAlt": "Screenshot of Placeholder Music Project 6",
+            "href": "#",
+            "repo": "#"
+          }
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "heading": "Skills",
+    "groups": [
+      {
+        "label": "Languages",
+        "items": [
+          "JavaScript",
+          "Python",
+          "SQL"
+        ]
+      },
+      {
+        "label": "Tools",
+        "items": [
+          "Git",
+          "Docker",
+          "Linux"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Let's talk",
+    "intro": "Interested in working together? Reach out.",
+    "email": "jose.alcaraz@tmrw.com",
+    "formHref": "#",
+    "socials": [
+      {
+        "label": "LinkedIn",
+        "href": "#"
+      },
+      {
+        "label": "GitHub",
+        "href": "#"
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 Jose Alcaraz"
+  }
+}
