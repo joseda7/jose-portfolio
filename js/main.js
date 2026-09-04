@@ -42,31 +42,47 @@ function initCategoryNav() {
         });
     }
 
-    buttons.forEach((button) => {
-        button.addEventListener('click', () => {
-            const target = categories.find((c) => c.dataset.category === button.dataset.category);
-            if (!target) return;
-            setActive(button.dataset.category);
-            if (isDesktop()) return;
+    function activate(key, { updateHash = true } = {}) {
+        if (!buttons.some((b) => b.dataset.category === key)) return;
+        setActive(key);
+        if (updateHash) history.replaceState(null, '', `#${key}`);
 
-            const scrollToTarget = () => target.scrollIntoView({
-                behavior: reducedMotion() ? 'auto' : 'smooth',
-                block: 'start',
-            });
-            const wasCollapsed = !layout.classList.contains('is-swapped');
-            layout.classList.add('is-swapped');
-            if (wasCollapsed) {
-                gallery.closest('.pane').addEventListener('transitionend', scrollToTarget, { once: true });
-            } else {
-                scrollToTarget();
-            }
+        if (key === 'all') {
+            gallery.classList.add('gallery--all');
+            if (!isDesktop()) layout.classList.add('is-swapped');
+            return;
+        }
+        gallery.classList.remove('gallery--all');
+
+        const target = categories.find((c) => c.dataset.category === key);
+        if (!target) return;
+
+        const scrollToTarget = () => target.scrollIntoView({
+            behavior: reducedMotion() ? 'auto' : 'smooth',
+            block: 'start',
         });
+
+        if (isDesktop()) {
+            scrollToTarget();
+            return;
+        }
+
+        const wasCollapsed = !layout.classList.contains('is-swapped');
+        layout.classList.add('is-swapped');
+        if (wasCollapsed) {
+            gallery.closest('.pane').addEventListener('transitionend', scrollToTarget, { once: true });
+        } else {
+            scrollToTarget();
+        }
+    }
+
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => activate(button.dataset.category));
     });
 
     let observer;
     function observeActiveCategory() {
         observer?.disconnect();
-        if (isDesktop()) return;
         observer = new IntersectionObserver((entries) => {
             const mostVisible = entries
                 .filter((entry) => entry.isIntersecting)
@@ -78,7 +94,13 @@ function initCategoryNav() {
 
     observeActiveCategory();
     window.matchMedia(DESKTOP_QUERY).addEventListener('change', observeActiveCategory);
-    if (buttons[0]) setActive(buttons[0].dataset.category);
+
+    const initialKey = location.hash.slice(1);
+    if (buttons.some((b) => b.dataset.category === initialKey)) {
+        activate(initialKey, { updateHash: false });
+    } else if (categories[0]) {
+        setActive(categories[0].dataset.category);
+    }
 }
 
 function updateYearsSince() {
@@ -92,6 +114,27 @@ function updateYearsSince() {
     });
 }
 
+function initSongOverlay() {
+    const audio = document.querySelector('.song-audio');
+    const overlay = document.querySelector('.song-overlay');
+    const essay = document.querySelector('.essay');
+    if (!audio || !overlay) return;
+
+    audio.addEventListener('play', () => {
+        overlay.classList.add('is-active');
+        if (essay && !window.matchMedia(DESKTOP_QUERY).matches) {
+            essay.scrollTo({
+                top: 0,
+                behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+            });
+        }
+    });
+    audio.addEventListener('pause', () => overlay.classList.remove('is-active'));
+    audio.addEventListener('ended', () => overlay.classList.remove('is-active'));
+    overlay.addEventListener('click', () => audio.pause());
+}
+
 initPaneSwap();
 initCategoryNav();
 updateYearsSince();
+initSongOverlay();

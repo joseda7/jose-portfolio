@@ -4,16 +4,20 @@
             <img class="avatar" src="{{about.photo}}" alt="{{about.photoAlt}}" width="32" height="32">
             <div class="pane-header__meta fade-target">
                 <span class="pane-header__name">{{hero.name}}</span>
+                <a class="lang-switch" href="{{meta.alternateLangPath}}">{{nav.langSwitchLabel}}</a>
             </div>
         </header>
 
         <div class="essay fade-target">
             <div class="essay-body">
                 {{{aboutParagraphsHtml}}}
+                <audio class="song-audio" src="{{about.songSrc}}" controls preload="none"></audio>
             </div>
             <footer class="pane-footer">
+                <a class="cv-link" href="{{footer.cvHref}}" download>{{footer.cvLabel}}</a>
+                <a href="mailto:{{footer.email}}">{{footer.email}}</a>
+                <a href="{{footer.tagHref}}" target="_blank">{{footer.tag}}</a>
                 <p>{{footer.copyright}}</p>
-                <a class="lang-switch" href="{{meta.alternateLangPath}}">{{nav.langSwitchLabel}}</a>
             </footer>
         </div>
     </section>
@@ -29,4 +33,6 @@
             {{{galleryHtml}}}
         </div>
     </section>
+
+    <div class="song-overlay"></div>
 </div>

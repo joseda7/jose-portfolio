@@ -1,7 +1,7 @@
 {
   "meta": {
     "lang": "en",
-    "siteTitle": "Jose Alcaraz - Software Engineer",
+    "siteTitle": "Jose Alcaraz - Software Engineer, Visual Artist and Musician with 11+ years of experience",
     "description": "Jose Alcaraz is a software engineer building web products. Explore his background, experience, and projects.",
     "ogImage": "/assets/images/og-cover.jpg",
     "canonicalPath": "/en/",
@@ -14,7 +14,7 @@
     "projects": "Projects",
     "skills": "Skills",
     "contact": "Contact",
-    "langSwitchLabel": "Español",
+    "langSwitchLabel": "EN / ES",
     "menuLabel": "Menu",
     "themeToggleLabel": "Toggle dark mode"
   },
@@ -28,15 +28,16 @@
   "about": {
     "heading": "About",
     "paragraphs": [
-      "Hi wherever you are on earth.",
-      "Here I share with you a few things about me, thinking that maybe in the future we could do something cool together. Ever since my dad taught me to use Microsoft Paint when I was 6, I haven't stopped solving problems through art and technology.",
+      "Alicante, Spain. 2026",
+      "Hi, wherever you are on earth.",
+      "Here I share with you a few things about me, thinking that maybe in the future we could do something cool together. Ever since my dad taught me to use Microsoft Paint when I was 6, I haven't stopped solving problems through **art and technology**.",
       "While I was studying engineering I learned language C, which gave me the foundation to later program my first web game in JS, and without knowing it, that would be my way into my first job as a web app and game developer.",
-      "{{yearsSince}} years later, today I ask myself: why would a son, husband, father, Colombian, electronic and front-end engineer design logos and illustrate for while reading about astronomy, or write songs that don't sound like AI made them?",
+      "**{{yearsSince}}** years later, today I ask myself: why would a son, husband, father, Colombian, electronic and front-end engineer design logos and illustrate for while reading about astronomy, or write songs that don't sound like AI made them?",
       "Usually I'm thinking slowly but surely, sometimes out loud. I ask for help along the way, and I ask \"what for...?\" a lot. I'd rather fall in love with the problem than with the solution.",
-      "Thank you for making it this far. If you think that maybe one day we could do something together, write to me — and keep in mind that now I'm the one who wants to hear about you.",
-      "_Ultreia et suseia,_",
-      "Jose."
+      "Thank you for making it this far. If you think that maybe one day we could do something together, **[write to me](mailto:jose.david.alcaraz7@gmail.com)** — and keep in mind that now I'm the one who wants to hear about you. _Ultreia et suseia._ ",
+      "Hugs, Jose."
     ],
+    "songSrc": "/assets/audio/art-and-technology.m4a",
     "photo": "/assets/images/headshot.png",
     "photoAlt": "Photo of Jose Alcaraz"
   },
@@ -71,6 +72,7 @@
   },
   "projects": {
     "heading": "Projects",
+    "allLabel": "All",
     "categories": [
       {
         "key": "frontend",
@@ -346,6 +348,11 @@
     ]
   },
   "footer": {
-    "copyright": "© 2026 Jose Alcaraz"
+    "copyright": "© 2026 Jose Alcaraz",
+    "email": "jose.david.alcaraz7@gmail.com",
+    "tag": "#codewithpurpose",
+    "tagHref": "https://github.com/joseda7",
+    "cvLabel": "Download CV",
+    "cvHref": "/assets/pdf/CV_JoseDavidAlcaraz_EN.pdf"
   }
 }

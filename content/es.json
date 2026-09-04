@@ -1,7 +1,7 @@
 {
   "meta": {
     "lang": "es",
-    "siteTitle": "Jose Alcaraz - Ingeniero de Software",
+    "siteTitle": "Jose Alcaraz - Ingeniero de Software, Artista Visual y Músico con 11 años de experiencia",
     "description": "Jose Alcaraz es ingeniero de software y construye productos web. Conoce su trayectoria, experiencia y proyectos.",
     "ogImage": "/assets/images/og-cover.jpg",
     "canonicalPath": "/",
@@ -14,7 +14,7 @@
     "projects": "Proyectos",
     "skills": "Habilidades",
     "contact": "Contacto",
-    "langSwitchLabel": "English",
+    "langSwitchLabel": "ES / EN",
     "menuLabel": "Menú",
     "themeToggleLabel": "Cambiar modo oscuro"
   },
@@ -28,15 +28,16 @@
   "about": {
     "heading": "Sobre mí",
     "paragraphs": [
+      "Alicante, España. 2026",
       "Hola, desde donde estés en la tierra.",
-      "Aquí te cuento algunas cosas sobre mí, pensando en que más adelante podamos hacer algo juntos. Desde que a los 6 años me enseñó papá a usar Microsoft Paint, no he parado de solucionar problemas a través de **arte y tecnología**.",
-      "Mientras estudiaba ingeniería aprendí lenguaje C, ganando bases para después programar mi primer juego en JS, que sin saberlo esa sería mi entrada a mi primer trabajo como desarrollador de aplicaciones y juegos web.",
-      "{{yearsSince}} años después, hoy me pregunto: ¿Para qué un hijo, esposo, padre, colombiano, ingeniero electrónico y front-end; diseñaría logotipos e ilustraría mientras lee de astronomía, o compondría canciones que no parezcan hechas por IA?",
+      "Permíteme contarte un poco sobre mí, pensando en que más adelante podamos hacer algo juntos. Desde que a los 6 años me enseñó papá a usar Microsoft Paint, no he parado de solucionar problemas a través de **arte y tecnología**.",
+      "Mientras estudiaba ingeniería aprendí lenguaje C, ganando bases para después programar mi primer juego en JS, que accidentalmente sería mi entrada a mi primer trabajo como desarrollador de aplicaciones y juegos web.",
+      "**{{yearsSince}}** años después, hoy me pregunto: ¿Para qué un hijo, esposo, padre, colombiano, ingeniero electrónico y front-end; diseñaría logotipos e ilustraría mientras lee de astronomía, o compondría canciones que no parezcan hechas por IA?",
       "Pienso lento pero seguro, a veces en voz alta. Voy pidiendo ayuda y pregunto mucho \"¿para qué...?\". Prefiero enamorarme del problema antes que de la solución.",
-      "Gracias por haber llegado hasta aquí. Si crees que tal vez un día podamos hacer algo juntos, **[escríbeme](mailto:jose.david.alcaraz7@gmail.com)** sin mente que ahora soy yo quien quisiera escuchar de tí.",
-      "_Ultreia et suseia,_",
-      "Jose."
+      "Gracias por haber llegado hasta aquí. Si crees que tal vez un día podamos hacer algo juntos, **[escríbeme](mailto:jose.david.alcaraz7@gmail.com)** sin mente que ahora soy yo quien quisiera escuchar de tí. _Ultreia et suseia_.",
+      "Abrazos, Jose."
     ],
+    "songSrc": "/assets/audio/arte-y-tecnologia.m4a",
     "photo": "/assets/images/headshot.png",
     "photoAlt": "Foto de Jose Alcaraz"
   },
@@ -71,6 +72,7 @@
   },
   "projects": {
     "heading": "Proyectos",
+    "allLabel": "Todos",
     "categories": [
       {
         "key": "frontend",
@@ -346,6 +348,11 @@
     ]
   },
   "footer": {
-    "copyright": "© 2026 Jose Alcaraz"
+    "copyright": "© 2026 Jose Alcaraz",
+    "email": "jose.david.alcaraz7@gmail.com",
+    "tag": "#codewithpurpose",
+    "tagHref": "https://github.com/joseda7",
+    "cvLabel": "Descargar CV",
+    "cvHref": "/assets/pdf/CV_JoseDavidAlcaraz_ES.pdf"
   }
 }

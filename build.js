@@ -82,9 +82,12 @@ function buildPage(content) {
 
     const CARD_SIZES = ['l', 's', 's', 's', 'l', 's'];
 
-    const categoryNavHtml = content.projects.categories.map((cat) =>
-        `<li><button type="button" class="category-nav__item" data-category="${escapeHtml(cat.key)}">${escapeHtml(cat.label)}</button></li>`
-    ).join('\n');
+    const categoryNavHtml = [
+        `<li><button type="button" class="category-nav__item" data-category="all">${escapeHtml(content.projects.allLabel)}</button></li>`,
+        ...content.projects.categories.map((cat) =>
+            `<li><button type="button" class="category-nav__item" data-category="${escapeHtml(cat.key)}">${escapeHtml(cat.label)}</button></li>`
+        ),
+    ].join('\n');
 
     const galleryHtml = content.projects.categories.map((cat) => {
         const cardsHtml = cat.items.map((item, i) => {
