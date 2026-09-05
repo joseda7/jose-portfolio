@@ -33,6 +33,18 @@ function initCategoryNav() {
     const categories = [...gallery.querySelectorAll('.gallery__category')];
     const isDesktop = () => window.matchMedia(DESKTOP_QUERY).matches;
     const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let previewCard = null;
+    let previewKey = null;
+
+    gallery.addEventListener('mouseover', (event) => {
+        const trigger = event.target.closest('.gallery__item-trigger');
+        if (!trigger) return;
+        const card = trigger.closest('.gallery__item');
+        if (!card || card === previewCard) return;
+        previewCard?.classList.remove('is-preview');
+        previewCard = card;
+        previewCard.classList.add('is-preview');
+    });
 
     function setActive(key) {
         buttons.forEach((button) => {
@@ -40,6 +52,18 @@ function initCategoryNav() {
             button.classList.toggle('is-active', active);
             button.setAttribute('aria-current', active ? 'true' : 'false');
         });
+
+        if (isDesktop() && key !== previewKey) {
+            previewKey = key;
+            previewCard?.classList.remove('is-preview');
+            previewCard = null;
+            const categoryEl = categories.find((c) => c.dataset.category === key);
+            const cards = categoryEl ? [...categoryEl.querySelectorAll('.gallery__item')] : [];
+            if (cards.length) {
+                previewCard = cards[Math.floor(Math.random() * cards.length)];
+                previewCard.classList.add('is-preview');
+            }
+        }
     }
 
     function activate(key, { updateHash = true } = {}) {
@@ -134,7 +158,87 @@ function initSongOverlay() {
     overlay.addEventListener('click', () => audio.pause());
 }
 
+function initProjectModal() {
+    const modal = document.querySelector('.project-modal');
+    const closeButton = document.querySelector('.project-modal__close');
+    const prevButton = document.querySelector('.project-modal__prev');
+    const nextButton = document.querySelector('.project-modal__next');
+    const titleEl = document.querySelector('.project-modal__title');
+    const tagsEl = document.querySelector('.project-modal__tags');
+    const descriptionEl = document.querySelector('.project-modal__description');
+    const mediaEl = document.querySelector('.project-modal__media');
+    const triggers = [...document.querySelectorAll('.gallery__item-trigger')];
+    if (!modal || !closeButton || !prevButton || !nextButton
+        || !titleEl || !tagsEl || !descriptionEl || !mediaEl || !triggers.length) return;
+
+    const YOUTUBE_PATTERN = /youtube\.com|youtu\.be/;
+    let images = [];
+    let index = 0;
+    let lastTrigger = null;
+
+    function showMedia() {
+        const src = images[index];
+        const label = `${titleEl.textContent} ${index + 1}/${images.length}`;
+        mediaEl.innerHTML = '';
+        if (YOUTUBE_PATTERN.test(src)) {
+            const iframe = document.createElement('iframe');
+            iframe.src = src;
+            iframe.title = label;
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+            iframe.allowFullscreen = true;
+            mediaEl.appendChild(iframe);
+        } else {
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = label;
+            mediaEl.appendChild(img);
+        }
+    }
+
+    function openModal(trigger) {
+        titleEl.textContent = trigger.dataset.title;
+        descriptionEl.textContent = trigger.dataset.description;
+        tagsEl.textContent = JSON.parse(trigger.dataset.tags).join(' • ');
+        images = JSON.parse(trigger.dataset.images);
+        index = 0;
+        prevButton.hidden = images.length <= 1;
+        nextButton.hidden = images.length <= 1;
+        showMedia();
+
+        lastTrigger = trigger;
+        modal.classList.add('is-active');
+        closeButton.focus();
+    }
+
+    function closeModal() {
+        modal.classList.remove('is-active');
+        mediaEl.innerHTML = '';
+        lastTrigger?.focus();
+    }
+
+    triggers.forEach((trigger) => {
+        trigger.addEventListener('click', () => openModal(trigger));
+    });
+
+    closeButton.addEventListener('click', closeModal);
+    prevButton.addEventListener('click', () => {
+        index = (index - 1 + images.length) % images.length;
+        showMedia();
+    });
+    nextButton.addEventListener('click', () => {
+        index = (index + 1) % images.length;
+        showMedia();
+    });
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && modal.classList.contains('is-active')) closeModal();
+    });
+}
+
 initPaneSwap();
 initCategoryNav();
 updateYearsSince();
 initSongOverlay();
+initProjectModal();

@@ -85,10 +85,14 @@
               "JavaScript",
               "CSS"
             ],
-            "image": "/assets/images/projects/frontend-1.webp",
             "imageAlt": "Captura de pantalla del Proyecto de Front-end de ejemplo 1",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/frontend-1.webp",
+              "/assets/images/projects/frontend-2.webp",
+              "https://www.youtube.com/embed/jNQXAC9IVRw"
+            ]
           },
           {
             "title": "Proyecto de Front-end de ejemplo 2",
@@ -97,10 +101,12 @@
               "JavaScript",
               "CSS"
             ],
-            "image": "/assets/images/projects/frontend-2.webp",
             "imageAlt": "Captura de pantalla del Proyecto de Front-end de ejemplo 2",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/frontend-2.webp"
+            ]
           },
           {
             "title": "Proyecto de Front-end de ejemplo 3",
@@ -109,10 +115,12 @@
               "JavaScript",
               "CSS"
             ],
-            "image": "/assets/images/projects/frontend-3.webp",
             "imageAlt": "Captura de pantalla del Proyecto de Front-end de ejemplo 3",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/frontend-3.webp"
+            ]
           },
           {
             "title": "Proyecto de Front-end de ejemplo 4",
@@ -121,10 +129,12 @@
               "JavaScript",
               "CSS"
             ],
-            "image": "/assets/images/projects/frontend-4.webp",
             "imageAlt": "Captura de pantalla del Proyecto de Front-end de ejemplo 4",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/frontend-4.webp"
+            ]
           },
           {
             "title": "Proyecto de Front-end de ejemplo 5",
@@ -133,10 +143,12 @@
               "JavaScript",
               "CSS"
             ],
-            "image": "/assets/images/projects/frontend-5.webp",
             "imageAlt": "Captura de pantalla del Proyecto de Front-end de ejemplo 5",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/frontend-5.webp"
+            ]
           },
           {
             "title": "Proyecto de Front-end de ejemplo 6",
@@ -145,10 +157,12 @@
               "JavaScript",
               "CSS"
             ],
-            "image": "/assets/images/projects/frontend-6.webp",
             "imageAlt": "Captura de pantalla del Proyecto de Front-end de ejemplo 6",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/frontend-6.webp"
+            ]
           }
         ]
       },
@@ -163,10 +177,12 @@
               "Ilustración",
               "Diseño"
             ],
-            "image": "/assets/images/projects/visual-arts-1.webp",
             "imageAlt": "Captura de pantalla del Proyecto de Artes Visuales de ejemplo 1",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/visual-arts-1.webp"
+            ]
           },
           {
             "title": "Proyecto de Artes Visuales de ejemplo 2",
@@ -175,10 +191,12 @@
               "Ilustración",
               "Diseño"
             ],
-            "image": "/assets/images/projects/visual-arts-2.webp",
             "imageAlt": "Captura de pantalla del Proyecto de Artes Visuales de ejemplo 2",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/visual-arts-2.webp"
+            ]
           },
           {
             "title": "Proyecto de Artes Visuales de ejemplo 3",
@@ -187,10 +205,12 @@
               "Ilustración",
               "Diseño"
             ],
-            "image": "/assets/images/projects/visual-arts-3.webp",
             "imageAlt": "Captura de pantalla del Proyecto de Artes Visuales de ejemplo 3",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/visual-arts-3.webp"
+            ]
           },
           {
             "title": "Proyecto de Artes Visuales de ejemplo 4",
@@ -199,10 +219,12 @@
               "Ilustración",
               "Diseño"
             ],
-            "image": "/assets/images/projects/visual-arts-4.webp",
             "imageAlt": "Captura de pantalla del Proyecto de Artes Visuales de ejemplo 4",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/visual-arts-4.webp"
+            ]
           },
           {
             "title": "Proyecto de Artes Visuales de ejemplo 5",
@@ -211,10 +233,12 @@
               "Ilustración",
               "Diseño"
             ],
-            "image": "/assets/images/projects/visual-arts-5.webp",
             "imageAlt": "Captura de pantalla del Proyecto de Artes Visuales de ejemplo 5",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/visual-arts-5.webp"
+            ]
           },
           {
             "title": "Proyecto de Artes Visuales de ejemplo 6",
@@ -223,10 +247,12 @@
               "Ilustración",
               "Diseño"
             ],
-            "image": "/assets/images/projects/visual-arts-6.webp",
             "imageAlt": "Captura de pantalla del Proyecto de Artes Visuales de ejemplo 6",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/visual-arts-6.webp"
+            ]
           }
         ]
       },
@@ -241,10 +267,12 @@
               "Audio",
               "Producción"
             ],
-            "image": "/assets/images/projects/music-1.webp",
             "imageAlt": "Captura de pantalla del Proyecto de Música de ejemplo 1",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/music-1.webp"
+            ]
           },
           {
             "title": "Proyecto de Música de ejemplo 2",
@@ -253,10 +281,12 @@
               "Audio",
               "Producción"
             ],
-            "image": "/assets/images/projects/music-2.webp",
             "imageAlt": "Captura de pantalla del Proyecto de Música de ejemplo 2",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/music-2.webp"
+            ]
           },
           {
             "title": "Proyecto de Música de ejemplo 3",
@@ -265,10 +295,12 @@
               "Audio",
               "Producción"
             ],
-            "image": "/assets/images/projects/music-3.webp",
             "imageAlt": "Captura de pantalla del Proyecto de Música de ejemplo 3",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/music-3.webp"
+            ]
           },
           {
             "title": "Proyecto de Música de ejemplo 4",
@@ -277,10 +309,12 @@
               "Audio",
               "Producción"
             ],
-            "image": "/assets/images/projects/music-4.webp",
             "imageAlt": "Captura de pantalla del Proyecto de Música de ejemplo 4",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/music-4.webp"
+            ]
           },
           {
             "title": "Proyecto de Música de ejemplo 5",
@@ -289,10 +323,12 @@
               "Audio",
               "Producción"
             ],
-            "image": "/assets/images/projects/music-5.webp",
             "imageAlt": "Captura de pantalla del Proyecto de Música de ejemplo 5",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/music-5.webp"
+            ]
           },
           {
             "title": "Proyecto de Música de ejemplo 6",
@@ -301,14 +337,19 @@
               "Audio",
               "Producción"
             ],
-            "image": "/assets/images/projects/music-6.webp",
             "imageAlt": "Captura de pantalla del Proyecto de Música de ejemplo 6",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/music-6.webp"
+            ]
           }
         ]
       }
-    ]
+    ],
+    "closeLabel": "Cerrar",
+    "prevLabel": "Imagen anterior",
+    "nextLabel": "Imagen siguiente"
   },
   "skills": {
     "heading": "Habilidades",
@@ -349,7 +390,6 @@
   },
   "footer": {
     "copyright": "© 2026 Jose Alcaraz",
-    "email": "jose.david.alcaraz7@gmail.com",
     "tag": "#codewithpurpose",
     "tagHref": "https://github.com/joseda7",
     "cvLabel": "Descargar CV",

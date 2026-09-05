@@ -91,10 +91,13 @@ function buildPage(content) {
 
     const galleryHtml = content.projects.categories.map((cat) => {
         const cardsHtml = cat.items.map((item, i) => {
-            const tagsHtml = item.tags.map((t) => `<span>${escapeHtml(t)}</span>`).join(', ');
+            const tagsHtml = item.tags.map((t) => escapeHtml(t)).join(' • ');
             return render(partials.projectCard, {
                 ...item,
+                image: item.images[0],
                 tagsHtml,
+                tagsJson: escapeHtml(JSON.stringify(item.tags)),
+                imagesJson: escapeHtml(JSON.stringify(item.images)),
                 size: CARD_SIZES[i % CARD_SIZES.length],
             });
         }).join('\n');

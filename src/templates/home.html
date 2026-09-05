@@ -15,7 +15,6 @@
             </div>
             <footer class="pane-footer">
                 <a class="cv-link" href="{{footer.cvHref}}" download>{{footer.cvLabel}}</a>
-                <a href="mailto:{{footer.email}}">{{footer.email}}</a>
                 <a href="{{footer.tagHref}}" target="_blank">{{footer.tag}}</a>
                 <p>{{footer.copyright}}</p>
             </footer>
@@ -35,4 +34,20 @@
     </section>
 
     <div class="song-overlay"></div>
+
+    <div class="project-modal" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+        <button type="button" class="project-modal__close" aria-label="{{projects.closeLabel}}">&times;</button>
+        <div class="project-modal__content">
+            <div class="project-modal__info">
+                <h2 class="project-modal__title" id="project-modal-title"></h2>
+                <div class="project-modal__tags"></div>
+                <p class="project-modal__description"></p>
+            </div>
+            <div class="project-modal__slider">
+                <button type="button" class="project-modal__prev" aria-label="{{projects.prevLabel}}">&lsaquo;</button>
+                <div class="project-modal__media"></div>
+                <button type="button" class="project-modal__next" aria-label="{{projects.nextLabel}}">&rsaquo;</button>
+            </div>
+        </div>
+    </div>
 </div>

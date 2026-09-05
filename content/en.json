@@ -85,10 +85,14 @@
               "JavaScript",
               "CSS"
             ],
-            "image": "/assets/images/projects/frontend-1.webp",
             "imageAlt": "Screenshot of Placeholder Front-end Project 1",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/frontend-1.webp",
+              "/assets/images/projects/frontend-2.webp",
+              "https://www.youtube.com/embed/jNQXAC9IVRw"
+            ]
           },
           {
             "title": "Placeholder Front-end Project 2",
@@ -97,10 +101,12 @@
               "JavaScript",
               "CSS"
             ],
-            "image": "/assets/images/projects/frontend-2.webp",
             "imageAlt": "Screenshot of Placeholder Front-end Project 2",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/frontend-2.webp"
+            ]
           },
           {
             "title": "Placeholder Front-end Project 3",
@@ -109,10 +115,12 @@
               "JavaScript",
               "CSS"
             ],
-            "image": "/assets/images/projects/frontend-3.webp",
             "imageAlt": "Screenshot of Placeholder Front-end Project 3",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/frontend-3.webp"
+            ]
           },
           {
             "title": "Placeholder Front-end Project 4",
@@ -121,10 +129,12 @@
               "JavaScript",
               "CSS"
             ],
-            "image": "/assets/images/projects/frontend-4.webp",
             "imageAlt": "Screenshot of Placeholder Front-end Project 4",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/frontend-4.webp"
+            ]
           },
           {
             "title": "Placeholder Front-end Project 5",
@@ -133,10 +143,12 @@
               "JavaScript",
               "CSS"
             ],
-            "image": "/assets/images/projects/frontend-5.webp",
             "imageAlt": "Screenshot of Placeholder Front-end Project 5",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/frontend-5.webp"
+            ]
           },
           {
             "title": "Placeholder Front-end Project 6",
@@ -145,10 +157,12 @@
               "JavaScript",
               "CSS"
             ],
-            "image": "/assets/images/projects/frontend-6.webp",
             "imageAlt": "Screenshot of Placeholder Front-end Project 6",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/frontend-6.webp"
+            ]
           }
         ]
       },
@@ -163,10 +177,12 @@
               "Illustration",
               "Design"
             ],
-            "image": "/assets/images/projects/visual-arts-1.webp",
             "imageAlt": "Screenshot of Placeholder Visual Arts Project 1",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/visual-arts-1.webp"
+            ]
           },
           {
             "title": "Placeholder Visual Arts Project 2",
@@ -175,10 +191,12 @@
               "Illustration",
               "Design"
             ],
-            "image": "/assets/images/projects/visual-arts-2.webp",
             "imageAlt": "Screenshot of Placeholder Visual Arts Project 2",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/visual-arts-2.webp"
+            ]
           },
           {
             "title": "Placeholder Visual Arts Project 3",
@@ -187,10 +205,12 @@
               "Illustration",
               "Design"
             ],
-            "image": "/assets/images/projects/visual-arts-3.webp",
             "imageAlt": "Screenshot of Placeholder Visual Arts Project 3",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/visual-arts-3.webp"
+            ]
           },
           {
             "title": "Placeholder Visual Arts Project 4",
@@ -199,10 +219,12 @@
               "Illustration",
               "Design"
             ],
-            "image": "/assets/images/projects/visual-arts-4.webp",
             "imageAlt": "Screenshot of Placeholder Visual Arts Project 4",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/visual-arts-4.webp"
+            ]
           },
           {
             "title": "Placeholder Visual Arts Project 5",
@@ -211,10 +233,12 @@
               "Illustration",
               "Design"
             ],
-            "image": "/assets/images/projects/visual-arts-5.webp",
             "imageAlt": "Screenshot of Placeholder Visual Arts Project 5",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/visual-arts-5.webp"
+            ]
           },
           {
             "title": "Placeholder Visual Arts Project 6",
@@ -223,10 +247,12 @@
               "Illustration",
               "Design"
             ],
-            "image": "/assets/images/projects/visual-arts-6.webp",
             "imageAlt": "Screenshot of Placeholder Visual Arts Project 6",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/visual-arts-6.webp"
+            ]
           }
         ]
       },
@@ -241,10 +267,12 @@
               "Audio",
               "Production"
             ],
-            "image": "/assets/images/projects/music-1.webp",
             "imageAlt": "Screenshot of Placeholder Music Project 1",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/music-1.webp"
+            ]
           },
           {
             "title": "Placeholder Music Project 2",
@@ -253,10 +281,12 @@
               "Audio",
               "Production"
             ],
-            "image": "/assets/images/projects/music-2.webp",
             "imageAlt": "Screenshot of Placeholder Music Project 2",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/music-2.webp"
+            ]
           },
           {
             "title": "Placeholder Music Project 3",
@@ -265,10 +295,12 @@
               "Audio",
               "Production"
             ],
-            "image": "/assets/images/projects/music-3.webp",
             "imageAlt": "Screenshot of Placeholder Music Project 3",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/music-3.webp"
+            ]
           },
           {
             "title": "Placeholder Music Project 4",
@@ -277,10 +309,12 @@
               "Audio",
               "Production"
             ],
-            "image": "/assets/images/projects/music-4.webp",
             "imageAlt": "Screenshot of Placeholder Music Project 4",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/music-4.webp"
+            ]
           },
           {
             "title": "Placeholder Music Project 5",
@@ -289,10 +323,12 @@
               "Audio",
               "Production"
             ],
-            "image": "/assets/images/projects/music-5.webp",
             "imageAlt": "Screenshot of Placeholder Music Project 5",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/music-5.webp"
+            ]
           },
           {
             "title": "Placeholder Music Project 6",
@@ -301,14 +337,19 @@
               "Audio",
               "Production"
             ],
-            "image": "/assets/images/projects/music-6.webp",
             "imageAlt": "Screenshot of Placeholder Music Project 6",
             "href": "#",
-            "repo": "#"
+            "repo": "#",
+            "images": [
+              "/assets/images/projects/music-6.webp"
+            ]
           }
         ]
       }
-    ]
+    ],
+    "closeLabel": "Close",
+    "prevLabel": "Previous image",
+    "nextLabel": "Next image"
   },
   "skills": {
     "heading": "Skills",
@@ -349,7 +390,6 @@
   },
   "footer": {
     "copyright": "© 2026 Jose Alcaraz",
-    "email": "jose.david.alcaraz7@gmail.com",
     "tag": "#codewithpurpose",
     "tagHref": "https://github.com/joseda7",
     "cvLabel": "Download CV",
