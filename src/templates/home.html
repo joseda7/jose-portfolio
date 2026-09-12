@@ -1,21 +1,37 @@
 <div class="layout">
     <section class="pane pane--content" aria-label="{{about.heading}}">
         <header class="pane-header">
-            <img class="avatar" src="{{about.photo}}" alt="{{about.photoAlt}}" width="32" height="32">
+            <img class="avatar fade-target" src="{{about.photo}}" alt="{{about.photoAlt}}" width="32" height="32">
+            <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="{{nav.menuLabel}}">
+                <span class="menu-toggle__bar"></span>
+                <span class="menu-toggle__bar"></span>
+            </button>
             <div class="pane-header__meta fade-target">
                 <span class="pane-header__name">{{hero.name}}</span>
-                <a class="lang-switch" href="{{meta.alternateLangPath}}">{{nav.langSwitchLabel}}</a>
+                <a class="available-label" href="{{footer.linkedinHref}}" target="_blank">{{hero.availableLabel}}</a>
             </div>
+            <nav class="main-menu" id="main-menu" aria-label="{{nav.menuLabel}}">
+                <a href="{{footer.cvHref}}" download>{{footer.cvLabel}}</a>
+                <a href="{{meta.alternateLangPath}}">{{nav.langSwitchLabel}}</a>
+                <a class="main-menu__contact" href="mailto:{{nav.contactEmail}}">{{nav.contact}}</a>
+            </nav>
         </header>
 
         <div class="essay fade-target">
             <div class="essay-body">
                 {{{aboutParagraphsHtml}}}
-                <audio class="song-audio" src="{{about.songSrc}}" controls preload="none"></audio>
+                <button type="button" class="song-play-btn">
+                    <span class="song-play-btn__icon" aria-hidden="true"></span>
+                    {{about.playLabel}}
+                </button>
+                <audio class="song-audio" src="{{about.songSrc}}" preload="none" hidden></audio>
             </div>
             <footer class="pane-footer">
-                <a class="cv-link" href="{{footer.cvHref}}" download>{{footer.cvLabel}}</a>
-                <a href="{{footer.tagHref}}" target="_blank">{{footer.tag}}</a>
+                <div class="pane-footer__links">
+                    <a href="{{footer.linkedinHref}}" target="_blank">{{footer.linkedinLabel}}</a>
+                    <a href="{{footer.tagHref}}" target="_blank">{{footer.githubLabel}} <span class="pane-footer__tag">{{footer.tag}}</span></a>
+                    <a href="{{footer.spotifyHref}}" target="_blank">{{footer.spotifyLabel}}</a>
+                </div>
                 <p>{{footer.copyright}}</p>
             </footer>
         </div>
@@ -25,6 +41,15 @@
         <ul>
             {{{categoryNavHtml}}}
         </ul>
+        <button type="button" class="category-nav__close" aria-label="{{nav.backLabel}}">
+            <span class="category-nav__close-icon" aria-hidden="true"></span>
+        </button>
+        <div class="achievements">
+            <span class="achievements__star" aria-hidden="true"></span>
+            <ul class="achievements__list">
+                {{{achievementsHtml}}}
+            </ul>
+        </div>
     </nav>
 
     <section class="pane pane--gallery" aria-label="{{projects.heading}}">

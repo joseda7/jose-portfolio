@@ -4,6 +4,7 @@ function initPaneSwap() {
     const layout = document.querySelector('.layout');
     const content = document.querySelector('.pane--content');
     const gallery = document.querySelector('.pane--gallery');
+    const closeButton = document.querySelector('.category-nav__close');
     if (!layout || !content || !gallery) return;
 
     const isDesktop = () => window.matchMedia(DESKTOP_QUERY).matches;
@@ -21,6 +22,12 @@ function initPaneSwap() {
             layout.classList.remove('is-swapped');
         }
     });
+
+    closeButton?.addEventListener('click', (event) => {
+        event.stopPropagation();
+        if (isDesktop()) return;
+        layout.classList.remove('is-swapped');
+    });
 }
 
 function initCategoryNav() {
@@ -37,6 +44,7 @@ function initCategoryNav() {
     let previewKey = null;
 
     gallery.addEventListener('mouseover', (event) => {
+        if (!isDesktop()) return;
         const trigger = event.target.closest('.gallery__item-trigger');
         if (!trigger) return;
         const card = trigger.closest('.gallery__item');
@@ -60,7 +68,7 @@ function initCategoryNav() {
             const categoryEl = categories.find((c) => c.dataset.category === key);
             const cards = categoryEl ? [...categoryEl.querySelectorAll('.gallery__item')] : [];
             if (cards.length) {
-                previewCard = cards[Math.floor(Math.random() * cards.length)];
+                previewCard = cards[0];
                 previewCard.classList.add('is-preview');
             }
         }
@@ -104,6 +112,13 @@ function initCategoryNav() {
         button.addEventListener('click', () => activate(button.dataset.category));
     });
 
+    document.querySelectorAll('a[href="#all"]').forEach((link) => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            activate('all');
+        });
+    });
+
     let observer;
     function observeActiveCategory() {
         observer?.disconnect();
@@ -117,7 +132,14 @@ function initCategoryNav() {
     }
 
     observeActiveCategory();
-    window.matchMedia(DESKTOP_QUERY).addEventListener('change', observeActiveCategory);
+    window.matchMedia(DESKTOP_QUERY).addEventListener('change', (event) => {
+        observeActiveCategory();
+        if (!event.matches) {
+            previewCard?.classList.remove('is-preview');
+            previewCard = null;
+            previewKey = null;
+        }
+    });
 
     const initialKey = location.hash.slice(1);
     if (buttons.some((b) => b.dataset.category === initialKey)) {
@@ -125,6 +147,18 @@ function initCategoryNav() {
     } else if (categories[0]) {
         setActive(categories[0].dataset.category);
     }
+}
+
+function initAchievements() {
+    const items = [...document.querySelectorAll('.achievements__item')];
+    if (items.length < 2) return;
+
+    let index = 0;
+    setInterval(() => {
+        items[index].classList.remove('is-active');
+        index = (index + 1) % items.length;
+        items[index].classList.add('is-active');
+    }, 5000);
 }
 
 function updateYearsSince() {
@@ -142,9 +176,19 @@ function initSongOverlay() {
     const audio = document.querySelector('.song-audio');
     const overlay = document.querySelector('.song-overlay');
     const essay = document.querySelector('.essay');
+    const playButton = document.querySelector('.song-play-btn');
     if (!audio || !overlay) return;
 
+    if (playButton) {
+        playButton.addEventListener('click', () => {
+            playButton.hidden = true;
+            audio.setAttribute('controls', '');
+            audio.play();
+        });
+    }
+
     audio.addEventListener('play', () => {
+        audio.hidden = false;
         overlay.classList.add('is-active');
         if (essay && !window.matchMedia(DESKTOP_QUERY).matches) {
             essay.scrollTo({
@@ -153,8 +197,13 @@ function initSongOverlay() {
             });
         }
     });
-    audio.addEventListener('pause', () => overlay.classList.remove('is-active'));
-    audio.addEventListener('ended', () => overlay.classList.remove('is-active'));
+    function hideAudio() {
+        overlay.classList.remove('is-active');
+        audio.hidden = true;
+        if (playButton) playButton.hidden = false;
+    }
+    audio.addEventListener('pause', hideAudio);
+    audio.addEventListener('ended', hideAudio);
     overlay.addEventListener('click', () => audio.pause());
 }
 
@@ -168,9 +217,11 @@ function initProjectModal() {
     const descriptionEl = document.querySelector('.project-modal__description');
     const mediaEl = document.querySelector('.project-modal__media');
     const triggers = [...document.querySelectorAll('.gallery__item-trigger')];
+    const layout = document.querySelector('.layout');
     if (!modal || !closeButton || !prevButton || !nextButton
         || !titleEl || !tagsEl || !descriptionEl || !mediaEl || !triggers.length) return;
 
+    const isDesktop = () => window.matchMedia(DESKTOP_QUERY).matches;
     const YOUTUBE_PATTERN = /youtube\.com|youtu\.be/;
     let images = [];
     let index = 0;
@@ -217,7 +268,10 @@ function initProjectModal() {
     }
 
     triggers.forEach((trigger) => {
-        trigger.addEventListener('click', () => openModal(trigger));
+        trigger.addEventListener('click', () => {
+            if (!isDesktop() && !layout?.classList.contains('is-swapped')) return;
+            openModal(trigger);
+        });
     });
 
     closeButton.addEventListener('click', closeModal);
@@ -237,8 +291,46 @@ function initProjectModal() {
     });
 }
 
+function initMainMenu() {
+    const layout = document.querySelector('.layout');
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.main-menu');
+    if (!toggle || !menu) return;
+
+    const isDesktop = () => window.matchMedia(DESKTOP_QUERY).matches;
+
+    function closeMenu() {
+        menu.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+    }
+
+    toggle.addEventListener('click', () => {
+        if (!isDesktop()) layout?.classList.remove('is-swapped');
+        const isOpen = menu.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    menu.addEventListener('click', (event) => event.stopPropagation());
+
+    menu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!menu.classList.contains('is-open')) return;
+        if (menu.contains(event.target) || toggle.contains(event.target)) return;
+        closeMenu();
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && menu.classList.contains('is-open')) closeMenu();
+    });
+}
+
 initPaneSwap();
 initCategoryNav();
 updateYearsSince();
 initSongOverlay();
 initProjectModal();
+initMainMenu();
+initAchievements();

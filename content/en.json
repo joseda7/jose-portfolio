@@ -13,9 +13,11 @@
     "experience": "Experience",
     "projects": "Projects",
     "skills": "Skills",
-    "contact": "Contact",
-    "langSwitchLabel": "EN / ES",
+    "contact": "Let's talk",
+    "contactEmail": "jose.david.alcaraz7@gmail.com",
+    "langSwitchLabel": "EN/ES",
     "menuLabel": "Menu",
+    "backLabel": "Back",
     "themeToggleLabel": "Toggle dark mode"
   },
   "hero": {
@@ -23,21 +25,23 @@
     "name": "Jose Alcaraz",
     "tagline": "Software engineer building things that matter.",
     "ctaLabel": "Get in touch",
-    "ctaHref": "#contact"
+    "ctaHref": "#contact",
+    "availableLabel": "Available"
   },
   "about": {
     "heading": "About",
     "paragraphs": [
       "Alicante, Spain. 2026",
       "Hi, wherever you are on earth.",
-      "Here I share with you a few things about me, thinking that maybe in the future we could do something cool together. Ever since my dad taught me to use Microsoft Paint when I was 6, I haven't stopped solving problems through **art and technology**.",
-      "While I was studying engineering I learned language C, which gave me the foundation to later program my first web game in JS, and without knowing it, that would be my way into my first job as a web app and game developer.",
-      "**{{yearsSince}}** years later, today I ask myself: why would a son, husband, father, Colombian, electronic and front-end engineer design logos and illustrate for while reading about astronomy, or write songs that don't sound like AI made them?",
-      "Usually I'm thinking slowly but surely, sometimes out loud. I ask for help along the way, and I ask \"what for...?\" a lot. I'd rather fall in love with the problem than with the solution.",
-      "Thank you for making it this far. If you think that maybe one day we could do something together, **[write to me](mailto:jose.david.alcaraz7@gmail.com)** — and keep in mind that now I'm the one who wants to hear about you. _Ultreia et suseia._ ",
+      "Here are a few things about me, in case we ever get the chance to do something epic together… I was 6, and ever since my dad taught me to use Microsoft Paint, I haven't stopped wondering how to solve all kinds of problems through the mix of **[art and technology](#all)**.",
+      "While I was studying engineering I learned how to code in C, laying the base to later dare to program my first game in JavaScript, which by chance ended up being the entrance ticket to my first job, building games and apps for browsers. I loved it then, and I'm still in love.",
+      "**{{yearsSince}}** years later, I ask myself: why would a son, a husband, a father, a Colombian front-end and electronics engineer illustrate and design logotypes while reading about astronomy? Or write songs that no AI could ever harmonize or even feel for me?",
+      "I think slowly, steadily, surely, sometimes out loud, and I ask for help when I'm stuck, and I ask a lot of whys. I'd rather fall in love with the problem than any kind of solution.",
+      "You made it to the end, and I thank you for it. In case you think we have a chance to do something epic together, don't hesitate to **[text me](mailto:jose.david.alcaraz7@gmail.com)** Now I'm looking forward to hearing from you. _Ultreia et suseia._ ",
       "Hugs, Jose."
     ],
     "songSrc": "/assets/audio/art-and-technology.m4a",
+    "playLabel": "Listen it",
     "photo": "/assets/images/headshot.png",
     "photoAlt": "Photo of Jose Alcaraz"
   },
@@ -383,14 +387,28 @@
         "href": "#"
       },
       {
-        "label": "GitHub",
+        "label": "",
         "href": "#"
       }
     ]
   },
+  "achievements": {
+    "items": [
+      "1st place, Video Game Workshop by [Universidad Pontificia Bolivariana](https://portal.upb.edu.co/) and Bancolombia, 2nd edition, 2015.",
+      "Adjunct professor at [Universidad Pontificia Bolivariana](https://portal.upb.edu.co/), 'Advanced Web Development' course for Computer Engineering, 2018.",
+      "Creator of a Sound Design course for Digital Entertainment Engineering, at [Universidad Pontificia Bolivariana](https://portal.upb.edu.co/), 2015.",
+      "Founder of communities about front-end, music band, and drawing, at [Pragma](https://www.pragma.co/).",
+      "20+ publications and conferences."
+    ]
+  },
   "footer": {
     "copyright": "© 2026 Jose Alcaraz",
-    "tag": "#codewithpurpose",
+    "linkedinLabel": "LinkedIn",
+    "linkedinHref": "https://www.linkedin.com/in/jose-alcaraz/",
+    "spotifyLabel": "Spotify",
+    "spotifyHref": "https://open.spotify.com/artist/0nkrxajl6AFLsSWOAxo6Ye?si=EPJonJbhSdm0O516nAkXOw",
+    "githubLabel": "",
+    "tag": "#CodeWithPurpose",
     "tagHref": "https://github.com/joseda7",
     "cvLabel": "Download CV",
     "cvHref": "/assets/pdf/CV_JoseDavidAlcaraz_EN.pdf"

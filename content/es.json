@@ -13,9 +13,11 @@
     "experience": "Experiencia",
     "projects": "Proyectos",
     "skills": "Habilidades",
-    "contact": "Contacto",
-    "langSwitchLabel": "ES / EN",
+    "contact": "Conversemos",
+    "contactEmail": "jose.david.alcaraz7@gmail.com",
+    "langSwitchLabel": "ES/EN",
     "menuLabel": "Menú",
+    "backLabel": "Volver",
     "themeToggleLabel": "Cambiar modo oscuro"
   },
   "hero": {
@@ -23,21 +25,23 @@
     "name": "Jose Alcaraz",
     "tagline": "Ingeniero de software construyendo cosas que importan.",
     "ctaLabel": "Contáctame",
-    "ctaHref": "#contact"
+    "ctaHref": "#contact",
+    "availableLabel": "Disponible"
   },
   "about": {
     "heading": "Sobre mí",
     "paragraphs": [
       "Alicante, España. 2026",
-      "Hola, desde donde estés en la tierra.",
-      "Permíteme contarte un poco sobre mí, pensando en que más adelante podamos hacer algo juntos. Desde que a los 6 años me enseñó papá a usar Microsoft Paint, no he parado de solucionar problemas a través de **arte y tecnología**.",
-      "Mientras estudiaba ingeniería aprendí lenguaje C, ganando bases para después programar mi primer juego en JS, que accidentalmente sería mi entrada a mi primer trabajo como desarrollador de aplicaciones y juegos web.",
-      "**{{yearsSince}}** años después, hoy me pregunto: ¿Para qué un hijo, esposo, padre, colombiano, ingeniero electrónico y front-end; diseñaría logotipos e ilustraría mientras lee de astronomía, o compondría canciones que no parezcan hechas por IA?",
-      "Pienso lento pero seguro, a veces en voz alta. Voy pidiendo ayuda y pregunto mucho \"¿para qué...?\". Prefiero enamorarme del problema antes que de la solución.",
-      "Gracias por haber llegado hasta aquí. Si crees que tal vez un día podamos hacer algo juntos, **[escríbeme](mailto:jose.david.alcaraz7@gmail.com)** sin mente que ahora soy yo quien quisiera escuchar de tí. _Ultreia et suseia_.",
+      "Hola, donde estés en la tierra.",
+      "Aquí te cuento un poco sobre mí, pensando en que en cualquier momento podamos hacer algo juntos. Desde que a los 6 años me enseñó papá a usar Microsoft Paint, no he parado de solucionar problemas a través de: **[arte y tecnología](#all)**.",
+      "Mientras estudiaba ingeniería aprendí lenguaje C, sentando bases para después programar mi primer juego en JS, que sin saberlo sería mi entrada a mi primer trabajo como desarrollador de aplicaciones y juegos web.",
+      "**{{yearsSince}}** años después, sigo preguntándome: ¿Por qué un hijo, esposo, padre, colombiano, ingeniero electrónico y front-end; ilustraría y diseñaría logotipos mientras lee de astronomía, o compondría canciones que no parezcan hechas por IA?",
+      "Pienso lento pero seguro, a veces en voz alta. Voy pidiendo ayuda y pregunto mucho '¿para qué...?'. Prefiero enamorarme del problema antes que de la solución.",
+      "Gracias por haber llegado hasta aquí. Si crees que en cualquier momento podamos hacer algo juntos, **[escríbeme](mailto:jose.david.alcaraz7@gmail.com)** sin mente. Ahora soy yo quién quiero escuchar de ti. _Ultreia et suseia_.",
       "Abrazos, Jose."
     ],
     "songSrc": "/assets/audio/arte-y-tecnologia.m4a",
+    "playLabel": "Escúchala",
     "photo": "/assets/images/headshot.png",
     "photoAlt": "Foto de Jose Alcaraz"
   },
@@ -383,14 +387,28 @@
         "href": "#"
       },
       {
-        "label": "GitHub",
+        "label": "",
         "href": "#"
       }
     ]
   },
+  "achievements": {
+    "items": [
+      "1er puesto en Workshop de Videojuegos [Universidad Pontificia Bolivariana](https://portal.upb.edu.co/) y Bancolombia, 2da edición, 2015.",
+      "Profesor de cátedra en [Universidad Pontificia Bolivariana](https://portal.upb.edu.co/), curso 'Desarrollo Web Avanzado' para Ingeniería Informática, 2018.",
+      "Creador de curso de Diseño Sonoro para Ingeniería de Entretenimiento Digital, [Universidad Pontificia Bolivariana](https://portal.upb.edu.co/), 2015.",
+      "Fundador de comunidades de front-end, banda musical y dibujo en [Pragma](https://www.pragma.co/).",
+      "20+ publicaciones y conferencias."
+    ]
+  },
   "footer": {
     "copyright": "© 2026 Jose Alcaraz",
-    "tag": "#codewithpurpose",
+    "linkedinLabel": "LinkedIn",
+    "linkedinHref": "https://www.linkedin.com/in/jose-alcaraz/",
+    "spotifyLabel": "Spotify",
+    "spotifyHref": "https://open.spotify.com/artist/0nkrxajl6AFLsSWOAxo6Ye?si=EPJonJbhSdm0O516nAkXOw",
+    "githubLabel": "",
+    "tag": "#CodeWithPurpose",
     "tagHref": "https://github.com/joseda7",
     "cvLabel": "Descargar CV",
     "cvHref": "/assets/pdf/CV_JoseDavidAlcaraz_ES.pdf"

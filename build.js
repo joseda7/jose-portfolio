@@ -104,6 +104,10 @@ function buildPage(content) {
         return `<div class="gallery__category" data-category="${escapeHtml(cat.key)}" aria-label="${escapeHtml(cat.label)}">${cardsHtml}</div>`;
     }).join('\n');
 
+    const achievementsHtml = content.achievements.items.map((text, i) =>
+        `<li class="achievements__item${i === 0 ? ' is-active' : ''}">${formatInline(escapeHtml(text))}</li>`
+    ).join('\n');
+
     const aboutParagraphsHtml = content.about.paragraphs.map((p) => {
         let escaped = escapeHtml(p);
         if (escaped.includes(YEARS_SINCE_TOKEN)) {
@@ -118,6 +122,7 @@ function buildPage(content) {
         galleryHtml,
         categoryNavHtml,
         aboutParagraphsHtml,
+        achievementsHtml,
     };
 
     const bodyHtml = render(readText(tplPath('home.html')), pageData);
