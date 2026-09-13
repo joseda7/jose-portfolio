@@ -403,6 +403,7 @@
   },
   "footer": {
     "copyright": "© 2026 Jose Alcaraz",
+    "emailLabel": "Email",
     "linkedinLabel": "LinkedIn",
     "linkedinHref": "https://www.linkedin.com/in/jose-alcaraz/",
     "spotifyLabel": "Spotify",
