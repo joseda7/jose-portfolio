@@ -81,6 +81,12 @@
       {
         "key": "frontend",
         "label": "Front-end",
+        "skills": [
+          "TypeScript",
+          "React",
+          "CSS",
+          "Node.js"
+        ],
         "items": [
           {
             "title": "Proyecto de Front-end de ejemplo 1",
@@ -173,6 +179,11 @@
       {
         "key": "visual-arts",
         "label": "Artes visuales",
+        "skills": [
+          "Ilustración",
+          "Animación",
+          "Logotipos"
+        ],
         "items": [
           {
             "title": "Proyecto de Artes Visuales de ejemplo 1",
@@ -263,6 +274,11 @@
       {
         "key": "music",
         "label": "Música",
+        "skills": [
+          "Composición",
+          "Guitarra",
+          "Cantautor"
+        ],
         "items": [
           {
             "title": "Proyecto de Música de ejemplo 1",

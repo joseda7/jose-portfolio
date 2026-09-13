@@ -187,7 +187,10 @@ function initSongOverlay() {
         });
     }
 
+    let hideTimer = null;
+
     audio.addEventListener('play', () => {
+        clearTimeout(hideTimer);
         audio.hidden = false;
         overlay.classList.add('is-active');
         if (essay && !window.matchMedia(DESKTOP_QUERY).matches) {
@@ -202,7 +205,14 @@ function initSongOverlay() {
         audio.hidden = true;
         if (playButton) playButton.hidden = false;
     }
-    audio.addEventListener('pause', hideAudio);
+    audio.addEventListener('pause', () => {
+        // Scrubbing the native seek bar briefly pauses then resumes playback;
+        // wait a beat so that doesn't get mistaken for the user stopping the song.
+        clearTimeout(hideTimer);
+        hideTimer = setTimeout(() => {
+            if (audio.paused) hideAudio();
+        }, 250);
+    });
     audio.addEventListener('ended', hideAudio);
     overlay.addEventListener('click', () => audio.pause());
 }

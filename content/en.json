@@ -81,6 +81,12 @@
       {
         "key": "frontend",
         "label": "Front-end",
+        "skills": [
+          "TypeScript",
+          "React",
+          "CSS",
+          "Node.js"
+        ],
         "items": [
           {
             "title": "Placeholder Front-end Project 1",
@@ -173,6 +179,11 @@
       {
         "key": "visual-arts",
         "label": "Visual arts",
+        "skills": [
+          "Illustration",
+          "Animation",
+          "Logotypes"
+        ],
         "items": [
           {
             "title": "Placeholder Visual Arts Project 1",
@@ -263,6 +274,11 @@
       {
         "key": "music",
         "label": "Music",
+        "skills": [
+          "Composition",
+          "Guitar",
+          "Songwriting"
+        ],
         "items": [
           {
             "title": "Placeholder Music Project 1",

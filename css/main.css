@@ -99,7 +99,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 32px;
+    gap: 20px;
 }
 .category-nav__close {
     display: none;
@@ -155,6 +155,12 @@ a:hover {
 }
 .category-nav__item.is-active {
     color: var(--turquoise);
+}
+.category-nav__skills {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .fade-target {
@@ -261,7 +267,7 @@ a:hover {
     color: white;
     border-radius: 2px;
     font-weight: bold;
-    transition: 0.1s scale ease-in;
+    transition: scale 0.1s  ease-in;
 }
 .main-menu a.main-menu__contact:hover {
     box-shadow: inset 0 0 10px #f8cd0bab;
@@ -292,6 +298,9 @@ a:hover {
 .essay-body p:first-of-type,
 .essay-body p:last-of-type {
     text-align: right;
+}
+.essay-body p:first-of-type {
+    font-size: 0.7rem;
 }
 .essay-body a:hover {
     color: var(--turquoise);
@@ -665,6 +674,11 @@ a:hover {
         flex: 1 1 auto;
         align-items: flex-end;
     }
+    .category-nav ul li {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
     .category-nav__item {
         writing-mode: horizontal-tb;
         transform: none;
@@ -672,12 +686,30 @@ a:hover {
         letter-spacing: 0.5em;
         margin-right: -0.5em;
         font-size: 1.2rem;
+        transition: letter-spacing 0.1s ease-in;
     }
     .category-nav__item[data-category="all"] {
         font-size: 0.7rem;
         letter-spacing: 0.05em;
         margin-right: -0.05em;
         font-weight: normal;
+    }
+    .category-nav__item:hover {
+        letter-spacing: 0.55em;
+    }
+    .category-nav__item[data-category="all"]:hover {
+        letter-spacing: 0.1em;
+    }
+    .category-nav__skills {
+        height: 1.1em;
+        color: var(--gray);
+        font-size: 0.7rem;
+        text-align: right;
+        transition: opacity 0.2s ease;
+    }
+    .category-nav__item:hover ~ .category-nav__skills,
+    .category-nav__item.is-active ~ .category-nav__skills {
+        opacity: 1;
     }
     .achievements {
         display: flex;
