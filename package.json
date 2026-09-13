@@ -5,7 +5,8 @@
   "type": "module",
   "description": "Jose Alcaraz's personal portfolio: static, bilingual (EN/ES), minified build via esbuild.",
   "scripts": {
-    "build": "node build.js"
+    "build": "node build.js",
+    "preview": "node preview.js"
   },
   "devDependencies": {
     "esbuild": "^0.28.2"

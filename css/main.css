@@ -157,6 +157,7 @@ a:hover {
     color: var(--turquoise);
 }
 .category-nav__skills {
+    width: 0;
     height: 0;
     overflow: hidden;
     opacity: 0;
@@ -279,7 +280,7 @@ a:hover {
     overflow-y: auto;
     padding: 16px 16px 0;
     text-align: justify;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     display: flex;
     flex-direction: column;
     line-height: 1.2;
@@ -674,7 +675,7 @@ a:hover {
         flex: 1 1 auto;
         align-items: flex-end;
     }
-    .category-nav ul li {
+    .category-nav > ul > li {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
@@ -701,6 +702,7 @@ a:hover {
         letter-spacing: 0.1em;
     }
     .category-nav__skills {
+        width: auto;
         height: 1.1em;
         color: var(--gray);
         font-size: 0.7rem;
