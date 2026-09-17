@@ -34,6 +34,7 @@ function initSwipeNav() {
     if (!layout) return;
 
     const isDesktop = () => window.matchMedia(DESKTOP_QUERY).matches;
+    const INTENT_THRESHOLD = 15;
     const SWIPE_THRESHOLD = 35;
     // Elements involving their own horizontal dragging (native audio scrubbing,
     // the project modal) shouldn't be hijacked by the swipe-to-open/close gesture.
@@ -42,6 +43,10 @@ function initSwipeNav() {
 
     let startX = null;
     let startY = null;
+
+    function clearPeek() {
+        layout.classList.remove('is-peek-open', 'is-peek-close');
+    }
 
     document.addEventListener('touchstart', (event) => {
         if (isDesktop() || event.target.closest(IGNORE_SELECTOR)) {
@@ -52,7 +57,30 @@ function initSwipeNav() {
         startY = event.touches[0].clientY;
     }, { passive: true });
 
+    document.addEventListener('touchmove', (event) => {
+        if (startX === null || isDesktop()) return;
+        const deltaX = event.touches[0].clientX - startX;
+        const deltaY = event.touches[0].clientY - startY;
+
+        if (Math.abs(deltaX) < INTENT_THRESHOLD || Math.abs(deltaX) < Math.abs(deltaY) * 1.5) {
+            clearPeek();
+            return;
+        }
+
+        const isOpen = layout.classList.contains('is-swapped');
+        if (deltaX < 0 && !isOpen) {
+            layout.classList.add('is-peek-open');
+            layout.classList.remove('is-peek-close');
+        } else if (deltaX > 0 && isOpen) {
+            layout.classList.add('is-peek-close');
+            layout.classList.remove('is-peek-open');
+        } else {
+            clearPeek();
+        }
+    }, { passive: true });
+
     document.addEventListener('touchend', (event) => {
+        clearPeek();
         if (startX === null || isDesktop()) return;
         const deltaX = event.changedTouches[0].clientX - startX;
         const deltaY = event.changedTouches[0].clientY - startY;
@@ -65,6 +93,11 @@ function initSwipeNav() {
         } else {
             layout.classList.remove('is-swapped');
         }
+    }, { passive: true });
+
+    document.addEventListener('touchcancel', () => {
+        clearPeek();
+        startX = null;
     }, { passive: true });
 }
 

@@ -45,6 +45,7 @@ a:hover {
 
 /* Home layout: two full-height panes, one collapsed to a rail -------------- */
 .layout {
+    position: relative;
     display: flex;
     width: 100vw;
     height: 100vh;
@@ -56,7 +57,7 @@ a:hover {
     height: 100%;
     min-width: 0;
     overflow: hidden;
-    transition: flex-grow 0.4s ease;
+    transition: flex-grow 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .pane--content {
     flex: 85 85 0%;
@@ -66,6 +67,7 @@ a:hover {
 }
 .pane--gallery {
     flex: 15 15 0%;
+    width: 15%;
     background: var(--carbon);
     cursor: pointer;
 }
@@ -75,6 +77,32 @@ a:hover {
 .layout.is-swapped .pane--gallery {
     flex: 1 1 0%;
     cursor: default;
+}
+.layout.is-swapped.is-peek-close .pane--content,
+.layout.is-swapped.is-peek-close .pane--gallery {
+    transition: flex-grow 0.15s ease-out;
+}
+.layout.is-swapped.is-peek-close .pane--content {
+    flex: 20 20 0%;
+}
+.layout.is-swapped.is-peek-close .pane--gallery {
+    flex: 80 80 0%;
+}
+.layout.is-peek-open .pane--content .fade-target {
+    opacity: 0.35;
+    transition: opacity 0.15s ease-out;
+}
+.layout.is-peek-open .pane--content {
+    flex: 0 0 85%;
+}
+.layout.is-peek-open .pane--gallery {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 35%;
+    z-index: 3;
+    transition: width 0.15s ease-out;
 }
 .layout.is-swapped .category-nav {
     display: flex;
@@ -159,7 +187,11 @@ a:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .pane, .fade-target {
+    .pane, .fade-target,
+    .layout.is-peek-open .pane--content .fade-target,
+    .layout.is-peek-open .pane--gallery,
+    .layout.is-swapped.is-peek-close .pane--content,
+    .layout.is-swapped.is-peek-close .pane--gallery {
         transition: none;
     }
 }
@@ -253,7 +285,7 @@ a:hover {
     overflow-y: auto;
     padding: 16px 16px 0;
     text-align: justify;
-    font-size: 1rem;
+    font-size: 0.9rem;
     display: flex;
     flex-direction: column;
     line-height: 1.2;
@@ -609,19 +641,19 @@ a:hover {
         justify-content: center;
         position: fixed;
         bottom: 20px;
-        left: 85%;
+        left: 92.5%;
         transform: translateX(-50%);
         width: 36px;
         height: 36px;
         border: 0;
         border-radius: 50%;
-        background: var(--onyx);
-        color: var(--white);
+        background: white;
+        color: var(--turquoise);
         cursor: pointer;
         z-index: 2;
     }
     .layout.is-swapped .gallery-open-btn {
-        left: 15%;
+        left: 7.5%;
     }
 }
 
