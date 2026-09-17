@@ -2,32 +2,70 @@ const DESKTOP_QUERY = '(min-width: 900px)';
 
 function initPaneSwap() {
     const layout = document.querySelector('.layout');
-    const content = document.querySelector('.pane--content');
-    const gallery = document.querySelector('.pane--gallery');
-    const closeButton = document.querySelector('.category-nav__close');
-    if (!layout || !content || !gallery) return;
+    const openButton = document.querySelector('.gallery-open-btn');
+    if (!layout) return;
 
     const isDesktop = () => window.matchMedia(DESKTOP_QUERY).matches;
 
-    gallery.addEventListener('click', () => {
+    openButton?.addEventListener('click', () => {
         if (isDesktop()) return;
-        if (!layout.classList.contains('is-swapped')) {
-            layout.classList.add('is-swapped');
-        }
+        layout.classList.toggle('is-swapped');
     });
+}
 
-    content.addEventListener('click', () => {
-        if (isDesktop()) return;
-        if (layout.classList.contains('is-swapped')) {
+function initGalleryOpenLabel() {
+    const layout = document.querySelector('.layout');
+    const openButton = document.querySelector('.gallery-open-btn');
+    if (!layout || !openButton) return;
+
+    function sync() {
+        const isOpen = layout.classList.contains('is-swapped');
+        openButton.setAttribute(
+            'aria-label',
+            isOpen ? openButton.dataset.closeLabel : openButton.dataset.openLabel,
+        );
+    }
+
+    new MutationObserver(sync).observe(layout, { attributes: true, attributeFilter: ['class'] });
+}
+
+function initSwipeNav() {
+    const layout = document.querySelector('.layout');
+    if (!layout) return;
+
+    const isDesktop = () => window.matchMedia(DESKTOP_QUERY).matches;
+    const SWIPE_THRESHOLD = 35;
+    // Elements involving their own horizontal dragging (native audio scrubbing,
+    // the project modal) shouldn't be hijacked by the swipe-to-open/close gesture.
+    // Plain taps on buttons/links are already safe: they never cross SWIPE_THRESHOLD.
+    const IGNORE_SELECTOR = 'audio, .project-modal';
+
+    let startX = null;
+    let startY = null;
+
+    document.addEventListener('touchstart', (event) => {
+        if (isDesktop() || event.target.closest(IGNORE_SELECTOR)) {
+            startX = null;
+            return;
+        }
+        startX = event.touches[0].clientX;
+        startY = event.touches[0].clientY;
+    }, { passive: true });
+
+    document.addEventListener('touchend', (event) => {
+        if (startX === null || isDesktop()) return;
+        const deltaX = event.changedTouches[0].clientX - startX;
+        const deltaY = event.changedTouches[0].clientY - startY;
+        startX = null;
+
+        if (Math.abs(deltaX) < SWIPE_THRESHOLD || Math.abs(deltaX) < Math.abs(deltaY) * 1.5) return;
+
+        if (deltaX < 0) {
+            layout.classList.add('is-swapped');
+        } else {
             layout.classList.remove('is-swapped');
         }
-    });
-
-    closeButton?.addEventListener('click', (event) => {
-        event.stopPropagation();
-        if (isDesktop()) return;
-        layout.classList.remove('is-swapped');
-    });
+    }, { passive: true });
 }
 
 function initCategoryNav() {
@@ -151,14 +189,23 @@ function initCategoryNav() {
 
 function initAchievements() {
     const items = [...document.querySelectorAll('.achievements__item')];
+    const star = document.querySelector('.achievements__star');
     if (items.length < 2) return;
 
     let index = 0;
-    setInterval(() => {
+    function next() {
         items[index].classList.remove('is-active');
         index = (index + 1) % items.length;
         items[index].classList.add('is-active');
-    }, 5000);
+    }
+
+    let timer = setInterval(next, 5000);
+
+    star?.addEventListener('click', () => {
+        next();
+        clearInterval(timer);
+        timer = setInterval(next, 5000);
+    });
 }
 
 function updateYearsSince() {
@@ -301,46 +348,11 @@ function initProjectModal() {
     });
 }
 
-function initMainMenu() {
-    const layout = document.querySelector('.layout');
-    const toggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.main-menu');
-    if (!toggle || !menu) return;
-
-    const isDesktop = () => window.matchMedia(DESKTOP_QUERY).matches;
-
-    function closeMenu() {
-        menu.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
-    }
-
-    toggle.addEventListener('click', () => {
-        if (!isDesktop()) layout?.classList.remove('is-swapped');
-        const isOpen = menu.classList.toggle('is-open');
-        toggle.setAttribute('aria-expanded', String(isOpen));
-    });
-
-    menu.addEventListener('click', (event) => event.stopPropagation());
-
-    menu.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', closeMenu);
-    });
-
-    document.addEventListener('click', (event) => {
-        if (!menu.classList.contains('is-open')) return;
-        if (menu.contains(event.target) || toggle.contains(event.target)) return;
-        closeMenu();
-    });
-
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && menu.classList.contains('is-open')) closeMenu();
-    });
-}
-
 initPaneSwap();
+initGalleryOpenLabel();
+initSwipeNav();
 initCategoryNav();
 updateYearsSince();
 initSongOverlay();
 initProjectModal();
-initMainMenu();
 initAchievements();

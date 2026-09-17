@@ -15,14 +15,15 @@
     "skills": "Skills",
     "contact": "Let's talk",
     "contactEmail": "jose.david.alcaraz7@gmail.com",
-    "langSwitchLabel": "EN/ES",
-    "menuLabel": "Menu",
+    "langSwitchLabel": "ES",
     "backLabel": "Back",
+    "openGalleryLabel": "Open gallery",
     "themeToggleLabel": "Toggle dark mode"
   },
   "hero": {
     "greeting": "Hi, I'm",
     "name": "Jose Alcaraz",
+    "location": "Alicante, Spain",
     "tagline": "Software engineer building things that matter.",
     "ctaLabel": "Get in touch",
     "ctaHref": "#contact",
@@ -31,7 +32,6 @@
   "about": {
     "heading": "About",
     "paragraphs": [
-      "Alicante, Spain. 2026",
       "Hi, wherever you are on earth.",
       "Here are a few things about me, in case we ever get the chance to do something epic together… I was 6, and ever since my dad taught me to use Microsoft Paint, I haven't stopped wondering how to solve all kinds of problems through the mix of **[art and technology](#all)**.",
       "While I was studying engineering I learned how to code in C, laying the base to later dare to program my first game in JavaScript, which by chance ended up being the entrance ticket to my first job, building games and apps for browsers. I loved it then, and I'm still in love.",
@@ -177,12 +177,12 @@
         ]
       },
       {
-        "key": "visual-arts",
-        "label": "Visual arts",
+        "key": "visual-design",
+        "label": "Visual design",
         "skills": [
           "Illustration",
           "Animation",
-          "Logotypes"
+          "Design"
         ],
         "items": [
           {
@@ -409,17 +409,18 @@
     ]
   },
   "achievements": {
+    "nextLabel": "Next achievement",
     "items": [
-      "1st place, Video Game Workshop by [Universidad Pontificia Bolivariana](https://portal.upb.edu.co/) and Bancolombia, 2nd edition, 2015.",
-      "Adjunct professor at [Universidad Pontificia Bolivariana](https://portal.upb.edu.co/), 'Advanced Web Development' course for Computer Engineering, 2018.",
-      "Creator of a Sound Design course for Digital Entertainment Engineering, at [Universidad Pontificia Bolivariana](https://portal.upb.edu.co/), 2015.",
-      "Founder of communities about front-end, music band, and drawing, at [Pragma](https://www.pragma.co/).",
+      "1st place, Video Game Workshop by Universidad Pontificia Bolivariana and Bancolombia, 2nd edition, 2015.",
+      "Adjunct professor at Universidad Pontificia Bolivariana, 'Advanced Web Development' course for Computer Engineering, 2018.",
+      "Creator of a Sound Design course for Digital Entertainment Engineering, at Universidad Pontificia Bolivariana, 2015.",
+      "Founder of communities about front-end, music band, and drawing, at Pragma.",
       "20+ publications and conferences."
     ]
   },
   "footer": {
     "copyright": "© 2026 Jose Alcaraz",
-    "emailLabel": "Email",
+    "emailLabel": "jose.david.alcaraz7@gmail.com",
     "linkedinLabel": "LinkedIn",
     "linkedinHref": "https://www.linkedin.com/in/jose-alcaraz/",
     "spotifyLabel": "Spotify",
@@ -427,7 +428,7 @@
     "githubLabel": "",
     "tag": "#CodeWithPurpose",
     "tagHref": "https://github.com/joseda7",
-    "cvLabel": "Download CV",
+    "cvLabel": "CV",
     "cvHref": "assets/pdf/CV_JoseDavidAlcaraz_EN.pdf"
   }
 }

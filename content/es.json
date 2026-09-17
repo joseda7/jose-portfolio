@@ -15,14 +15,15 @@
     "skills": "Habilidades",
     "contact": "Conversemos",
     "contactEmail": "jose.david.alcaraz7@gmail.com",
-    "langSwitchLabel": "ES/EN",
-    "menuLabel": "Menú",
+    "langSwitchLabel": "EN",
     "backLabel": "Volver",
+    "openGalleryLabel": "Abrir galería",
     "themeToggleLabel": "Cambiar modo oscuro"
   },
   "hero": {
     "greeting": "Hola, soy",
     "name": "Jose Alcaraz",
+    "location": "Alicante, España",
     "tagline": "Ingeniero de software construyendo cosas que importan.",
     "ctaLabel": "Contáctame",
     "ctaHref": "#contact",
@@ -31,7 +32,6 @@
   "about": {
     "heading": "Sobre mí",
     "paragraphs": [
-      "Alicante, España. 2026",
       "Hola, donde estés en la tierra.",
       "Aquí te cuento un poco sobre mí, pensando en que en cualquier momento podamos hacer algo juntos. Desde que a los 6 años me enseñó papá a usar Microsoft Paint, no he parado de solucionar problemas a través de: **[arte y tecnología](#all)**.",
       "Mientras estudiaba ingeniería aprendí lenguaje C, sentando bases para después programar mi primer juego en JS, que sin saberlo sería mi entrada a mi primer trabajo como desarrollador de aplicaciones y juegos web.",
@@ -177,12 +177,12 @@
         ]
       },
       {
-        "key": "visual-arts",
-        "label": "Artes visuales",
+        "key": "visual-design",
+        "label": "Visual design",
         "skills": [
           "Ilustración",
           "Animación",
-          "Logotipos"
+          "Diseño"
         ],
         "items": [
           {
@@ -409,17 +409,18 @@
     ]
   },
   "achievements": {
+    "nextLabel": "Siguiente logro",
     "items": [
-      "1er puesto en Workshop de Videojuegos [Universidad Pontificia Bolivariana](https://portal.upb.edu.co/) y Bancolombia, 2da edición, 2015.",
-      "Profesor de cátedra en [Universidad Pontificia Bolivariana](https://portal.upb.edu.co/), curso 'Desarrollo Web Avanzado' para Ingeniería Informática, 2018.",
-      "Creador de curso de Diseño Sonoro para Ingeniería de Entretenimiento Digital, [Universidad Pontificia Bolivariana](https://portal.upb.edu.co/), 2015.",
-      "Fundador de comunidades de front-end, banda musical y dibujo en [Pragma](https://www.pragma.co/).",
+      "1er puesto en Workshop de Videojuegos Universidad Pontificia Bolivariana y Bancolombia, 2da edición, 2015.",
+      "Profesor de cátedra en Universidad Pontificia Bolivariana, curso 'Desarrollo Web Avanzado' para Ingeniería Informática, 2018.",
+      "Creador de curso de Diseño Sonoro para Ingeniería de Entretenimiento Digital, Universidad Pontificia Bolivariana, 2015.",
+      "Fundador de comunidades de front-end, banda musical y dibujo en Pragma.",
       "20+ publicaciones y conferencias."
     ]
   },
   "footer": {
     "copyright": "© 2026 Jose Alcaraz",
-    "emailLabel": "Email",
+    "emailLabel": "jose.david.alcaraz7@gmail.com",
     "linkedinLabel": "LinkedIn",
     "linkedinHref": "https://www.linkedin.com/in/jose-alcaraz/",
     "spotifyLabel": "Spotify",
@@ -427,7 +428,7 @@
     "githubLabel": "",
     "tag": "#CodeWithPurpose",
     "tagHref": "https://github.com/joseda7",
-    "cvLabel": "Descargar CV",
+    "cvLabel": "CV",
     "cvHref": "assets/pdf/CV_JoseDavidAlcaraz_ES.pdf"
   }
 }

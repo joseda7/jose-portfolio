@@ -1,29 +1,35 @@
 <div class="layout">
     <section class="pane pane--content" aria-label="{{about.heading}}">
         <header class="pane-header">
-            <img class="avatar fade-target" src="{{about.photo}}" alt="{{about.photoAlt}}" width="32" height="32">
-            <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="{{nav.menuLabel}}">
-                <span class="menu-toggle__bar"></span>
-                <span class="menu-toggle__bar"></span>
-            </button>
-            <div class="pane-header__meta fade-target">
-                <span class="pane-header__name">{{hero.name}}</span>
-                <a class="available-label" href="{{footer.linkedinHref}}" target="_blank">{{hero.availableLabel}}</a>
+            <div class="pane-header__group fade-target">
+                <img class="avatar" src="{{about.photo}}" alt="{{about.photoAlt}}" width="32" height="32">
+                <div class="pane-header__meta">
+                    <span class="pane-header__name">{{hero.name}}</span>
+                    <a class="available-label" href="{{footer.linkedinHref}}" target="_blank">{{hero.availableLabel}}</a>
+                </div>
             </div>
-            <nav class="main-menu" id="main-menu" aria-label="{{nav.menuLabel}}">
-                <a href="{{footer.cvHref}}" download>{{footer.cvLabel}}</a>
-                <a href="{{meta.alternateLangPath}}">{{nav.langSwitchLabel}}</a>
-                <a class="main-menu__contact" href="mailto:{{nav.contactEmail}}">{{nav.contact}}</a>
-            </nav>
+            <div class="pane-header__lang">
+                <span class="pane-header__location">{{hero.location}}</span>
+                <a class="lang-switch" href="{{meta.alternateLangPath}}">{{nav.langSwitchLabel}}</a>
+            </div>
         </header>
 
         <div class="essay fade-target">
             <div class="essay-body">
                 {{{aboutParagraphsHtml}}}
-                <button type="button" class="song-play-btn">
-                    <span class="song-play-btn__icon" aria-hidden="true"></span>
-                    {{about.playLabel}}
-                </button>
+                <div class="essay-body__actions">
+                    <button type="button" class="song-play-btn">
+                        <span class="song-play-btn__icon" aria-hidden="true"></span>
+                        {{about.playLabel}}
+                    </button>
+                    <div class="essay-body__cta">
+                        <a class="cv-btn" href="{{footer.cvHref}}" download>
+                            {{footer.cvLabel}}
+                            <span class="cv-btn__icon" aria-hidden="true"></span>
+                        </a>
+                        <a class="main-menu__contact" href="mailto:{{nav.contactEmail}}">{{nav.contact}}</a>
+                    </div>
+                </div>
                 <audio class="song-audio" src="{{about.songSrc}}" preload="none" hidden></audio>
             </div>
             <footer class="pane-footer">
@@ -42,16 +48,19 @@
         <ul>
             {{{categoryNavHtml}}}
         </ul>
-        <button type="button" class="category-nav__close" aria-label="{{nav.backLabel}}">
-            <span class="category-nav__close-icon" aria-hidden="true"></span>
-        </button>
         <div class="achievements">
-            <span class="achievements__star" aria-hidden="true"></span>
+            <button type="button" class="achievements__star" aria-label="{{achievements.nextLabel}}">
+                <span class="achievements__star-icon" aria-hidden="true"></span>
+            </button>
             <ul class="achievements__list">
                 {{{achievementsHtml}}}
             </ul>
         </div>
     </nav>
+
+    <button type="button" class="gallery-open-btn" aria-label="{{nav.openGalleryLabel}}" data-open-label="{{nav.openGalleryLabel}}" data-close-label="{{nav.backLabel}}">
+        <span class="gallery-open-btn__icon" aria-hidden="true"></span>
+    </button>
 
     <section class="pane pane--gallery" aria-label="{{projects.heading}}">
         <div class="gallery">
