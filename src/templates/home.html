@@ -34,7 +34,6 @@
                 </div>
                 <audio class="song-audio" src="{{about.songSrc}}" preload="none" hidden></audio>
                 <div class="song-overlay__actions">
-                    <a class="cv-btn" href="#all">{{projects.seeProjectsLabel}}</a>
                     <a class="main-menu__contact" href="mailto:{{nav.contactEmail}}">{{nav.contact}}</a>
                 </div>
             </div>
@@ -98,7 +97,15 @@
                 </button>
             </div>
             <div class="project-modal__body">
-                <div class="project-modal__media"></div>
+                <div class="project-modal__media-row">
+                    <button type="button" class="project-modal__media-nav project-modal__media-nav--prev" aria-label="{{projects.prevImageLabel}}">
+                        <span class="project-modal__media-nav-icon project-modal__media-nav-icon--prev" aria-hidden="true"></span>
+                    </button>
+                    <div class="project-modal__media"></div>
+                    <button type="button" class="project-modal__media-nav project-modal__media-nav--next" aria-label="{{projects.nextImageLabel}}">
+                        <span class="project-modal__media-nav-icon project-modal__media-nav-icon--next" aria-hidden="true"></span>
+                    </button>
+                </div>
                 <div class="project-modal__dots" data-dot-label="{{projects.dotLabel}}"></div>
             </div>
             <div class="project-modal__footer">
@@ -126,6 +133,7 @@
                         <button type="button" class="project-modal__prev-project" aria-label="{{projects.prevProjectLabel}}">
                             <span class="project-modal__prev-project-icon" aria-hidden="true"></span>
                         </button>
+                        <span class="project-modal__nav-label">{{projects.moreProjectsLabel}}</span>
                         <button type="button" class="project-modal__next-project" aria-label="{{projects.nextProjectLabel}}">
                             <span class="project-modal__next-project-icon" aria-hidden="true"></span>
                         </button>

@@ -290,16 +290,13 @@ function initSongOverlay() {
         }
     });
 
-    // Pausing from the native controls (or while scrubbing) only stops playback;
-    // it does not close the overlay. Closing is an explicit action (overlay click
-    // or one of its header buttons), which also stops playback.
     function closeOverlay() {
         overlay.classList.remove('is-active');
         audio.hidden = true;
         if (playButton) playButton.hidden = false;
         if (!audio.paused) audio.pause();
     }
-    audio.addEventListener('ended', closeOverlay);
+    audio.addEventListener('pause', closeOverlay);
     overlay.addEventListener('click', closeOverlay);
 
     document.querySelectorAll('.song-overlay__actions a').forEach((link) => {
@@ -318,21 +315,37 @@ function initProjectModal() {
     const siteColEl = document.querySelector('.project-modal__col--site');
     const siteLinkEl = document.querySelector('.project-modal__site-link');
     const mediaEl = document.querySelector('.project-modal__media');
+    const mediaPrevButton = document.querySelector('.project-modal__media-nav--prev');
+    const mediaNextButton = document.querySelector('.project-modal__media-nav--next');
     const dotsEl = document.querySelector('.project-modal__dots');
     const prevProjectButton = document.querySelector('.project-modal__prev-project');
     const nextProjectButton = document.querySelector('.project-modal__next-project');
     const triggers = [...document.querySelectorAll('.gallery__item-trigger')];
     const layout = document.querySelector('.layout');
     if (!modal || !closeButton || !titleEl || !categoryEl || !tagsEl || !descriptionEl
-        || !mediaEl || !dotsEl || !prevProjectButton || !nextProjectButton || !triggers.length) return;
+        || !mediaEl || !mediaPrevButton || !mediaNextButton || !dotsEl
+        || !prevProjectButton || !nextProjectButton || !triggers.length) return;
 
     const isDesktop = () => window.matchMedia(DESKTOP_QUERY).matches;
     const YOUTUBE_PATTERN = /youtube\.com|youtu\.be/;
     const dotLabel = dotsEl.dataset.dotLabel || 'Image';
+    const AUTO_ADVANCE_INTERVAL = 7000;
     let images = [];
     let index = 0;
     let triggerIndex = 0;
     let lastTrigger = null;
+    let autoAdvanceTimer = null;
+
+    function stopAutoAdvance() {
+        clearInterval(autoAdvanceTimer);
+        autoAdvanceTimer = null;
+    }
+
+    function startAutoAdvance() {
+        stopAutoAdvance();
+        if (images.length <= 1) return;
+        autoAdvanceTimer = setInterval(() => stepImage(1), AUTO_ADVANCE_INTERVAL);
+    }
 
     function showMedia() {
         const src = images[index];
@@ -349,14 +362,24 @@ function initProjectModal() {
             const img = document.createElement('img');
             img.src = src;
             img.alt = label;
+            img.draggable = false;
             mediaEl.appendChild(img);
         }
         [...dotsEl.children].forEach((dot, i) => dot.classList.toggle('is-active', i === index));
     }
 
+    function stepImage(delta) {
+        if (images.length <= 1) return;
+        index = (index + delta + images.length) % images.length;
+        showMedia();
+        startAutoAdvance();
+    }
+
     function renderDots() {
         dotsEl.innerHTML = '';
         dotsEl.hidden = images.length <= 1;
+        mediaPrevButton.hidden = images.length <= 1;
+        mediaNextButton.hidden = images.length <= 1;
         images.forEach((_, i) => {
             const dot = document.createElement('button');
             dot.type = 'button';
@@ -365,6 +388,7 @@ function initProjectModal() {
             dot.addEventListener('click', () => {
                 index = i;
                 showMedia();
+                startAutoAdvance();
             });
             dotsEl.appendChild(dot);
         });
@@ -392,6 +416,7 @@ function initProjectModal() {
         index = 0;
         renderDots();
         showMedia();
+        startAutoAdvance();
 
         lastTrigger = trigger;
         modal.classList.add('is-active');
@@ -404,6 +429,7 @@ function initProjectModal() {
     }
 
     function closeModal() {
+        stopAutoAdvance();
         modal.classList.remove('is-active');
         mediaEl.innerHTML = '';
         lastTrigger?.focus();
@@ -421,6 +447,28 @@ function initProjectModal() {
 
     closeButton.addEventListener('click', closeModal);
     brandButton?.addEventListener('click', closeModal);
+    mediaPrevButton.addEventListener('click', () => stepImage(-1));
+    mediaNextButton.addEventListener('click', () => stepImage(1));
+
+    const SWIPE_THRESHOLD = 35;
+    let swipeStartX = null;
+    let swipeStartY = null;
+    mediaEl.addEventListener('pointerdown', (event) => {
+        swipeStartX = event.clientX;
+        swipeStartY = event.clientY;
+    });
+    mediaEl.addEventListener('pointerup', (event) => {
+        if (swipeStartX === null) return;
+        const deltaX = event.clientX - swipeStartX;
+        const deltaY = event.clientY - swipeStartY;
+        swipeStartX = null;
+        if (Math.abs(deltaX) < SWIPE_THRESHOLD || Math.abs(deltaX) < Math.abs(deltaY) * 1.5) return;
+        stepImage(deltaX < 0 ? 1 : -1);
+    });
+    mediaEl.addEventListener('pointercancel', () => {
+        swipeStartX = null;
+    });
+
     prevProjectButton.addEventListener('click', () => {
         triggerIndex = (triggerIndex - 1 + triggers.length) % triggers.length;
         openModal(triggers[triggerIndex]);

@@ -90,7 +90,7 @@
         "items": [
           {
             "title": "Juan Martínez Tirado's Portfolio",
-            "description": "Placeholder description of what this project does and why it's interesting.",
+            "description": "-",
             "tags": [
               "JavaScript",
               "CSS"
@@ -107,7 +107,7 @@
           },
           {
             "title": "Placeholder Front-end Project 2",
-            "description": "Placeholder description of what this project does and why it's interesting.",
+            "description": "-",
             "tags": [
               "JavaScript",
               "CSS"
@@ -116,12 +116,14 @@
             "href": "#",
             "repo": "#",
             "images": [
-              "assets/images/projects/frontend-2.webp"
+              "assets/images/projects/frontend-2-1.webp",
+              "assets/images/projects/frontend-2-2.webp",
+              "assets/images/projects/frontend-2-3.webp"
             ]
           },
           {
             "title": "Placeholder Front-end Project 3",
-            "description": "Placeholder description of what this project does and why it's interesting.",
+            "description": "-",
             "tags": [
               "JavaScript",
               "CSS"
@@ -130,12 +132,14 @@
             "href": "#",
             "repo": "#",
             "images": [
-              "assets/images/projects/frontend-3.webp"
+              "assets/images/projects/frontend-3-1.webp",
+              "assets/images/projects/frontend-3-2.webp",
+              "assets/images/projects/frontend-3-3.webp"
             ]
           },
           {
             "title": "Placeholder Front-end Project 4",
-            "description": "Placeholder description of what this project does and why it's interesting.",
+            "description": "-",
             "tags": [
               "JavaScript",
               "CSS"
@@ -144,12 +148,12 @@
             "href": "#",
             "repo": "#",
             "images": [
-              "assets/images/projects/frontend-4.webp"
+              "assets/images/projects/frontend-4-1.webp"
             ]
           },
           {
             "title": "Placeholder Front-end Project 5",
-            "description": "Placeholder description of what this project does and why it's interesting.",
+            "description": "-",
             "tags": [
               "JavaScript",
               "CSS"
@@ -158,12 +162,12 @@
             "href": "#",
             "repo": "#",
             "images": [
-              "assets/images/projects/frontend-5.webp"
+              "assets/images/projects/frontend-5-1.png"
             ]
           },
           {
             "title": "Placeholder Front-end Project 6",
-            "description": "Placeholder description of what this project does and why it's interesting.",
+            "description": "-",
             "tags": [
               "JavaScript",
               "CSS"
@@ -172,7 +176,8 @@
             "href": "#",
             "repo": "#",
             "images": [
-              "assets/images/projects/frontend-6.webp"
+              "assets/images/projects/frontend-6-1.webp",
+              "assets/images/projects/frontend-6-2.gif"
             ]
           }
         ]
@@ -188,7 +193,7 @@
         "items": [
           {
             "title": "Placeholder Visual Arts Project 1",
-            "description": "Placeholder description of what this project does and why it's interesting.",
+            "description": "-",
             "tags": [
               "Illustration",
               "Design"
@@ -202,7 +207,7 @@
           },
           {
             "title": "Placeholder Visual Arts Project 2",
-            "description": "Placeholder description of what this project does and why it's interesting.",
+            "description": "-",
             "tags": [
               "Illustration",
               "Design"
@@ -216,7 +221,7 @@
           },
           {
             "title": "Placeholder Visual Arts Project 3",
-            "description": "Placeholder description of what this project does and why it's interesting.",
+            "description": "-",
             "tags": [
               "Illustration",
               "Design"
@@ -230,7 +235,7 @@
           },
           {
             "title": "Placeholder Visual Arts Project 4",
-            "description": "Placeholder description of what this project does and why it's interesting.",
+            "description": "-",
             "tags": [
               "Illustration",
               "Design"
@@ -244,7 +249,7 @@
           },
           {
             "title": "Placeholder Visual Arts Project 5",
-            "description": "Placeholder description of what this project does and why it's interesting.",
+            "description": "-",
             "tags": [
               "Illustration",
               "Design"
@@ -258,7 +263,7 @@
           },
           {
             "title": "Placeholder Visual Arts Project 6",
-            "description": "Placeholder description of what this project does and why it's interesting.",
+            "description": "-",
             "tags": [
               "Illustration",
               "Design"
@@ -283,7 +288,7 @@
         "items": [
           {
             "title": "Placeholder Music Project 1",
-            "description": "Placeholder description of what this project does and why it's interesting.",
+            "description": "-",
             "tags": [
               "Audio",
               "Production"
@@ -297,7 +302,7 @@
           },
           {
             "title": "Placeholder Music Project 2",
-            "description": "Placeholder description of what this project does and why it's interesting.",
+            "description": "-",
             "tags": [
               "Audio",
               "Production"
@@ -311,7 +316,7 @@
           },
           {
             "title": "Placeholder Music Project 3",
-            "description": "Placeholder description of what this project does and why it's interesting.",
+            "description": "-",
             "tags": [
               "Audio",
               "Production"
@@ -325,7 +330,7 @@
           },
           {
             "title": "Placeholder Music Project 4",
-            "description": "Placeholder description of what this project does and why it's interesting.",
+            "description": "-",
             "tags": [
               "Audio",
               "Production"
@@ -339,7 +344,7 @@
           },
           {
             "title": "Placeholder Music Project 5",
-            "description": "Placeholder description of what this project does and why it's interesting.",
+            "description": "-",
             "tags": [
               "Audio",
               "Production"
@@ -353,7 +358,7 @@
           },
           {
             "title": "Placeholder Music Project 6",
-            "description": "Placeholder description of what this project does and why it's interesting.",
+            "description": "-",
             "tags": [
               "Audio",
               "Production"
@@ -371,12 +376,15 @@
     "closeLabel": "Close",
     "seeProjectsLabel": "More stuff",
     "dotLabel": "Go to image",
+    "prevImageLabel": "Previous image",
+    "nextImageLabel": "Next image",
     "titleLabel": "Title",
     "categoryLabel": "Category",
     "descriptionLabel": "Description",
     "visitSiteLabel": "Visit site",
     "prevProjectLabel": "Previous project",
-    "nextProjectLabel": "Next project"
+    "nextProjectLabel": "Next project",
+    "moreProjectsLabel": "Projects"
   },
   "skills": {
     "heading": "Skills",

@@ -90,7 +90,7 @@
         "items": [
           {
             "title": "Portafolio Juan Martínez Tirado",
-            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "description": "En equipo con Juan, soñamos, planeamos y construimos su portafolio al servicio de otros.",
             "tags": [
               "JavaScript",
               "CSS"
@@ -106,22 +106,24 @@
             ]
           },
           {
-            "title": "Proyecto de Front-end de ejemplo 2",
-            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "title": "Juegos Web",
+            "description": "-",
             "tags": [
               "JavaScript",
               "CSS"
             ],
-            "imageAlt": "Captura de pantalla del Proyecto de Front-end de ejemplo 2",
+            "imageAlt": "Captura de pantalla de juegos web",
             "href": "#",
             "repo": "#",
             "images": [
-              "assets/images/projects/frontend-2.webp"
+              "assets/images/projects/frontend-2-1.webp",
+              "assets/images/projects/frontend-2-2.webp",
+              "assets/images/projects/frontend-2-3.webp"
             ]
           },
           {
             "title": "Proyecto de Front-end de ejemplo 3",
-            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "description": "-",
             "tags": [
               "JavaScript",
               "CSS"
@@ -130,12 +132,14 @@
             "href": "#",
             "repo": "#",
             "images": [
-              "assets/images/projects/frontend-3.webp"
+              "assets/images/projects/frontend-3-1.webp",
+              "assets/images/projects/frontend-3-2.webp",
+              "assets/images/projects/frontend-3-3.webp"
             ]
           },
           {
             "title": "Proyecto de Front-end de ejemplo 4",
-            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "description": "-",
             "tags": [
               "JavaScript",
               "CSS"
@@ -144,12 +148,12 @@
             "href": "#",
             "repo": "#",
             "images": [
-              "assets/images/projects/frontend-4.webp"
+              "assets/images/projects/frontend-4-1.webp"
             ]
           },
           {
             "title": "Proyecto de Front-end de ejemplo 5",
-            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "description": "-",
             "tags": [
               "JavaScript",
               "CSS"
@@ -158,12 +162,12 @@
             "href": "#",
             "repo": "#",
             "images": [
-              "assets/images/projects/frontend-5.webp"
+              "assets/images/projects/frontend-5-1.png"
             ]
           },
           {
             "title": "Proyecto de Front-end de ejemplo 6",
-            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "description": "-",
             "tags": [
               "JavaScript",
               "CSS"
@@ -172,7 +176,8 @@
             "href": "#",
             "repo": "#",
             "images": [
-              "assets/images/projects/frontend-6.webp"
+              "assets/images/projects/frontend-6-1.webp",
+              "assets/images/projects/frontend-6-2.gif"
             ]
           }
         ]
@@ -188,7 +193,7 @@
         "items": [
           {
             "title": "Proyecto de Artes Visuales de ejemplo 1",
-            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "description": "-",
             "tags": [
               "Ilustración",
               "Diseño"
@@ -202,7 +207,7 @@
           },
           {
             "title": "Proyecto de Artes Visuales de ejemplo 2",
-            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "description": "-",
             "tags": [
               "Ilustración",
               "Diseño"
@@ -216,7 +221,7 @@
           },
           {
             "title": "Proyecto de Artes Visuales de ejemplo 3",
-            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "description": "-",
             "tags": [
               "Ilustración",
               "Diseño"
@@ -230,7 +235,7 @@
           },
           {
             "title": "Proyecto de Artes Visuales de ejemplo 4",
-            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "description": "-",
             "tags": [
               "Ilustración",
               "Diseño"
@@ -244,7 +249,7 @@
           },
           {
             "title": "Proyecto de Artes Visuales de ejemplo 5",
-            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "description": "-",
             "tags": [
               "Ilustración",
               "Diseño"
@@ -258,7 +263,7 @@
           },
           {
             "title": "Proyecto de Artes Visuales de ejemplo 6",
-            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "description": "-",
             "tags": [
               "Ilustración",
               "Diseño"
@@ -283,7 +288,7 @@
         "items": [
           {
             "title": "Proyecto de Música de ejemplo 1",
-            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "description": "-",
             "tags": [
               "Audio",
               "Producción"
@@ -297,7 +302,7 @@
           },
           {
             "title": "Proyecto de Música de ejemplo 2",
-            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "description": "-",
             "tags": [
               "Audio",
               "Producción"
@@ -311,7 +316,7 @@
           },
           {
             "title": "Proyecto de Música de ejemplo 3",
-            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "description": "-",
             "tags": [
               "Audio",
               "Producción"
@@ -325,7 +330,7 @@
           },
           {
             "title": "Proyecto de Música de ejemplo 4",
-            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "description": "-",
             "tags": [
               "Audio",
               "Producción"
@@ -339,7 +344,7 @@
           },
           {
             "title": "Proyecto de Música de ejemplo 5",
-            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "description": "-",
             "tags": [
               "Audio",
               "Producción"
@@ -353,7 +358,7 @@
           },
           {
             "title": "Proyecto de Música de ejemplo 6",
-            "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
+            "description": "-",
             "tags": [
               "Audio",
               "Producción"
@@ -371,12 +376,15 @@
     "closeLabel": "Cerrar",
     "seeProjectsLabel": "Más cosas",
     "dotLabel": "Ir a la imagen",
+    "prevImageLabel": "Imagen anterior",
+    "nextImageLabel": "Imagen siguiente",
     "titleLabel": "Título",
     "categoryLabel": "Categoría",
     "descriptionLabel": "Descripción",
     "visitSiteLabel": "Ver sitio",
     "prevProjectLabel": "Proyecto anterior",
-    "nextProjectLabel": "Siguiente proyecto"
+    "nextProjectLabel": "Siguiente proyecto",
+    "moreProjectsLabel": "Proyectos"
   },
   "skills": {
     "heading": "Habilidades",
