@@ -89,19 +89,20 @@
         ],
         "items": [
           {
-            "title": "Proyecto de Front-end de ejemplo 1",
+            "title": "Portafolio Juan Martínez Tirado",
             "description": "Descripción de ejemplo de qué hace este proyecto y por qué es interesante.",
             "tags": [
               "JavaScript",
               "CSS"
             ],
-            "imageAlt": "Captura de pantalla del Proyecto de Front-end de ejemplo 1",
+            "imageAlt": "Captura de pantalla Portafolio Juan Martínez Tirado",
             "href": "#",
             "repo": "#",
+            "siteUrl": "https://www.juanmartineztirado.com/",
             "images": [
-              "assets/images/projects/frontend-1.webp",
-              "assets/images/projects/frontend-2.webp",
-              "https://www.youtube.com/embed/jNQXAC9IVRw"
+              "assets/images/projects/frontend-1-1.png",
+              "assets/images/projects/frontend-1-2.png",
+              "assets/images/projects/frontend-1-3.png"
             ]
           },
           {
@@ -368,8 +369,14 @@
       }
     ],
     "closeLabel": "Cerrar",
-    "prevLabel": "Imagen anterior",
-    "nextLabel": "Imagen siguiente"
+    "seeProjectsLabel": "Más cosas",
+    "dotLabel": "Ir a la imagen",
+    "titleLabel": "Título",
+    "categoryLabel": "Categoría",
+    "descriptionLabel": "Descripción",
+    "visitSiteLabel": "Ver sitio",
+    "prevProjectLabel": "Proyecto anterior",
+    "nextProjectLabel": "Siguiente proyecto"
   },
   "skills": {
     "heading": "Habilidades",

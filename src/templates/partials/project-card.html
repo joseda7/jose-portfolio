@@ -1,7 +1,8 @@
 <figure class="gallery__item gallery__item--{{size}}">
-    <button type="button" class="gallery__item-trigger" data-title="{{title}}" data-description="{{description}}" data-tags="{{{tagsJson}}}" data-images="{{{imagesJson}}}">
+    <button type="button" class="gallery__item-trigger" data-title="{{title}}" data-category="{{category}}" data-description="{{description}}" data-tags="{{{tagsJson}}}" data-images="{{{imagesJson}}}" data-site-url="{{siteUrl}}">
         <img src="{{image}}" alt="{{imageAlt}}" loading="lazy">
         <figcaption>
+            <span class="gallery__item-title">{{title}}</span>
             <span class="gallery__item-tags">{{{tagsHtml}}}</span>
         </figcaption>
     </button>

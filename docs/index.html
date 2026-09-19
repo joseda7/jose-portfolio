@@ -18,9 +18,11 @@
     <div class="layout">
     <section class="pane pane--content" aria-label="Sobre mí">
         <header class="pane-header">
-            <div class="pane-header__group fade-target">
-                <img class="avatar" src="assets/images/headshot.png" alt="Foto de Jose Alcaraz" width="32" height="32">
-                <div class="pane-header__meta">
+            <div class="pane-header__group">
+                <button type="button" class="avatar-btn" aria-label="Volver">
+                    <img class="avatar" src="assets/images/headshot.png" alt="Foto de Jose Alcaraz" width="32" height="32">
+                </button>
+                <div class="pane-header__meta fade-target">
                     <span class="pane-header__name">Jose Alcaraz</span>
                     <a class="available-label" href="https://www.linkedin.com/in/jose-alcaraz/" target="_blank">Disponible</a>
                 </div>
@@ -54,6 +56,10 @@
                     </div>
                 </div>
                 <audio class="song-audio" src="assets/audio/arte-y-tecnologia.m4a" preload="none" hidden></audio>
+                <div class="song-overlay__actions">
+                    <a class="cv-btn" href="#all">Más cosas</a>
+                    <a class="main-menu__contact" href="mailto:jose.david.alcaraz7@gmail.com">Conversemos</a>
+                </div>
             </div>
             <footer class="pane-footer">
                 <div class="pane-footer__links">
@@ -95,162 +101,180 @@
     <section class="pane pane--gallery" aria-label="Proyectos">
         <div class="gallery">
             <div class="gallery__category" data-category="frontend" aria-label="Front-end"><figure class="gallery__item gallery__item--l">
-    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Front-end de ejemplo 1" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;JavaScript&quot;,&quot;CSS&quot;]" data-images="[&quot;assets/images/projects/frontend-1.webp&quot;,&quot;assets/images/projects/frontend-2.webp&quot;,&quot;https://www.youtube.com/embed/jNQXAC9IVRw&quot;]">
-        <img src="assets/images/projects/frontend-1.webp" alt="Captura de pantalla del Proyecto de Front-end de ejemplo 1" loading="lazy">
+    <button type="button" class="gallery__item-trigger" data-title="Portafolio Juan Martínez Tirado" data-category="Front-end" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;JavaScript&quot;,&quot;CSS&quot;]" data-images="[&quot;assets/images/projects/frontend-1-1.png&quot;,&quot;assets/images/projects/frontend-1-2.png&quot;,&quot;assets/images/projects/frontend-1-3.png&quot;]" data-site-url="https://www.juanmartineztirado.com/">
+        <img src="assets/images/projects/frontend-1-1.png" alt="Captura de pantalla Portafolio Juan Martínez Tirado" loading="lazy">
         <figcaption>
+            <span class="gallery__item-title">Portafolio Juan Martínez Tirado</span>
             <span class="gallery__item-tags">JavaScript • CSS</span>
         </figcaption>
     </button>
 </figure>
 
 <figure class="gallery__item gallery__item--s">
-    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Front-end de ejemplo 2" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;JavaScript&quot;,&quot;CSS&quot;]" data-images="[&quot;assets/images/projects/frontend-2.webp&quot;]">
+    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Front-end de ejemplo 2" data-category="Front-end" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;JavaScript&quot;,&quot;CSS&quot;]" data-images="[&quot;assets/images/projects/frontend-2.webp&quot;]" data-site-url="">
         <img src="assets/images/projects/frontend-2.webp" alt="Captura de pantalla del Proyecto de Front-end de ejemplo 2" loading="lazy">
         <figcaption>
+            <span class="gallery__item-title">Proyecto de Front-end de ejemplo 2</span>
             <span class="gallery__item-tags">JavaScript • CSS</span>
         </figcaption>
     </button>
 </figure>
 
 <figure class="gallery__item gallery__item--s">
-    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Front-end de ejemplo 3" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;JavaScript&quot;,&quot;CSS&quot;]" data-images="[&quot;assets/images/projects/frontend-3.webp&quot;]">
+    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Front-end de ejemplo 3" data-category="Front-end" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;JavaScript&quot;,&quot;CSS&quot;]" data-images="[&quot;assets/images/projects/frontend-3.webp&quot;]" data-site-url="">
         <img src="assets/images/projects/frontend-3.webp" alt="Captura de pantalla del Proyecto de Front-end de ejemplo 3" loading="lazy">
         <figcaption>
+            <span class="gallery__item-title">Proyecto de Front-end de ejemplo 3</span>
             <span class="gallery__item-tags">JavaScript • CSS</span>
         </figcaption>
     </button>
 </figure>
 
 <figure class="gallery__item gallery__item--s">
-    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Front-end de ejemplo 4" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;JavaScript&quot;,&quot;CSS&quot;]" data-images="[&quot;assets/images/projects/frontend-4.webp&quot;]">
+    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Front-end de ejemplo 4" data-category="Front-end" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;JavaScript&quot;,&quot;CSS&quot;]" data-images="[&quot;assets/images/projects/frontend-4.webp&quot;]" data-site-url="">
         <img src="assets/images/projects/frontend-4.webp" alt="Captura de pantalla del Proyecto de Front-end de ejemplo 4" loading="lazy">
         <figcaption>
+            <span class="gallery__item-title">Proyecto de Front-end de ejemplo 4</span>
             <span class="gallery__item-tags">JavaScript • CSS</span>
         </figcaption>
     </button>
 </figure>
 
 <figure class="gallery__item gallery__item--l">
-    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Front-end de ejemplo 5" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;JavaScript&quot;,&quot;CSS&quot;]" data-images="[&quot;assets/images/projects/frontend-5.webp&quot;]">
+    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Front-end de ejemplo 5" data-category="Front-end" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;JavaScript&quot;,&quot;CSS&quot;]" data-images="[&quot;assets/images/projects/frontend-5.webp&quot;]" data-site-url="">
         <img src="assets/images/projects/frontend-5.webp" alt="Captura de pantalla del Proyecto de Front-end de ejemplo 5" loading="lazy">
         <figcaption>
+            <span class="gallery__item-title">Proyecto de Front-end de ejemplo 5</span>
             <span class="gallery__item-tags">JavaScript • CSS</span>
         </figcaption>
     </button>
 </figure>
 
 <figure class="gallery__item gallery__item--s">
-    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Front-end de ejemplo 6" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;JavaScript&quot;,&quot;CSS&quot;]" data-images="[&quot;assets/images/projects/frontend-6.webp&quot;]">
+    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Front-end de ejemplo 6" data-category="Front-end" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;JavaScript&quot;,&quot;CSS&quot;]" data-images="[&quot;assets/images/projects/frontend-6.webp&quot;]" data-site-url="">
         <img src="assets/images/projects/frontend-6.webp" alt="Captura de pantalla del Proyecto de Front-end de ejemplo 6" loading="lazy">
         <figcaption>
+            <span class="gallery__item-title">Proyecto de Front-end de ejemplo 6</span>
             <span class="gallery__item-tags">JavaScript • CSS</span>
         </figcaption>
     </button>
 </figure>
 </div>
 <div class="gallery__category" data-category="visual-design" aria-label="Visual design"><figure class="gallery__item gallery__item--l">
-    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Artes Visuales de ejemplo 1" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;Ilustración&quot;,&quot;Diseño&quot;]" data-images="[&quot;assets/images/projects/visual-arts-1.webp&quot;]">
+    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Artes Visuales de ejemplo 1" data-category="Visual design" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;Ilustración&quot;,&quot;Diseño&quot;]" data-images="[&quot;assets/images/projects/visual-arts-1.webp&quot;]" data-site-url="">
         <img src="assets/images/projects/visual-arts-1.webp" alt="Captura de pantalla del Proyecto de Artes Visuales de ejemplo 1" loading="lazy">
         <figcaption>
+            <span class="gallery__item-title">Proyecto de Artes Visuales de ejemplo 1</span>
             <span class="gallery__item-tags">Ilustración • Diseño</span>
         </figcaption>
     </button>
 </figure>
 
 <figure class="gallery__item gallery__item--s">
-    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Artes Visuales de ejemplo 2" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;Ilustración&quot;,&quot;Diseño&quot;]" data-images="[&quot;assets/images/projects/visual-arts-2.webp&quot;]">
+    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Artes Visuales de ejemplo 2" data-category="Visual design" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;Ilustración&quot;,&quot;Diseño&quot;]" data-images="[&quot;assets/images/projects/visual-arts-2.webp&quot;]" data-site-url="">
         <img src="assets/images/projects/visual-arts-2.webp" alt="Captura de pantalla del Proyecto de Artes Visuales de ejemplo 2" loading="lazy">
         <figcaption>
+            <span class="gallery__item-title">Proyecto de Artes Visuales de ejemplo 2</span>
             <span class="gallery__item-tags">Ilustración • Diseño</span>
         </figcaption>
     </button>
 </figure>
 
 <figure class="gallery__item gallery__item--s">
-    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Artes Visuales de ejemplo 3" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;Ilustración&quot;,&quot;Diseño&quot;]" data-images="[&quot;assets/images/projects/visual-arts-3.webp&quot;]">
+    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Artes Visuales de ejemplo 3" data-category="Visual design" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;Ilustración&quot;,&quot;Diseño&quot;]" data-images="[&quot;assets/images/projects/visual-arts-3.webp&quot;]" data-site-url="">
         <img src="assets/images/projects/visual-arts-3.webp" alt="Captura de pantalla del Proyecto de Artes Visuales de ejemplo 3" loading="lazy">
         <figcaption>
+            <span class="gallery__item-title">Proyecto de Artes Visuales de ejemplo 3</span>
             <span class="gallery__item-tags">Ilustración • Diseño</span>
         </figcaption>
     </button>
 </figure>
 
 <figure class="gallery__item gallery__item--s">
-    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Artes Visuales de ejemplo 4" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;Ilustración&quot;,&quot;Diseño&quot;]" data-images="[&quot;assets/images/projects/visual-arts-4.webp&quot;]">
+    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Artes Visuales de ejemplo 4" data-category="Visual design" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;Ilustración&quot;,&quot;Diseño&quot;]" data-images="[&quot;assets/images/projects/visual-arts-4.webp&quot;]" data-site-url="">
         <img src="assets/images/projects/visual-arts-4.webp" alt="Captura de pantalla del Proyecto de Artes Visuales de ejemplo 4" loading="lazy">
         <figcaption>
+            <span class="gallery__item-title">Proyecto de Artes Visuales de ejemplo 4</span>
             <span class="gallery__item-tags">Ilustración • Diseño</span>
         </figcaption>
     </button>
 </figure>
 
 <figure class="gallery__item gallery__item--l">
-    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Artes Visuales de ejemplo 5" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;Ilustración&quot;,&quot;Diseño&quot;]" data-images="[&quot;assets/images/projects/visual-arts-5.webp&quot;]">
+    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Artes Visuales de ejemplo 5" data-category="Visual design" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;Ilustración&quot;,&quot;Diseño&quot;]" data-images="[&quot;assets/images/projects/visual-arts-5.webp&quot;]" data-site-url="">
         <img src="assets/images/projects/visual-arts-5.webp" alt="Captura de pantalla del Proyecto de Artes Visuales de ejemplo 5" loading="lazy">
         <figcaption>
+            <span class="gallery__item-title">Proyecto de Artes Visuales de ejemplo 5</span>
             <span class="gallery__item-tags">Ilustración • Diseño</span>
         </figcaption>
     </button>
 </figure>
 
 <figure class="gallery__item gallery__item--s">
-    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Artes Visuales de ejemplo 6" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;Ilustración&quot;,&quot;Diseño&quot;]" data-images="[&quot;assets/images/projects/visual-arts-6.webp&quot;]">
+    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Artes Visuales de ejemplo 6" data-category="Visual design" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;Ilustración&quot;,&quot;Diseño&quot;]" data-images="[&quot;assets/images/projects/visual-arts-6.webp&quot;]" data-site-url="">
         <img src="assets/images/projects/visual-arts-6.webp" alt="Captura de pantalla del Proyecto de Artes Visuales de ejemplo 6" loading="lazy">
         <figcaption>
+            <span class="gallery__item-title">Proyecto de Artes Visuales de ejemplo 6</span>
             <span class="gallery__item-tags">Ilustración • Diseño</span>
         </figcaption>
     </button>
 </figure>
 </div>
 <div class="gallery__category" data-category="music" aria-label="Música"><figure class="gallery__item gallery__item--l">
-    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Música de ejemplo 1" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;Audio&quot;,&quot;Producción&quot;]" data-images="[&quot;assets/images/projects/music-1.webp&quot;]">
+    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Música de ejemplo 1" data-category="Música" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;Audio&quot;,&quot;Producción&quot;]" data-images="[&quot;assets/images/projects/music-1.webp&quot;]" data-site-url="">
         <img src="assets/images/projects/music-1.webp" alt="Captura de pantalla del Proyecto de Música de ejemplo 1" loading="lazy">
         <figcaption>
+            <span class="gallery__item-title">Proyecto de Música de ejemplo 1</span>
             <span class="gallery__item-tags">Audio • Producción</span>
         </figcaption>
     </button>
 </figure>
 
 <figure class="gallery__item gallery__item--s">
-    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Música de ejemplo 2" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;Audio&quot;,&quot;Producción&quot;]" data-images="[&quot;assets/images/projects/music-2.webp&quot;]">
+    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Música de ejemplo 2" data-category="Música" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;Audio&quot;,&quot;Producción&quot;]" data-images="[&quot;assets/images/projects/music-2.webp&quot;]" data-site-url="">
         <img src="assets/images/projects/music-2.webp" alt="Captura de pantalla del Proyecto de Música de ejemplo 2" loading="lazy">
         <figcaption>
+            <span class="gallery__item-title">Proyecto de Música de ejemplo 2</span>
             <span class="gallery__item-tags">Audio • Producción</span>
         </figcaption>
     </button>
 </figure>
 
 <figure class="gallery__item gallery__item--s">
-    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Música de ejemplo 3" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;Audio&quot;,&quot;Producción&quot;]" data-images="[&quot;assets/images/projects/music-3.webp&quot;]">
+    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Música de ejemplo 3" data-category="Música" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;Audio&quot;,&quot;Producción&quot;]" data-images="[&quot;assets/images/projects/music-3.webp&quot;]" data-site-url="">
         <img src="assets/images/projects/music-3.webp" alt="Captura de pantalla del Proyecto de Música de ejemplo 3" loading="lazy">
         <figcaption>
+            <span class="gallery__item-title">Proyecto de Música de ejemplo 3</span>
             <span class="gallery__item-tags">Audio • Producción</span>
         </figcaption>
     </button>
 </figure>
 
 <figure class="gallery__item gallery__item--s">
-    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Música de ejemplo 4" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;Audio&quot;,&quot;Producción&quot;]" data-images="[&quot;assets/images/projects/music-4.webp&quot;]">
+    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Música de ejemplo 4" data-category="Música" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;Audio&quot;,&quot;Producción&quot;]" data-images="[&quot;assets/images/projects/music-4.webp&quot;]" data-site-url="">
         <img src="assets/images/projects/music-4.webp" alt="Captura de pantalla del Proyecto de Música de ejemplo 4" loading="lazy">
         <figcaption>
+            <span class="gallery__item-title">Proyecto de Música de ejemplo 4</span>
             <span class="gallery__item-tags">Audio • Producción</span>
         </figcaption>
     </button>
 </figure>
 
 <figure class="gallery__item gallery__item--l">
-    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Música de ejemplo 5" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;Audio&quot;,&quot;Producción&quot;]" data-images="[&quot;assets/images/projects/music-5.webp&quot;]">
+    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Música de ejemplo 5" data-category="Música" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;Audio&quot;,&quot;Producción&quot;]" data-images="[&quot;assets/images/projects/music-5.webp&quot;]" data-site-url="">
         <img src="assets/images/projects/music-5.webp" alt="Captura de pantalla del Proyecto de Música de ejemplo 5" loading="lazy">
         <figcaption>
+            <span class="gallery__item-title">Proyecto de Música de ejemplo 5</span>
             <span class="gallery__item-tags">Audio • Producción</span>
         </figcaption>
     </button>
 </figure>
 
 <figure class="gallery__item gallery__item--s">
-    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Música de ejemplo 6" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;Audio&quot;,&quot;Producción&quot;]" data-images="[&quot;assets/images/projects/music-6.webp&quot;]">
+    <button type="button" class="gallery__item-trigger" data-title="Proyecto de Música de ejemplo 6" data-category="Música" data-description="Descripción de ejemplo de qué hace este proyecto y por qué es interesante." data-tags="[&quot;Audio&quot;,&quot;Producción&quot;]" data-images="[&quot;assets/images/projects/music-6.webp&quot;]" data-site-url="">
         <img src="assets/images/projects/music-6.webp" alt="Captura de pantalla del Proyecto de Música de ejemplo 6" loading="lazy">
         <figcaption>
+            <span class="gallery__item-title">Proyecto de Música de ejemplo 6</span>
             <span class="gallery__item-tags">Audio • Producción</span>
         </figcaption>
     </button>
@@ -259,20 +283,63 @@
         </div>
     </section>
 
-    <div class="song-overlay"></div>
+    <div class="song-overlay">
+        <div class="song-overlay__header">
+            <button type="button" class="song-overlay__brand-btn" aria-label="Cerrar">
+                <img class="avatar" src="assets/images/headshot.png" alt="Foto de Jose Alcaraz" width="32" height="32">
+                <span class="pane-header__name">Jose Alcaraz</span>
+            </button>
+            <button type="button" class="song-overlay__close" aria-label="Cerrar">
+                <span class="song-overlay__close-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
 
     <div class="project-modal" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
-        <button type="button" class="project-modal__close" aria-label="Cerrar">&times;</button>
         <div class="project-modal__content">
-            <div class="project-modal__info">
-                <h2 class="project-modal__title" id="project-modal-title"></h2>
-                <div class="project-modal__tags"></div>
-                <p class="project-modal__description"></p>
+            <div class="project-modal__header">
+                <button type="button" class="project-modal__brand-btn" aria-label="Cerrar">
+                    <img class="avatar" src="assets/images/headshot.png" alt="Foto de Jose Alcaraz" width="32" height="32">
+                    <span class="pane-header__name">Jose Alcaraz</span>
+                </button>
+                <button type="button" class="project-modal__close" aria-label="Cerrar">
+                    <span class="project-modal__close-icon" aria-hidden="true"></span>
+                </button>
             </div>
-            <div class="project-modal__slider">
-                <button type="button" class="project-modal__prev" aria-label="Imagen anterior">&lsaquo;</button>
+            <div class="project-modal__body">
                 <div class="project-modal__media"></div>
-                <button type="button" class="project-modal__next" aria-label="Imagen siguiente">&rsaquo;</button>
+                <div class="project-modal__dots" data-dot-label="Ir a la imagen"></div>
+            </div>
+            <div class="project-modal__footer">
+                <hr class="project-modal__divider">
+                <div class="project-modal__footer-row">
+                    <div class="project-modal__col-group">
+                        <div class="project-modal__col">
+                            <h2 class="project-modal__title" id="project-modal-title"></h2>
+                        </div>
+                        <div class="project-modal__col">
+                            <div class="project-modal__category"></div>
+                            <div class="project-modal__tags"></div>
+                        </div>
+                        <div class="project-modal__col">
+                            <p class="project-modal__description"></p>
+                        </div>
+                        <div class="project-modal__col project-modal__col--site" hidden>
+                            <a class="project-modal__site-link" target="_blank" rel="noopener noreferrer">
+                                Ver sitio
+                                <span class="project-modal__site-link-icon" aria-hidden="true"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-modal__col project-modal__col--nav">
+                        <button type="button" class="project-modal__prev-project" aria-label="Proyecto anterior">
+                            <span class="project-modal__prev-project-icon" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="project-modal__next-project" aria-label="Siguiente proyecto">
+                            <span class="project-modal__next-project-icon" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

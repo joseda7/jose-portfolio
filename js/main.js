@@ -2,14 +2,26 @@ const DESKTOP_QUERY = '(min-width: 900px)';
 
 function initPaneSwap() {
     const layout = document.querySelector('.layout');
+    const gallery = document.querySelector('.pane--gallery');
     const openButton = document.querySelector('.gallery-open-btn');
+    const avatarButton = document.querySelector('.avatar-btn');
     if (!layout) return;
 
     const isDesktop = () => window.matchMedia(DESKTOP_QUERY).matches;
 
+    gallery?.addEventListener('click', () => {
+        if (isDesktop()) return;
+        layout.classList.add('is-swapped');
+    });
+
     openButton?.addEventListener('click', () => {
         if (isDesktop()) return;
         layout.classList.toggle('is-swapped');
+    });
+
+    avatarButton?.addEventListener('click', () => {
+        if (isDesktop()) return;
+        layout.classList.remove('is-swapped');
     });
 }
 
@@ -212,7 +224,7 @@ function initCategoryNav() {
         }
     });
 
-    const initialKey = location.hash.slice(1);
+    const initialKey = location.hash.slice(1).split('?')[0];
     if (buttons.some((b) => b.dataset.category === initialKey)) {
         activate(initialKey, { updateHash: false });
     } else if (categories[0]) {
@@ -267,10 +279,7 @@ function initSongOverlay() {
         });
     }
 
-    let hideTimer = null;
-
     audio.addEventListener('play', () => {
-        clearTimeout(hideTimer);
         audio.hidden = false;
         overlay.classList.add('is-active');
         if (essay && !window.matchMedia(DESKTOP_QUERY).matches) {
@@ -280,41 +289,49 @@ function initSongOverlay() {
             });
         }
     });
-    function hideAudio() {
+
+    // Pausing from the native controls (or while scrubbing) only stops playback;
+    // it does not close the overlay. Closing is an explicit action (overlay click
+    // or one of its header buttons), which also stops playback.
+    function closeOverlay() {
         overlay.classList.remove('is-active');
         audio.hidden = true;
         if (playButton) playButton.hidden = false;
+        if (!audio.paused) audio.pause();
     }
-    audio.addEventListener('pause', () => {
-        // Scrubbing the native seek bar briefly pauses then resumes playback;
-        // wait a beat so that doesn't get mistaken for the user stopping the song.
-        clearTimeout(hideTimer);
-        hideTimer = setTimeout(() => {
-            if (audio.paused) hideAudio();
-        }, 250);
+    audio.addEventListener('ended', closeOverlay);
+    overlay.addEventListener('click', closeOverlay);
+
+    document.querySelectorAll('.song-overlay__actions a').forEach((link) => {
+        link.addEventListener('click', closeOverlay);
     });
-    audio.addEventListener('ended', hideAudio);
-    overlay.addEventListener('click', () => audio.pause());
 }
 
 function initProjectModal() {
     const modal = document.querySelector('.project-modal');
     const closeButton = document.querySelector('.project-modal__close');
-    const prevButton = document.querySelector('.project-modal__prev');
-    const nextButton = document.querySelector('.project-modal__next');
+    const brandButton = document.querySelector('.project-modal__brand-btn');
     const titleEl = document.querySelector('.project-modal__title');
+    const categoryEl = document.querySelector('.project-modal__category');
     const tagsEl = document.querySelector('.project-modal__tags');
     const descriptionEl = document.querySelector('.project-modal__description');
+    const siteColEl = document.querySelector('.project-modal__col--site');
+    const siteLinkEl = document.querySelector('.project-modal__site-link');
     const mediaEl = document.querySelector('.project-modal__media');
+    const dotsEl = document.querySelector('.project-modal__dots');
+    const prevProjectButton = document.querySelector('.project-modal__prev-project');
+    const nextProjectButton = document.querySelector('.project-modal__next-project');
     const triggers = [...document.querySelectorAll('.gallery__item-trigger')];
     const layout = document.querySelector('.layout');
-    if (!modal || !closeButton || !prevButton || !nextButton
-        || !titleEl || !tagsEl || !descriptionEl || !mediaEl || !triggers.length) return;
+    if (!modal || !closeButton || !titleEl || !categoryEl || !tagsEl || !descriptionEl
+        || !mediaEl || !dotsEl || !prevProjectButton || !nextProjectButton || !triggers.length) return;
 
     const isDesktop = () => window.matchMedia(DESKTOP_QUERY).matches;
     const YOUTUBE_PATTERN = /youtube\.com|youtu\.be/;
+    const dotLabel = dotsEl.dataset.dotLabel || 'Image';
     let images = [];
     let index = 0;
+    let triggerIndex = 0;
     let lastTrigger = null;
 
     function showMedia() {
@@ -334,27 +351,65 @@ function initProjectModal() {
             img.alt = label;
             mediaEl.appendChild(img);
         }
+        [...dotsEl.children].forEach((dot, i) => dot.classList.toggle('is-active', i === index));
     }
 
-    function openModal(trigger) {
+    function renderDots() {
+        dotsEl.innerHTML = '';
+        dotsEl.hidden = images.length <= 1;
+        images.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = 'project-modal__dot';
+            dot.setAttribute('aria-label', `${dotLabel} ${i + 1}`);
+            dot.addEventListener('click', () => {
+                index = i;
+                showMedia();
+            });
+            dotsEl.appendChild(dot);
+        });
+    }
+
+    function getProjectRef(trigger) {
+        const categoryEl = trigger.closest('.gallery__category');
+        if (!categoryEl) return null;
+        const siblings = [...categoryEl.querySelectorAll('.gallery__item-trigger')];
+        return { key: categoryEl.dataset.category, p: siblings.indexOf(trigger) + 1 };
+    }
+
+    function openModal(trigger, { updateHash = true } = {}) {
+        triggerIndex = triggers.indexOf(trigger);
         titleEl.textContent = trigger.dataset.title;
+        categoryEl.textContent = trigger.dataset.category;
         descriptionEl.textContent = trigger.dataset.description;
         tagsEl.textContent = JSON.parse(trigger.dataset.tags).join(' • ');
+        if (siteColEl && siteLinkEl) {
+            const siteUrl = trigger.dataset.siteUrl;
+            siteColEl.hidden = !siteUrl;
+            siteLinkEl.href = siteUrl || '';
+        }
         images = JSON.parse(trigger.dataset.images);
         index = 0;
-        prevButton.hidden = images.length <= 1;
-        nextButton.hidden = images.length <= 1;
+        renderDots();
         showMedia();
 
         lastTrigger = trigger;
         modal.classList.add('is-active');
         closeButton.focus();
+
+        if (updateHash) {
+            const ref = getProjectRef(trigger);
+            if (ref) history.replaceState(null, '', `#${ref.key}?p=${ref.p}`);
+        }
     }
 
     function closeModal() {
         modal.classList.remove('is-active');
         mediaEl.innerHTML = '';
         lastTrigger?.focus();
+
+        const ref = lastTrigger && getProjectRef(lastTrigger);
+        if (ref) history.replaceState(null, '', `#${ref.key}`);
     }
 
     triggers.forEach((trigger) => {
@@ -365,13 +420,14 @@ function initProjectModal() {
     });
 
     closeButton.addEventListener('click', closeModal);
-    prevButton.addEventListener('click', () => {
-        index = (index - 1 + images.length) % images.length;
-        showMedia();
+    brandButton?.addEventListener('click', closeModal);
+    prevProjectButton.addEventListener('click', () => {
+        triggerIndex = (triggerIndex - 1 + triggers.length) % triggers.length;
+        openModal(triggers[triggerIndex]);
     });
-    nextButton.addEventListener('click', () => {
-        index = (index + 1) % images.length;
-        showMedia();
+    nextProjectButton.addEventListener('click', () => {
+        triggerIndex = (triggerIndex + 1) % triggers.length;
+        openModal(triggers[triggerIndex]);
     });
     modal.addEventListener('click', (event) => {
         if (event.target === modal) closeModal();
@@ -379,6 +435,14 @@ function initProjectModal() {
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape' && modal.classList.contains('is-active')) closeModal();
     });
+
+    const [hashKey, hashQuery] = location.hash.slice(1).split('?');
+    const sharedIndex = Number(new URLSearchParams(hashQuery || '').get('p'));
+    if (hashKey && sharedIndex >= 1) {
+        const sharedCategoryEl = document.querySelector(`.gallery__category[data-category="${CSS.escape(hashKey)}"]`);
+        const sharedTrigger = sharedCategoryEl?.querySelectorAll('.gallery__item-trigger')[sharedIndex - 1];
+        if (sharedTrigger) openModal(sharedTrigger, { updateHash: false });
+    }
 }
 
 initPaneSwap();

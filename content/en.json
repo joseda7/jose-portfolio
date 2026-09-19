@@ -89,19 +89,20 @@
         ],
         "items": [
           {
-            "title": "Placeholder Front-end Project 1",
+            "title": "Juan Martínez Tirado's Portfolio",
             "description": "Placeholder description of what this project does and why it's interesting.",
             "tags": [
               "JavaScript",
               "CSS"
             ],
-            "imageAlt": "Screenshot of Placeholder Front-end Project 1",
+            "imageAlt": "Screenshot of Juan Martínez Tirado's Portfolio",
             "href": "#",
             "repo": "#",
+            "siteUrl": "https://www.juanmartineztirado.com/",
             "images": [
-              "assets/images/projects/frontend-1.webp",
-              "assets/images/projects/frontend-2.webp",
-              "https://www.youtube.com/embed/jNQXAC9IVRw"
+              "assets/images/projects/frontend-1-1.png",
+              "assets/images/projects/frontend-1-2.png",
+              "assets/images/projects/frontend-1-3.png"
             ]
           },
           {
@@ -368,8 +369,14 @@
       }
     ],
     "closeLabel": "Close",
-    "prevLabel": "Previous image",
-    "nextLabel": "Next image"
+    "seeProjectsLabel": "More stuff",
+    "dotLabel": "Go to image",
+    "titleLabel": "Title",
+    "categoryLabel": "Category",
+    "descriptionLabel": "Description",
+    "visitSiteLabel": "Visit site",
+    "prevProjectLabel": "Previous project",
+    "nextProjectLabel": "Next project"
   },
   "skills": {
     "heading": "Skills",

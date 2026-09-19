@@ -100,6 +100,7 @@ function buildPage(content) {
                 tagsHtml,
                 tagsJson: escapeHtml(JSON.stringify(item.tags)),
                 imagesJson: escapeHtml(JSON.stringify(item.images)),
+                category: cat.label,
                 size: CARD_SIZES[i % CARD_SIZES.length],
             });
         }).join('\n');

@@ -1,9 +1,11 @@
 <div class="layout">
     <section class="pane pane--content" aria-label="{{about.heading}}">
         <header class="pane-header">
-            <div class="pane-header__group fade-target">
-                <img class="avatar" src="{{about.photo}}" alt="{{about.photoAlt}}" width="32" height="32">
-                <div class="pane-header__meta">
+            <div class="pane-header__group">
+                <button type="button" class="avatar-btn" aria-label="{{nav.backLabel}}">
+                    <img class="avatar" src="{{about.photo}}" alt="{{about.photoAlt}}" width="32" height="32">
+                </button>
+                <div class="pane-header__meta fade-target">
                     <span class="pane-header__name">{{hero.name}}</span>
                     <a class="available-label" href="{{footer.linkedinHref}}" target="_blank">{{hero.availableLabel}}</a>
                 </div>
@@ -31,6 +33,10 @@
                     </div>
                 </div>
                 <audio class="song-audio" src="{{about.songSrc}}" preload="none" hidden></audio>
+                <div class="song-overlay__actions">
+                    <a class="cv-btn" href="#all">{{projects.seeProjectsLabel}}</a>
+                    <a class="main-menu__contact" href="mailto:{{nav.contactEmail}}">{{nav.contact}}</a>
+                </div>
             </div>
             <footer class="pane-footer">
                 <div class="pane-footer__links">
@@ -68,20 +74,63 @@
         </div>
     </section>
 
-    <div class="song-overlay"></div>
+    <div class="song-overlay">
+        <div class="song-overlay__header">
+            <button type="button" class="song-overlay__brand-btn" aria-label="{{projects.closeLabel}}">
+                <img class="avatar" src="{{about.photo}}" alt="{{about.photoAlt}}" width="32" height="32">
+                <span class="pane-header__name">{{hero.name}}</span>
+            </button>
+            <button type="button" class="song-overlay__close" aria-label="{{projects.closeLabel}}">
+                <span class="song-overlay__close-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
 
     <div class="project-modal" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
-        <button type="button" class="project-modal__close" aria-label="{{projects.closeLabel}}">&times;</button>
         <div class="project-modal__content">
-            <div class="project-modal__info">
-                <h2 class="project-modal__title" id="project-modal-title"></h2>
-                <div class="project-modal__tags"></div>
-                <p class="project-modal__description"></p>
+            <div class="project-modal__header">
+                <button type="button" class="project-modal__brand-btn" aria-label="{{projects.closeLabel}}">
+                    <img class="avatar" src="{{about.photo}}" alt="{{about.photoAlt}}" width="32" height="32">
+                    <span class="pane-header__name">{{hero.name}}</span>
+                </button>
+                <button type="button" class="project-modal__close" aria-label="{{projects.closeLabel}}">
+                    <span class="project-modal__close-icon" aria-hidden="true"></span>
+                </button>
             </div>
-            <div class="project-modal__slider">
-                <button type="button" class="project-modal__prev" aria-label="{{projects.prevLabel}}">&lsaquo;</button>
+            <div class="project-modal__body">
                 <div class="project-modal__media"></div>
-                <button type="button" class="project-modal__next" aria-label="{{projects.nextLabel}}">&rsaquo;</button>
+                <div class="project-modal__dots" data-dot-label="{{projects.dotLabel}}"></div>
+            </div>
+            <div class="project-modal__footer">
+                <hr class="project-modal__divider">
+                <div class="project-modal__footer-row">
+                    <div class="project-modal__col-group">
+                        <div class="project-modal__col">
+                            <h2 class="project-modal__title" id="project-modal-title"></h2>
+                        </div>
+                        <div class="project-modal__col">
+                            <div class="project-modal__category"></div>
+                            <div class="project-modal__tags"></div>
+                        </div>
+                        <div class="project-modal__col">
+                            <p class="project-modal__description"></p>
+                        </div>
+                        <div class="project-modal__col project-modal__col--site" hidden>
+                            <a class="project-modal__site-link" target="_blank" rel="noopener noreferrer">
+                                {{projects.visitSiteLabel}}
+                                <span class="project-modal__site-link-icon" aria-hidden="true"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-modal__col project-modal__col--nav">
+                        <button type="button" class="project-modal__prev-project" aria-label="{{projects.prevProjectLabel}}">
+                            <span class="project-modal__prev-project-icon" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="project-modal__next-project" aria-label="{{projects.nextProjectLabel}}">
+                            <span class="project-modal__next-project-icon" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
