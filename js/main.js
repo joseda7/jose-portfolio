@@ -312,7 +312,7 @@ function initProjectModal() {
     const categoryEl = document.querySelector('.project-modal__category');
     const tagsEl = document.querySelector('.project-modal__tags');
     const descriptionEl = document.querySelector('.project-modal__description');
-    const siteColEl = document.querySelector('.project-modal__col--site');
+    const descriptionTextEl = document.querySelector('.project-modal__description-text');
     const siteLinkEl = document.querySelector('.project-modal__site-link');
     const mediaEl = document.querySelector('.project-modal__media');
     const mediaPrevButton = document.querySelector('.project-modal__media-nav--prev');
@@ -322,41 +322,37 @@ function initProjectModal() {
     const nextProjectButton = document.querySelector('.project-modal__next-project');
     const triggers = [...document.querySelectorAll('.gallery__item-trigger')];
     const layout = document.querySelector('.layout');
-    if (!modal || !closeButton || !titleEl || !categoryEl || !tagsEl || !descriptionEl
+    if (!modal || !closeButton || !titleEl || !categoryEl || !tagsEl || !descriptionEl || !descriptionTextEl
         || !mediaEl || !mediaPrevButton || !mediaNextButton || !dotsEl
         || !prevProjectButton || !nextProjectButton || !triggers.length) return;
 
     const isDesktop = () => window.matchMedia(DESKTOP_QUERY).matches;
     const YOUTUBE_PATTERN = /youtube\.com|youtu\.be/;
+    const SPOTIFY_PATTERN = /open\.spotify\.com/;
     const dotLabel = dotsEl.dataset.dotLabel || 'Image';
-    const AUTO_ADVANCE_INTERVAL = 7000;
-    let images = [];
+    let media = [];
     let index = 0;
     let triggerIndex = 0;
     let lastTrigger = null;
-    let autoAdvanceTimer = null;
-
-    function stopAutoAdvance() {
-        clearInterval(autoAdvanceTimer);
-        autoAdvanceTimer = null;
-    }
-
-    function startAutoAdvance() {
-        stopAutoAdvance();
-        if (images.length <= 1) return;
-        autoAdvanceTimer = setInterval(() => stepImage(1), AUTO_ADVANCE_INTERVAL);
-    }
 
     function showMedia() {
-        const src = images[index];
-        const label = `${titleEl.textContent} ${index + 1}/${images.length}`;
+        const src = media[index];
+        const label = `${titleEl.textContent} ${index + 1}/${media.length}`;
         mediaEl.innerHTML = '';
         if (YOUTUBE_PATTERN.test(src)) {
             const iframe = document.createElement('iframe');
-            iframe.src = src;
+            iframe.src = src.replace('youtu.be/', 'www.youtube.com/embed/').split('?')[0];
             iframe.title = label;
             iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
             iframe.allowFullscreen = true;
+            mediaEl.appendChild(iframe);
+        } else if (SPOTIFY_PATTERN.test(src)) {
+            const iframe = document.createElement('iframe');
+            iframe.className = 'project-modal__spotify-embed';
+            iframe.src = src;
+            iframe.title = label;
+            iframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
+            iframe.loading = 'lazy';
             mediaEl.appendChild(iframe);
         } else {
             const img = document.createElement('img');
@@ -369,18 +365,17 @@ function initProjectModal() {
     }
 
     function stepImage(delta) {
-        if (images.length <= 1) return;
-        index = (index + delta + images.length) % images.length;
+        if (media.length <= 1) return;
+        index = (index + delta + media.length) % media.length;
         showMedia();
-        startAutoAdvance();
     }
 
     function renderDots() {
         dotsEl.innerHTML = '';
-        dotsEl.hidden = images.length <= 1;
-        mediaPrevButton.hidden = images.length <= 1;
-        mediaNextButton.hidden = images.length <= 1;
-        images.forEach((_, i) => {
+        dotsEl.hidden = media.length <= 1;
+        mediaPrevButton.hidden = media.length <= 1;
+        mediaNextButton.hidden = media.length <= 1;
+        media.forEach((_, i) => {
             const dot = document.createElement('button');
             dot.type = 'button';
             dot.className = 'project-modal__dot';
@@ -388,7 +383,6 @@ function initProjectModal() {
             dot.addEventListener('click', () => {
                 index = i;
                 showMedia();
-                startAutoAdvance();
             });
             dotsEl.appendChild(dot);
         });
@@ -405,18 +399,17 @@ function initProjectModal() {
         triggerIndex = triggers.indexOf(trigger);
         titleEl.textContent = trigger.dataset.title;
         categoryEl.textContent = trigger.dataset.category;
-        descriptionEl.textContent = trigger.dataset.description;
+        descriptionTextEl.textContent = trigger.dataset.description;
         tagsEl.textContent = JSON.parse(trigger.dataset.tags).join(' • ');
-        if (siteColEl && siteLinkEl) {
+        if (siteLinkEl) {
             const siteUrl = trigger.dataset.siteUrl;
-            siteColEl.hidden = !siteUrl;
+            siteLinkEl.hidden = !siteUrl;
             siteLinkEl.href = siteUrl || '';
         }
-        images = JSON.parse(trigger.dataset.images);
+        media = JSON.parse(trigger.dataset.media);
         index = 0;
         renderDots();
         showMedia();
-        startAutoAdvance();
 
         lastTrigger = trigger;
         modal.classList.add('is-active');
@@ -429,7 +422,6 @@ function initProjectModal() {
     }
 
     function closeModal() {
-        stopAutoAdvance();
         modal.classList.remove('is-active');
         mediaEl.innerHTML = '';
         lastTrigger?.focus();

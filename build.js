@@ -96,10 +96,10 @@ function buildPage(content) {
             const tagsHtml = item.tags.map((t) => escapeHtml(t)).join(' • ');
             return render(partials.projectCard, {
                 ...item,
-                image: item.images[0],
+                image: item.media[0],
                 tagsHtml,
                 tagsJson: escapeHtml(JSON.stringify(item.tags)),
-                imagesJson: escapeHtml(JSON.stringify(item.images)),
+                mediaJson: escapeHtml(JSON.stringify(item.media)),
                 category: cat.label,
                 size: CARD_SIZES[i % CARD_SIZES.length],
             });

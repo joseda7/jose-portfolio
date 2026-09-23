@@ -3,30 +3,19 @@
     "lang": "en",
     "siteTitle": "Jose Alcaraz - Software Engineer, Visual Artist and Musician with 11+ years of experience",
     "description": "Jose Alcaraz is a software engineer building web products. Explore his background, experience, and projects.",
-    "ogImage": "assets/images/og-cover.jpg",
     "canonicalPath": "/en/",
     "alternateLangPath": "./"
   },
   "nav": {
-    "home": "Home",
-    "about": "About",
-    "experience": "Experience",
-    "projects": "Projects",
-    "skills": "Skills",
     "contact": "Let's talk",
     "contactEmail": "jose.david.alcaraz7@gmail.com",
     "langSwitchLabel": "ES",
     "backLabel": "Back",
-    "openGalleryLabel": "Open gallery",
-    "themeToggleLabel": "Toggle dark mode"
+    "openGalleryLabel": "Open gallery"
   },
   "hero": {
-    "greeting": "Hi, I'm",
     "name": "Jose Alcaraz",
     "location": "Alicante, Spain",
-    "tagline": "Software engineer building things that matter.",
-    "ctaLabel": "Get in touch",
-    "ctaHref": "#contact",
     "availableLabel": "Available"
   },
   "about": {
@@ -45,35 +34,6 @@
     "photo": "assets/images/headshot.png",
     "photoAlt": "Photo of Jose Alcaraz"
   },
-  "experience": {
-    "heading": "Experience",
-    "items": [
-      {
-        "role": "Placeholder Role",
-        "company": "Placeholder Company",
-        "location": "City, Country",
-        "start": "2023",
-        "end": "Present",
-        "summary": "Placeholder summary of responsibilities and impact in this role.",
-        "highlights": [
-          "Placeholder highlight or achievement.",
-          "Placeholder highlight or achievement."
-        ]
-      },
-      {
-        "role": "Placeholder Role",
-        "company": "Placeholder Company",
-        "location": "City, Country",
-        "start": "2021",
-        "end": "2023",
-        "summary": "Placeholder summary of responsibilities and impact in this role.",
-        "highlights": [
-          "Placeholder highlight or achievement.",
-          "Placeholder highlight or achievement."
-        ]
-      }
-    ]
-  },
   "projects": {
     "heading": "Projects",
     "allLabel": "All",
@@ -83,99 +43,101 @@
         "label": "Front-end",
         "skills": [
           "TypeScript",
-          "React",
           "CSS",
+          "AI-assisted dev",
           "Node.js"
         ],
         "items": [
           {
             "title": "Juan Martínez Tirado's Portfolio",
-            "description": "-",
+            "description": "Working together with Juan, we understood the problem, planned, and built his portfolio in service of others.",
             "tags": [
-              "JavaScript",
-              "CSS"
+              "React",
+              "TypeScript",
+              "CSS",
+              "Contentful CMS"
             ],
             "imageAlt": "Screenshot of Juan Martínez Tirado's Portfolio",
-            "href": "#",
-            "repo": "#",
             "siteUrl": "https://www.juanmartineztirado.com/",
-            "images": [
+            "media": [
               "assets/images/projects/frontend-1-1.png",
               "assets/images/projects/frontend-1-2.png",
               "assets/images/projects/frontend-1-3.png"
             ]
           },
           {
-            "title": "Placeholder Front-end Project 2",
-            "description": "-",
+            "title": "Web Games",
+            "description": "I developed more than 20 2D web games for marketing campaigns for different companies.",
             "tags": [
+              "HTML",
               "JavaScript",
               "CSS"
             ],
-            "imageAlt": "Screenshot of Placeholder Front-end Project 2",
-            "href": "#",
-            "repo": "#",
-            "images": [
+            "imageAlt": "Screenshot of web games",
+            "media": [
               "assets/images/projects/frontend-2-1.webp",
               "assets/images/projects/frontend-2-2.webp",
               "assets/images/projects/frontend-2-3.webp"
             ]
           },
           {
-            "title": "Placeholder Front-end Project 3",
-            "description": "-",
+            "title": "Top-tier Websites",
+            "description": "For 6 years, I helped build more than 40 professional websites for mid-size and large companies across Latin America",
             "tags": [
-              "JavaScript",
-              "CSS"
+              "React",
+              "Angular",
+              "CSS",
+              "CMS",
+              "SEO"
             ],
-            "imageAlt": "Screenshot of Placeholder Front-end Project 3",
-            "href": "#",
-            "repo": "#",
-            "images": [
+            "imageAlt": "Screenshot of top-tier websites",
+            "media": [
               "assets/images/projects/frontend-3-1.webp",
-              "assets/images/projects/frontend-3-2.webp",
+              "assets/images/projects/frontend-3-2.png",
               "assets/images/projects/frontend-3-3.webp"
             ]
           },
           {
-            "title": "Placeholder Front-end Project 4",
-            "description": "-",
+            "title": "7000 dots #PragmaChallenge",
+            "description": "As a team, I developed the solution that won the #PragmaChallenge contest, which involved designing a t-shirt to inspire a goal of 7,000 people at a tech company",
             "tags": [
               "JavaScript",
-              "CSS"
+              "SVG",
+              "Adobe Illustrator"
             ],
-            "imageAlt": "Screenshot of Placeholder Front-end Project 4",
-            "href": "#",
-            "repo": "#",
-            "images": [
-              "assets/images/projects/frontend-4-1.webp"
+            "imageAlt": "Screenshot of the 7000 dots #PragmaChallenge project",
+            "siteUrl": "https://joseda7.github.io/7000dots/",
+            "media": [
+              "assets/images/projects/frontend-4-1.webp",
+              "assets/images/projects/frontend-4-2.png"
             ]
           },
           {
-            "title": "Placeholder Front-end Project 5",
-            "description": "-",
+            "title": "Immersive 3D video calls",
+            "description": "Helped push the status quo of video calling technology. Built the cloud infrastructure, backend, and a TS library that extended the technology to web browsers",
             "tags": [
-              "JavaScript",
-              "CSS"
+              "AI-coding",
+              "3D",
+              "TypeScript",
+              "Emscripten",
+              "Node JS",
+              "AWS"
             ],
-            "imageAlt": "Screenshot of Placeholder Front-end Project 5",
-            "href": "#",
-            "repo": "#",
-            "images": [
-              "assets/images/projects/frontend-5-1.png"
+            "imageAlt": "Screenshot of immersive 3D video calls",
+            "media": [
+              "assets/images/projects/frontend-5-1.png",
+              "assets/images/projects/frontend-5-2.png"
             ]
           },
           {
-            "title": "Placeholder Front-end Project 6",
-            "description": "-",
+            "title": "3D in the browser",
+            "description": "I developed 3D experiments to learn, in service of others.",
             "tags": [
               "JavaScript",
               "CSS"
             ],
-            "imageAlt": "Screenshot of Placeholder Front-end Project 6",
-            "href": "#",
-            "repo": "#",
-            "images": [
+            "imageAlt": "Screenshot of 3D in the browser",
+            "media": [
               "assets/images/projects/frontend-6-1.webp",
               "assets/images/projects/frontend-6-2.gif"
             ]
@@ -187,92 +149,102 @@
         "label": "Visual design",
         "skills": [
           "Illustration",
+          "Graphic design",
           "Animation",
-          "Design"
+          "Video editing"
         ],
         "items": [
           {
-            "title": "Placeholder Visual Arts Project 1",
+            "title": "Neofelis nebulosa",
             "description": "-",
             "tags": [
-              "Illustration",
-              "Design"
+              "Drawing",
+              "Watercolor"
             ],
-            "imageAlt": "Screenshot of Placeholder Visual Arts Project 1",
-            "href": "#",
-            "repo": "#",
-            "images": [
-              "assets/images/projects/visual-arts-1.webp"
+            "imageAlt": "Screenshot of Neofelis nebulosa",
+            "media": [
+              "assets/images/projects/visual-design-1-1.png",
+              "assets/images/projects/visual-design-1-2.png",
+              "assets/images/projects/visual-design-1-3.png",
+              "assets/images/projects/visual-design-1-4.png"
             ]
           },
           {
-            "title": "Placeholder Visual Arts Project 2",
+            "title": "Insame: Instrumental Gaming",
             "description": "-",
             "tags": [
               "Illustration",
-              "Design"
+              "Character design"
             ],
-            "imageAlt": "Screenshot of Placeholder Visual Arts Project 2",
-            "href": "#",
-            "repo": "#",
-            "images": [
-              "assets/images/projects/visual-arts-2.webp"
+            "imageAlt": "Screenshot of Insame: Instrumental Gaming",
+            "media": [
+              "assets/images/projects/visual-design-2-1.png",
+              "assets/images/projects/visual-design-2-2.png",
+              "assets/images/projects/visual-design-2-3.png"
             ]
           },
           {
-            "title": "Placeholder Visual Arts Project 3",
-            "description": "-",
+            "title": "Digital Portraits",
+            "description": "I digitally illustrated people I admire.",
             "tags": [
+              "Drawing",
               "Illustration",
-              "Design"
+              "Graphic design"
             ],
-            "imageAlt": "Screenshot of Placeholder Visual Arts Project 3",
-            "href": "#",
-            "repo": "#",
-            "images": [
-              "assets/images/projects/visual-arts-3.webp"
+            "imageAlt": "Screenshot of Digital Portraits",
+            "media": [
+              "assets/images/projects/visual-design-3-1.png",
+              "assets/images/projects/visual-design-3-2.png",
+              "assets/images/projects/visual-design-3-3.png",
+              "assets/images/projects/visual-design-3-4.png"
             ]
           },
           {
-            "title": "Placeholder Visual Arts Project 4",
+            "title": "Pixel Art",
             "description": "-",
             "tags": [
               "Illustration",
               "Design"
             ],
-            "imageAlt": "Screenshot of Placeholder Visual Arts Project 4",
-            "href": "#",
-            "repo": "#",
-            "images": [
-              "assets/images/projects/visual-arts-4.webp"
+            "imageAlt": "Screenshot of Pixel Art",
+            "media": [
+              "assets/images/projects/visual-design-4-1.webp",
+              "assets/images/projects/visual-design-4-2.webp",
+              "assets/images/projects/visual-design-4-3.webp",
+              "assets/images/projects/visual-design-4-4.webp",
+              "assets/images/projects/visual-design-4-5.webp"
             ]
           },
           {
-            "title": "Placeholder Visual Arts Project 5",
-            "description": "-",
+            "title": "The Fay Morgana - Since the Beginning (Lyric Video)",
+            "description": "I designed and animated the video for a music project.",
             "tags": [
               "Illustration",
-              "Design"
+              "Animation",
+              "Graphic design",
+              "Video editing"
             ],
-            "imageAlt": "Screenshot of Placeholder Visual Arts Project 5",
-            "href": "#",
-            "repo": "#",
-            "images": [
-              "assets/images/projects/visual-arts-5.webp"
+            "imageAlt": "Screenshot of the project The Fay Morgana - Since the Beginning (Lyric Video)",
+            "media": [
+              "assets/images/projects/visual-design-5-1.webp",
+              "assets/images/projects/visual-design-5-2.gif",
+              "https://youtu.be/DIaodt2RSrU?si=9BJq-Tb44rX5l3ti"
             ]
           },
           {
-            "title": "Placeholder Visual Arts Project 6",
+            "title": "A Knee's Journey",
             "description": "-",
             "tags": [
               "Illustration",
               "Design"
             ],
-            "imageAlt": "Screenshot of Placeholder Visual Arts Project 6",
-            "href": "#",
-            "repo": "#",
-            "images": [
-              "assets/images/projects/visual-arts-6.webp"
+            "imageAlt": "Screenshot of A Knee's Journey",
+            "media": [
+              "assets/images/projects/visual-design-6-1.png",
+              "assets/images/projects/visual-design-6-2.png",
+              "assets/images/projects/visual-design-6-3.png",
+              "assets/images/projects/visual-design-6-4.png",
+              "assets/images/projects/visual-design-6-5.gif"
             ]
           }
         ]
@@ -287,141 +259,104 @@
         ],
         "items": [
           {
-            "title": "Placeholder Music Project 1",
+            "title": "Montaña - Alfaro",
             "description": "-",
             "tags": [
-              "Audio",
-              "Production"
+              "Composition",
+              "Guitar",
+              "Piano",
+              "Songwriting"
             ],
-            "imageAlt": "Screenshot of Placeholder Music Project 1",
-            "href": "#",
-            "repo": "#",
-            "images": [
-              "assets/images/projects/music-1.webp"
+            "imageAlt": "Screenshot of Montaña - Alfaro",
+            "media": [
+              "assets/images/projects/music-1-1.png",
+              "assets/images/projects/music-1-2.png",
+              "https://youtu.be/WgEdYFSknPs?si=-DCI3Cvfxqc8MQYY",
+              "https://open.spotify.com/embed/track/2pE7Z4ip9obeA3posc1Guk?utm_source=generator&si=3c591bc678ab4597&theme=0"
             ]
           },
           {
-            "title": "Placeholder Music Project 2",
+            "title": "Sueños - Alfaro",
             "description": "-",
             "tags": [
-              "Audio",
-              "Production"
+              "Composition",
+              "Guitar",
+              "Songwriting"
             ],
-            "imageAlt": "Screenshot of Placeholder Music Project 2",
-            "href": "#",
-            "repo": "#",
-            "images": [
-              "assets/images/projects/music-2.webp"
+            "imageAlt": "Screenshot of Sueños - Alfaro",
+            "media": [
+              "assets/images/projects/music-2-1.png",
+              "https://open.spotify.com/embed/track/5jNvON8uWXeWgc9W9uXAnc?utm_source=generator&si=2f0c6c3943524f53&theme=0"
             ]
           },
           {
-            "title": "Placeholder Music Project 3",
+            "title": "Vuelta - Alfaro",
             "description": "-",
             "tags": [
-              "Audio",
-              "Production"
+              "Composition",
+              "Guitar",
+              "Songwriting"
             ],
-            "imageAlt": "Screenshot of Placeholder Music Project 3",
-            "href": "#",
-            "repo": "#",
-            "images": [
-              "assets/images/projects/music-3.webp"
+            "imageAlt": "Screenshot of Vuelta - Alfaro",
+            "media": [
+              "assets/images/projects/music-3-1.png",
+              "https://open.spotify.com/embed/track/0wSNJdZbedS8uWXxruf46a?utm_source=generator&si=74855281ad4d479b&theme=0"
             ]
           },
           {
-            "title": "Placeholder Music Project 4",
+            "title": "Álbum Entrenando Paz",
             "description": "-",
             "tags": [
-              "Audio",
-              "Production"
+              "Composition",
+              "Guitar",
+              "Songwriting"
             ],
-            "imageAlt": "Screenshot of Placeholder Music Project 4",
-            "href": "#",
-            "repo": "#",
-            "images": [
-              "assets/images/projects/music-4.webp"
+            "imageAlt": "Screenshot of the project Álbum Entrenando Paz",
+            "media": [
+              "assets/images/projects/music-4-1.png",
+              "assets/images/projects/music-4-2.png",
+              "https://open.spotify.com/embed/album/1FMl3EYA8CdnGkScC1t0BD?utm_source=generator&si=0cde806b61f540b3&theme=0"
             ]
           },
           {
-            "title": "Placeholder Music Project 5",
+            "title": "Alcaradio",
             "description": "-",
             "tags": [
-              "Audio",
-              "Production"
+              "Composition",
+              "Guitar",
+              "Songwriting"
             ],
-            "imageAlt": "Screenshot of Placeholder Music Project 5",
-            "href": "#",
-            "repo": "#",
-            "images": [
-              "assets/images/projects/music-5.webp"
+            "imageAlt": "Screenshot of Alcaradio",
+            "media": [
+              "assets/images/projects/music-5-1.png",
+              "https://youtu.be/X3cQQFkg3Tc?si=ny6obXi8yJXcaP8M",
+              "https://youtu.be/s4KuHcxA3AI?si=vjg27AfiLGhgQLHC"
             ]
           },
           {
-            "title": "Placeholder Music Project 6",
+            "title": "Noche - Alfaro",
             "description": "-",
             "tags": [
               "Audio",
               "Production"
             ],
-            "imageAlt": "Screenshot of Placeholder Music Project 6",
-            "href": "#",
-            "repo": "#",
-            "images": [
-              "assets/images/projects/music-6.webp"
+            "imageAlt": "Screenshot of Noche - Alfaro",
+            "media": [
+              "assets/images/projects/music-6-1.png",
+              "https://open.spotify.com/embed/track/0mFQj9g8UiQbjfwZX5egg7?utm_source=generator&si=4022e879069c47b0&theme=0"
             ]
           }
         ]
       }
     ],
     "closeLabel": "Close",
-    "seeProjectsLabel": "More stuff",
     "dotLabel": "Go to image",
     "prevImageLabel": "Previous image",
     "nextImageLabel": "Next image",
-    "titleLabel": "Title",
-    "categoryLabel": "Category",
-    "descriptionLabel": "Description",
     "visitSiteLabel": "Visit site",
     "prevProjectLabel": "Previous project",
     "nextProjectLabel": "Next project",
     "moreProjectsLabel": "Projects"
-  },
-  "skills": {
-    "heading": "Skills",
-    "groups": [
-      {
-        "label": "Languages",
-        "items": [
-          "JavaScript",
-          "Python",
-          "SQL"
-        ]
-      },
-      {
-        "label": "Tools",
-        "items": [
-          "Git",
-          "Docker",
-          "Linux"
-        ]
-      }
-    ]
-  },
-  "contact": {
-    "heading": "Let's talk",
-    "intro": "Interested in working together? Reach out.",
-    "email": "jose.alcaraz@tmrw.com",
-    "formHref": "#",
-    "socials": [
-      {
-        "label": "LinkedIn",
-        "href": "#"
-      },
-      {
-        "label": "",
-        "href": "#"
-      }
-    ]
   },
   "achievements": {
     "nextLabel": "Next achievement",

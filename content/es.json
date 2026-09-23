@@ -3,30 +3,19 @@
     "lang": "es",
     "siteTitle": "Jose Alcaraz - Ingeniero de Software, Artista Visual y Músico con 11 años de experiencia",
     "description": "Jose Alcaraz es ingeniero de software y construye productos web. Conoce su trayectoria, experiencia y proyectos.",
-    "ogImage": "assets/images/og-cover.jpg",
     "canonicalPath": "/",
     "alternateLangPath": "en/"
   },
   "nav": {
-    "home": "Inicio",
-    "about": "Sobre mí",
-    "experience": "Experiencia",
-    "projects": "Proyectos",
-    "skills": "Habilidades",
     "contact": "Conversemos",
     "contactEmail": "jose.david.alcaraz7@gmail.com",
     "langSwitchLabel": "EN",
     "backLabel": "Volver",
-    "openGalleryLabel": "Abrir galería",
-    "themeToggleLabel": "Cambiar modo oscuro"
+    "openGalleryLabel": "Abrir galería"
   },
   "hero": {
-    "greeting": "Hola, soy",
     "name": "Jose Alcaraz",
     "location": "Alicante, España",
-    "tagline": "Ingeniero de software construyendo cosas que importan.",
-    "ctaLabel": "Contáctame",
-    "ctaHref": "#contact",
     "availableLabel": "Disponible"
   },
   "about": {
@@ -45,35 +34,6 @@
     "photo": "assets/images/headshot.png",
     "photoAlt": "Foto de Jose Alcaraz"
   },
-  "experience": {
-    "heading": "Experiencia",
-    "items": [
-      {
-        "role": "Puesto de ejemplo",
-        "company": "Empresa de ejemplo",
-        "location": "Ciudad, País",
-        "start": "2023",
-        "end": "Actualidad",
-        "summary": "Resumen de ejemplo de responsabilidades e impacto en este puesto.",
-        "highlights": [
-          "Logro o aporte de ejemplo.",
-          "Logro o aporte de ejemplo."
-        ]
-      },
-      {
-        "role": "Puesto de ejemplo",
-        "company": "Empresa de ejemplo",
-        "location": "Ciudad, País",
-        "start": "2021",
-        "end": "2023",
-        "summary": "Resumen de ejemplo de responsabilidades e impacto en este puesto.",
-        "highlights": [
-          "Logro o aporte de ejemplo.",
-          "Logro o aporte de ejemplo."
-        ]
-      }
-    ]
-  },
   "projects": {
     "heading": "Proyectos",
     "allLabel": "Todos",
@@ -83,23 +43,23 @@
         "label": "Front-end",
         "skills": [
           "TypeScript",
-          "React",
           "CSS",
+          "AI-assisted dev",
           "Node.js"
         ],
         "items": [
           {
             "title": "Portafolio Juan Martínez Tirado",
-            "description": "En equipo con Juan, soñamos, planeamos y construimos su portafolio al servicio de otros.",
+            "description": "En equipo con Juan, entendimos el problema, planeamos y construimos su portafolio al servicio de otros.",
             "tags": [
-              "JavaScript",
-              "CSS"
+              "React",
+              "TypeScript",
+              "CSS",
+              "Contentful CMS"
             ],
             "imageAlt": "Captura de pantalla Portafolio Juan Martínez Tirado",
-            "href": "#",
-            "repo": "#",
             "siteUrl": "https://www.juanmartineztirado.com/",
-            "images": [
+            "media": [
               "assets/images/projects/frontend-1-1.png",
               "assets/images/projects/frontend-1-2.png",
               "assets/images/projects/frontend-1-3.png"
@@ -107,75 +67,77 @@
           },
           {
             "title": "Juegos Web",
-            "description": "-",
+            "description": "Desarrollé más de 20 juegos web 2D para campañas de mercadeo de diferentes empresas.",
             "tags": [
+              "HTML",
               "JavaScript",
               "CSS"
             ],
             "imageAlt": "Captura de pantalla de juegos web",
-            "href": "#",
-            "repo": "#",
-            "images": [
+            "media": [
               "assets/images/projects/frontend-2-1.webp",
               "assets/images/projects/frontend-2-2.webp",
               "assets/images/projects/frontend-2-3.webp"
             ]
           },
           {
-            "title": "Proyecto de Front-end de ejemplo 3",
-            "description": "-",
+            "title": "Páginas Web de primer nivel",
+            "description": "Durante 6 años, ayudé a desarrollár más de 40 sitios web profesionales para empresas medianas y grandes en América Latina",
             "tags": [
-              "JavaScript",
-              "CSS"
+              "React",
+              "Angular",
+              "CSS",
+              "CMS",
+              "SEO"
             ],
-            "imageAlt": "Captura de pantalla del Proyecto de Front-end de ejemplo 3",
-            "href": "#",
-            "repo": "#",
-            "images": [
+            "imageAlt": "Captura de pantalla de Páginas Web de primer nivel",
+            "media": [
               "assets/images/projects/frontend-3-1.webp",
-              "assets/images/projects/frontend-3-2.webp",
+              "assets/images/projects/frontend-3-2.png",
               "assets/images/projects/frontend-3-3.webp"
             ]
           },
           {
-            "title": "Proyecto de Front-end de ejemplo 4",
-            "description": "-",
+            "title": "7000 dots #PragmaChallenge",
+            "description": "En equipo, desarrollé la solución con la que ganamos el concurso #PragmaChallenge, que consistía en diseñar una camiseta para inspirar a la meta de 7000 personas en una empresa de tecnología",
             "tags": [
               "JavaScript",
-              "CSS"
+              "SVG",
+              "Adobe Illustrator"
             ],
-            "imageAlt": "Captura de pantalla del Proyecto de Front-end de ejemplo 4",
-            "href": "#",
-            "repo": "#",
-            "images": [
-              "assets/images/projects/frontend-4-1.webp"
+            "imageAlt": "Captura de pantalla del Proyecto de 7000 dots #PragmaChallenge",
+            "siteUrl": "https://joseda7.github.io/7000dots/",
+            "media": [
+              "assets/images/projects/frontend-4-1.webp",
+              "assets/images/projects/frontend-4-2.png"
             ]
           },
           {
-            "title": "Proyecto de Front-end de ejemplo 5",
-            "description": "-",
+            "title": "Videollamadas inmersivas 3D",
+            "description": "Ayudé a empujar el statu quo de la tecnología de videollamadas. Desarrollé la infraestructura cloud, backend y una librería en TS que extendiendó la tecnología a los navegadores web",
             "tags": [
-              "JavaScript",
-              "CSS"
+              "AI-coding",
+              "3D",
+              "TypeScript",
+              "Emscripten",
+              "Node JS",
+              "AWS"
             ],
-            "imageAlt": "Captura de pantalla del Proyecto de Front-end de ejemplo 5",
-            "href": "#",
-            "repo": "#",
-            "images": [
-              "assets/images/projects/frontend-5-1.png"
+            "imageAlt": "Captura de pantalla de vieollamadas inmersivas 3D",
+            "media": [
+              "assets/images/projects/frontend-5-1.png",
+              "assets/images/projects/frontend-5-2.png"
             ]
           },
           {
-            "title": "Proyecto de Front-end de ejemplo 6",
-            "description": "-",
+            "title": "3D en el navegador",
+            "description": "Desarrollé experimentos en 3D para aprender al servicio de otros.",
             "tags": [
               "JavaScript",
               "CSS"
             ],
-            "imageAlt": "Captura de pantalla del Proyecto de Front-end de ejemplo 6",
-            "href": "#",
-            "repo": "#",
-            "images": [
+            "imageAlt": "Captura de pantalla de 3D en el navegador",
+            "media": [
               "assets/images/projects/frontend-6-1.webp",
               "assets/images/projects/frontend-6-2.gif"
             ]
@@ -187,92 +149,102 @@
         "label": "Visual design",
         "skills": [
           "Ilustración",
+          "Diseño gráfico",
           "Animación",
-          "Diseño"
+          "Edición de video"
         ],
         "items": [
           {
-            "title": "Proyecto de Artes Visuales de ejemplo 1",
+            "title": "Neofelis nebulosa",
             "description": "-",
             "tags": [
-              "Ilustración",
-              "Diseño"
+              "Dibujo",
+              "Acuarela"
             ],
-            "imageAlt": "Captura de pantalla del Proyecto de Artes Visuales de ejemplo 1",
-            "href": "#",
-            "repo": "#",
-            "images": [
-              "assets/images/projects/visual-arts-1.webp"
+            "imageAlt": "Captura de pantalla de Neofelis nebulosa",
+            "media": [
+              "assets/images/projects/visual-design-1-1.png",
+              "assets/images/projects/visual-design-1-2.png",
+              "assets/images/projects/visual-design-1-3.png",
+              "assets/images/projects/visual-design-1-4.png"
             ]
           },
           {
-            "title": "Proyecto de Artes Visuales de ejemplo 2",
+            "title": "Insame: Instrumental Gaming",
             "description": "-",
             "tags": [
               "Ilustración",
-              "Diseño"
+              "Diseño de presonajes"
             ],
-            "imageAlt": "Captura de pantalla del Proyecto de Artes Visuales de ejemplo 2",
-            "href": "#",
-            "repo": "#",
-            "images": [
-              "assets/images/projects/visual-arts-2.webp"
+            "imageAlt": "Captura de pantalla de Insame: Instrumental Gaming",
+            "media": [
+              "assets/images/projects/visual-design-2-1.png",
+              "assets/images/projects/visual-design-2-2.png",
+              "assets/images/projects/visual-design-2-3.png"
             ]
           },
           {
-            "title": "Proyecto de Artes Visuales de ejemplo 3",
-            "description": "-",
+            "title": "Retratos digitales",
+            "description": "Ilustré digitalmente a personas que admiro.",
             "tags": [
+              "Dibujo",
               "Ilustración",
-              "Diseño"
+              "Diseño gráfico"
             ],
-            "imageAlt": "Captura de pantalla del Proyecto de Artes Visuales de ejemplo 3",
-            "href": "#",
-            "repo": "#",
-            "images": [
-              "assets/images/projects/visual-arts-3.webp"
+            "imageAlt": "Captura de pantalla de Retratos digitales",
+            "media": [
+              "assets/images/projects/visual-design-3-1.png",
+              "assets/images/projects/visual-design-3-2.png",
+              "assets/images/projects/visual-design-3-3.png",
+              "assets/images/projects/visual-design-3-4.png"
             ]
           },
           {
-            "title": "Proyecto de Artes Visuales de ejemplo 4",
+            "title": "Arte pixelado",
             "description": "-",
             "tags": [
               "Ilustración",
               "Diseño"
             ],
-            "imageAlt": "Captura de pantalla del Proyecto de Artes Visuales de ejemplo 4",
-            "href": "#",
-            "repo": "#",
-            "images": [
-              "assets/images/projects/visual-arts-4.webp"
+            "imageAlt": "Captura de pantalla de Arte pixelado",
+            "media": [
+              "assets/images/projects/visual-design-4-1.webp",
+              "assets/images/projects/visual-design-4-2.webp",
+              "assets/images/projects/visual-design-4-3.webp",
+              "assets/images/projects/visual-design-4-4.webp",
+              "assets/images/projects/visual-design-4-5.webp"
             ]
           },
           {
-            "title": "Proyecto de Artes Visuales de ejemplo 5",
-            "description": "-",
+            "title": "The Fay Morgana - Since the Beginning (Lyric Video)",
+            "description": "Diseñé y animé el video para un proyecto musical.",
             "tags": [
               "Ilustración",
-              "Diseño"
+              "Animación",
+              "Diseño gráfico",
+              "Edición de video"
             ],
-            "imageAlt": "Captura de pantalla del Proyecto de Artes Visuales de ejemplo 5",
-            "href": "#",
-            "repo": "#",
-            "images": [
-              "assets/images/projects/visual-arts-5.webp"
+            "imageAlt": "Captura de pantalla del Proyecto de The Fay Morgana - Since the Beginning (Lyric Video)",
+            "media": [
+              "assets/images/projects/visual-design-5-1.webp",
+              "assets/images/projects/visual-design-5-2.gif",
+              "https://youtu.be/DIaodt2RSrU?si=9BJq-Tb44rX5l3ti"
             ]
           },
           {
-            "title": "Proyecto de Artes Visuales de ejemplo 6",
+            "title": "Viaje de una rodilla",
             "description": "-",
             "tags": [
               "Ilustración",
               "Diseño"
             ],
-            "imageAlt": "Captura de pantalla del Proyecto de Artes Visuales de ejemplo 6",
-            "href": "#",
-            "repo": "#",
-            "images": [
-              "assets/images/projects/visual-arts-6.webp"
+            "imageAlt": "Captura de pantalla de Viaje de una rodilla",
+            "media": [
+              "assets/images/projects/visual-design-6-1.png",
+              "assets/images/projects/visual-design-6-2.png",
+              "assets/images/projects/visual-design-6-3.png",
+              "assets/images/projects/visual-design-6-4.png",
+              "assets/images/projects/visual-design-6-5.gif"
             ]
           }
         ]
@@ -287,141 +259,104 @@
         ],
         "items": [
           {
-            "title": "Proyecto de Música de ejemplo 1",
+            "title": "Montaña - Alfaro",
             "description": "-",
             "tags": [
-              "Audio",
-              "Producción"
+              "Composición",
+              "Guitarra",
+              "Piano",
+              "Cantautor"
             ],
-            "imageAlt": "Captura de pantalla del Proyecto de Música de ejemplo 1",
-            "href": "#",
-            "repo": "#",
-            "images": [
-              "assets/images/projects/music-1.webp"
+            "imageAlt": "Captura de pantalla de Montaña - Alfaro",
+            "media": [
+              "assets/images/projects/music-1-1.png",
+              "assets/images/projects/music-1-2.png",
+              "https://youtu.be/WgEdYFSknPs?si=-DCI3Cvfxqc8MQYY",
+              "https://open.spotify.com/embed/track/2pE7Z4ip9obeA3posc1Guk?utm_source=generator&si=3c591bc678ab4597&theme=0"
             ]
           },
           {
-            "title": "Proyecto de Música de ejemplo 2",
+            "title": "Sueños - Alfaro",
             "description": "-",
             "tags": [
-              "Audio",
-              "Producción"
+              "Composición",
+              "Guitarra",
+              "Cantautor"
             ],
-            "imageAlt": "Captura de pantalla del Proyecto de Música de ejemplo 2",
-            "href": "#",
-            "repo": "#",
-            "images": [
-              "assets/images/projects/music-2.webp"
+            "imageAlt": "Captura de pantalla de Sueños - Alfaro",
+            "media": [
+              "assets/images/projects/music-2-1.png",
+              "https://open.spotify.com/embed/track/5jNvON8uWXeWgc9W9uXAnc?utm_source=generator&si=2f0c6c3943524f53&theme=0"
             ]
           },
           {
-            "title": "Proyecto de Música de ejemplo 3",
+            "title": "Vuelta - Alfaro",
             "description": "-",
             "tags": [
-              "Audio",
-              "Producción"
+              "Composición",
+              "Guitarra",
+              "Cantautor"
             ],
-            "imageAlt": "Captura de pantalla del Proyecto de Música de ejemplo 3",
-            "href": "#",
-            "repo": "#",
-            "images": [
-              "assets/images/projects/music-3.webp"
+            "imageAlt": "Captura de pantalla de Vuelta - Alfaro",
+            "media": [
+              "assets/images/projects/music-3-1.png",
+              "https://open.spotify.com/embed/track/0wSNJdZbedS8uWXxruf46a?utm_source=generator&si=74855281ad4d479b&theme=0"
             ]
           },
           {
-            "title": "Proyecto de Música de ejemplo 4",
+            "title": "Álbum Entrenando Paz",
             "description": "-",
             "tags": [
-              "Audio",
-              "Producción"
+              "Composición",
+              "Guitarra",
+              "Cantautor"
             ],
-            "imageAlt": "Captura de pantalla del Proyecto de Música de ejemplo 4",
-            "href": "#",
-            "repo": "#",
-            "images": [
-              "assets/images/projects/music-4.webp"
+            "imageAlt": "Captura de pantalla del Proyecto de Álbum Entrenando Paz",
+            "media": [
+              "assets/images/projects/music-4-1.png",
+              "assets/images/projects/music-4-2.png",
+              "https://open.spotify.com/embed/album/1FMl3EYA8CdnGkScC1t0BD?utm_source=generator&si=0cde806b61f540b3&theme=0"
             ]
           },
           {
-            "title": "Proyecto de Música de ejemplo 5",
+            "title": "Alcaradio",
             "description": "-",
             "tags": [
-              "Audio",
-              "Producción"
+              "Composición",
+              "Guitarra",
+              "Cantautor"
             ],
-            "imageAlt": "Captura de pantalla del Proyecto de Música de ejemplo 5",
-            "href": "#",
-            "repo": "#",
-            "images": [
-              "assets/images/projects/music-5.webp"
+            "imageAlt": "Captura de pantalla de Alcaradio",
+            "media": [
+              "assets/images/projects/music-5-1.png",
+              "https://youtu.be/X3cQQFkg3Tc?si=ny6obXi8yJXcaP8M",
+              "https://youtu.be/s4KuHcxA3AI?si=vjg27AfiLGhgQLHC"
             ]
           },
           {
-            "title": "Proyecto de Música de ejemplo 6",
+            "title": "Noche - Alfaro",
             "description": "-",
             "tags": [
               "Audio",
               "Producción"
             ],
-            "imageAlt": "Captura de pantalla del Proyecto de Música de ejemplo 6",
-            "href": "#",
-            "repo": "#",
-            "images": [
-              "assets/images/projects/music-6.webp"
+            "imageAlt": "Captura de pantalla de Noche - Alfaro",
+            "media": [
+              "assets/images/projects/music-6-1.png",
+              "https://open.spotify.com/embed/track/0mFQj9g8UiQbjfwZX5egg7?utm_source=generator&si=4022e879069c47b0&theme=0"
             ]
           }
         ]
       }
     ],
     "closeLabel": "Cerrar",
-    "seeProjectsLabel": "Más cosas",
     "dotLabel": "Ir a la imagen",
     "prevImageLabel": "Imagen anterior",
     "nextImageLabel": "Imagen siguiente",
-    "titleLabel": "Título",
-    "categoryLabel": "Categoría",
-    "descriptionLabel": "Descripción",
     "visitSiteLabel": "Ver sitio",
     "prevProjectLabel": "Proyecto anterior",
     "nextProjectLabel": "Siguiente proyecto",
     "moreProjectsLabel": "Proyectos"
-  },
-  "skills": {
-    "heading": "Habilidades",
-    "groups": [
-      {
-        "label": "Lenguajes",
-        "items": [
-          "JavaScript",
-          "Python",
-          "SQL"
-        ]
-      },
-      {
-        "label": "Herramientas",
-        "items": [
-          "Git",
-          "Docker",
-          "Linux"
-        ]
-      }
-    ]
-  },
-  "contact": {
-    "heading": "Hablemos",
-    "intro": "¿Interesado en trabajar juntos? Escríbeme.",
-    "email": "jose.alcaraz@tmrw.com",
-    "formHref": "#",
-    "socials": [
-      {
-        "label": "LinkedIn",
-        "href": "#"
-      },
-      {
-        "label": "",
-        "href": "#"
-      }
-    ]
   },
   "achievements": {
     "nextLabel": "Siguiente logro",
