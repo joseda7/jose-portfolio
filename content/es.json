@@ -1,8 +1,8 @@
 {
   "meta": {
     "lang": "es",
-    "siteTitle": "Jose Alcaraz - Ingeniero de Software, Artista Visual y Músico con 11 años de experiencia",
-    "description": "Jose Alcaraz es ingeniero de software y construye productos web. Conoce su trayectoria, experiencia y proyectos.",
+    "siteTitle": "Jose Alcaraz - Ingeniero de Software, Diseñador Visual y Compositor Musical con 11 años de experiencia",
+    "description": "Jose Alcaraz construye soluciones a través del arte y la tecnología. Conoce su trayectoria, experiencia y proyectos.",
     "canonicalPath": "/",
     "alternateLangPath": "en/"
   },
@@ -108,7 +108,7 @@
             "imageAlt": "Captura de pantalla del Proyecto de 7000 dots #PragmaChallenge",
             "siteUrl": "https://joseda7.github.io/7000dots/",
             "media": [
-              "assets/images/projects/frontend-4-1.webp",
+              "assets/images/projects/frontend-4-1.png",
               "assets/images/projects/frontend-4-2.png"
             ]
           },

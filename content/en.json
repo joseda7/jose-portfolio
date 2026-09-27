@@ -1,8 +1,8 @@
 {
   "meta": {
     "lang": "en",
-    "siteTitle": "Jose Alcaraz - Software Engineer, Visual Artist and Musician with 11+ years of experience",
-    "description": "Jose Alcaraz is a software engineer building web products. Explore his background, experience, and projects.",
+    "siteTitle": "Jose Alcaraz - Software Engineer, Visual Designer and Music Composer with 11 years of experience",
+    "description": "Jose Alcaraz builds solutions through art and technology. Explore his background, experience, and projects.",
     "canonicalPath": "/en/",
     "alternateLangPath": "./"
   },
@@ -108,7 +108,7 @@
             "imageAlt": "Screenshot of the 7000 dots #PragmaChallenge project",
             "siteUrl": "https://joseda7.github.io/7000dots/",
             "media": [
-              "assets/images/projects/frontend-4-1.webp",
+              "assets/images/projects/frontend-4-1.png",
               "assets/images/projects/frontend-4-2.png"
             ]
           },
