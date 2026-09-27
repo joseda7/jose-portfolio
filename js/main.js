@@ -233,23 +233,25 @@ function initCategoryNav() {
 }
 
 function initAchievements() {
-    const items = [...document.querySelectorAll('.achievements__item')];
-    const star = document.querySelector('.achievements__star');
-    if (items.length < 2) return;
+    document.querySelectorAll('.achievements, .essay-achievements').forEach((container) => {
+        const items = [...container.querySelectorAll('.achievements__item')];
+        const star = container.querySelector('.achievements__star');
+        if (items.length < 2) return;
 
-    let index = 0;
-    function next() {
-        items[index].classList.remove('is-active');
-        index = (index + 1) % items.length;
-        items[index].classList.add('is-active');
-    }
+        let index = 0;
+        function next() {
+            items[index].classList.remove('is-active');
+            index = (index + 1) % items.length;
+            items[index].classList.add('is-active');
+        }
 
-    let timer = setInterval(next, 5000);
+        let timer = setInterval(next, 5000);
 
-    star?.addEventListener('click', () => {
-        next();
-        clearInterval(timer);
-        timer = setInterval(next, 5000);
+        star?.addEventListener('click', () => {
+            next();
+            clearInterval(timer);
+            timer = setInterval(next, 5000);
+        });
     });
 }
 
@@ -260,7 +262,8 @@ function updateYearsSince() {
         const years = now.getFullYear() - since.getFullYear();
         const hadAnniversary = now.getMonth() > since.getMonth()
             || (now.getMonth() === since.getMonth() && now.getDate() >= since.getDate());
-        el.textContent = hadAnniversary ? years : years - 1;
+        const countEl = el.querySelector('.years-since__count') ?? el;
+        countEl.textContent = hadAnniversary ? years : years - 1;
     });
 }
 

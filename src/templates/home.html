@@ -36,6 +36,14 @@
                 <div class="song-overlay__actions">
                     <a class="main-menu__contact" href="mailto:{{nav.contactEmail}}">{{nav.contact}}</a>
                 </div>
+                <div class="essay-achievements">
+                    <button type="button" class="achievements__star" aria-label="{{achievements.nextLabel}}">
+                        <span class="achievements__star-icon" aria-hidden="true"></span>
+                    </button>
+                    <ul class="achievements__list">
+                        {{{achievementsHtml}}}
+                    </ul>
+                </div>
             </div>
             <footer class="pane-footer">
                 <div class="pane-footer__links">

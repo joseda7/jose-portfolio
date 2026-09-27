@@ -16,6 +16,7 @@ function get(obj, keyPath) {
 }
 
 const YEARS_SINCE_TOKEN = '{{yearsSince}}';
+const YEARS_SINCE_PLACEHOLDER = 'YEARSSINCEPLACEHOLDER';
 const YEARS_SINCE_DATE = '2015-02-09';
 
 function yearsSince(dateStr, now = new Date()) {
@@ -94,9 +95,10 @@ function buildPage(content) {
     const galleryHtml = content.projects.categories.map((cat) => {
         const cardsHtml = cat.items.map((item, i) => {
             const tagsHtml = item.tags.map((t) => escapeHtml(t)).join(' • ');
+            const thumbnail = item.media.find((m) => !/^https?:\/\//.test(m)) ?? item.media[0];
             return render(partials.projectCard, {
                 ...item,
-                image: item.media[0],
+                image: thumbnail,
                 tagsHtml,
                 tagsJson: escapeHtml(JSON.stringify(item.tags)),
                 mediaJson: escapeHtml(JSON.stringify(item.media)),
@@ -113,11 +115,16 @@ function buildPage(content) {
 
     const aboutParagraphsHtml = content.about.paragraphs.map((p) => {
         let escaped = escapeHtml(p);
-        if (escaped.includes(YEARS_SINCE_TOKEN)) {
-            const span = `<span class="years-since" data-since="${YEARS_SINCE_DATE}">${yearsSince(YEARS_SINCE_DATE)}</span>`;
-            escaped = escaped.replace(YEARS_SINCE_TOKEN, span);
+        const hasYearsSince = escaped.includes(YEARS_SINCE_TOKEN);
+        if (hasYearsSince) {
+            escaped = escaped.replace(YEARS_SINCE_TOKEN, YEARS_SINCE_PLACEHOLDER);
         }
-        return `<p>${formatInline(escaped)}</p>`;
+        let html = formatInline(escaped);
+        if (hasYearsSince) {
+            const cvButton = `<a class="years-since" href="${escapeHtml(content.footer.cvHref)}" download data-since="${YEARS_SINCE_DATE}">${yearsSince(YEARS_SINCE_DATE)}</a>`;
+            html = html.replace(YEARS_SINCE_PLACEHOLDER, cvButton);
+        }
+        return `<p>${html}</p>`;
     }).join('\n');
 
     const pageData = {

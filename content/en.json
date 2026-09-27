@@ -1,8 +1,8 @@
 {
   "meta": {
     "lang": "en",
-    "siteTitle": "Jose Alcaraz - Software Engineer, Visual Designer and Music Composer with 11 years of experience",
-    "description": "Jose Alcaraz builds solutions through art and technology. Explore his background, experience, and projects.",
+    "siteTitle": "Jose Alcaraz - Visual Engineer, Designer and Music Composer with 11 years of experience",
+    "description": "Jose Alcaraz is a software engineer who builds solutions through art and technology. Explore his background, experience, and projects.",
     "canonicalPath": "/en/",
     "alternateLangPath": "./"
   },
@@ -117,7 +117,7 @@
             "description": "Helped push the status quo of video calling technology. Built the cloud infrastructure, backend, and a TS library that extended the technology to web browsers",
             "tags": [
               "AI-coding",
-              "3D",
+              "WebGPU",
               "TypeScript",
               "Emscripten",
               "Node JS",
@@ -269,10 +269,10 @@
             ],
             "imageAlt": "Screenshot of Montaña - Alfaro",
             "media": [
+              "https://open.spotify.com/embed/track/2pE7Z4ip9obeA3posc1Guk?utm_source=generator&si=3c591bc678ab4597&theme=0",
               "assets/images/projects/music-1-1.png",
               "assets/images/projects/music-1-2.png",
-              "https://youtu.be/WgEdYFSknPs?si=-DCI3Cvfxqc8MQYY",
-              "https://open.spotify.com/embed/track/2pE7Z4ip9obeA3posc1Guk?utm_source=generator&si=3c591bc678ab4597&theme=0"
+              "https://youtu.be/WgEdYFSknPs?si=-DCI3Cvfxqc8MQYY"
             ]
           },
           {
@@ -285,8 +285,8 @@
             ],
             "imageAlt": "Screenshot of Sueños - Alfaro",
             "media": [
-              "assets/images/projects/music-2-1.png",
-              "https://open.spotify.com/embed/track/5jNvON8uWXeWgc9W9uXAnc?utm_source=generator&si=2f0c6c3943524f53&theme=0"
+              "https://open.spotify.com/embed/track/5jNvON8uWXeWgc9W9uXAnc?utm_source=generator&si=2f0c6c3943524f53&theme=0",
+              "assets/images/projects/music-2-1.png"
             ]
           },
           {
@@ -299,8 +299,8 @@
             ],
             "imageAlt": "Screenshot of Vuelta - Alfaro",
             "media": [
-              "assets/images/projects/music-3-1.png",
-              "https://open.spotify.com/embed/track/0wSNJdZbedS8uWXxruf46a?utm_source=generator&si=74855281ad4d479b&theme=0"
+              "https://open.spotify.com/embed/track/0wSNJdZbedS8uWXxruf46a?utm_source=generator&si=74855281ad4d479b&theme=0",
+              "assets/images/projects/music-3-1.png"
             ]
           },
           {
@@ -313,9 +313,9 @@
             ],
             "imageAlt": "Screenshot of the project Álbum Entrenando Paz",
             "media": [
+              "https://open.spotify.com/embed/album/1FMl3EYA8CdnGkScC1t0BD?utm_source=generator&si=0cde806b61f540b3&theme=0",
               "assets/images/projects/music-4-1.png",
-              "assets/images/projects/music-4-2.png",
-              "https://open.spotify.com/embed/album/1FMl3EYA8CdnGkScC1t0BD?utm_source=generator&si=0cde806b61f540b3&theme=0"
+              "assets/images/projects/music-4-2.png"
             ]
           },
           {
@@ -328,8 +328,8 @@
             ],
             "imageAlt": "Screenshot of Alcaradio",
             "media": [
-              "assets/images/projects/music-5-1.png",
               "https://youtu.be/X3cQQFkg3Tc?si=ny6obXi8yJXcaP8M",
+              "assets/images/projects/music-5-1.png",
               "https://youtu.be/s4KuHcxA3AI?si=vjg27AfiLGhgQLHC"
             ]
           },
@@ -342,8 +342,8 @@
             ],
             "imageAlt": "Screenshot of Noche - Alfaro",
             "media": [
-              "assets/images/projects/music-6-1.png",
-              "https://open.spotify.com/embed/track/0mFQj9g8UiQbjfwZX5egg7?utm_source=generator&si=4022e879069c47b0&theme=0"
+              "https://open.spotify.com/embed/track/0mFQj9g8UiQbjfwZX5egg7?utm_source=generator&si=4022e879069c47b0&theme=0",
+              "assets/images/projects/music-6-1.png"
             ]
           }
         ]
