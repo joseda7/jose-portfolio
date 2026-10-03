@@ -11,7 +11,8 @@
     "contactEmail": "jose.david.alcaraz7@gmail.com",
     "langSwitchLabel": "ES",
     "backLabel": "Back",
-    "openGalleryLabel": "Open gallery"
+    "openGalleryLabel": "Open gallery",
+    "galleryLabel": "Gallery"
   },
   "hero": {
     "name": "Jose Alcaraz",
@@ -60,9 +61,18 @@
             "imageAlt": "Screenshot of Juan Martínez Tirado's Portfolio",
             "siteUrl": "https://www.juanmartineztirado.com/",
             "media": [
-              "assets/images/projects/frontend-1-1.png",
-              "assets/images/projects/frontend-1-2.png",
-              "assets/images/projects/frontend-1-3.png"
+              {
+                "src": "assets/images/projects/frontend-1-1.png",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/frontend-1-2.png",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/frontend-1-3.png",
+                "caption": ""
+              }
             ]
           },
           {
@@ -75,9 +85,18 @@
             ],
             "imageAlt": "Screenshot of web games",
             "media": [
-              "assets/images/projects/frontend-2-1.webp",
-              "assets/images/projects/frontend-2-2.webp",
-              "assets/images/projects/frontend-2-3.webp"
+              {
+                "src": "assets/images/projects/frontend-2-1.webp",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/frontend-2-2.webp",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/frontend-2-3.webp",
+                "caption": ""
+              }
             ]
           },
           {
@@ -92,9 +111,18 @@
             ],
             "imageAlt": "Screenshot of top-tier websites",
             "media": [
-              "assets/images/projects/frontend-3-1.webp",
-              "assets/images/projects/frontend-3-2.png",
-              "assets/images/projects/frontend-3-3.webp"
+              {
+                "src": "assets/images/projects/frontend-3-1.webp",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/frontend-3-2.png",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/frontend-3-3.webp",
+                "caption": ""
+              }
             ]
           },
           {
@@ -108,8 +136,14 @@
             "imageAlt": "Screenshot of the 7000 dots #PragmaChallenge project",
             "siteUrl": "https://joseda7.github.io/7000dots/",
             "media": [
-              "assets/images/projects/frontend-4-1.png",
-              "assets/images/projects/frontend-4-2.png"
+              {
+                "src": "assets/images/projects/frontend-4-1.png",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/frontend-4-2.png",
+                "caption": ""
+              }
             ]
           },
           {
@@ -125,8 +159,14 @@
             ],
             "imageAlt": "Screenshot of immersive 3D video calls",
             "media": [
-              "assets/images/projects/frontend-5-1.png",
-              "assets/images/projects/frontend-5-2.png"
+              {
+                "src": "assets/images/projects/frontend-5-1.png",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/frontend-5-2.png",
+                "caption": ""
+              }
             ]
           },
           {
@@ -138,8 +178,14 @@
             ],
             "imageAlt": "Screenshot of 3D in the browser",
             "media": [
-              "assets/images/projects/frontend-6-1.webp",
-              "assets/images/projects/frontend-6-2.gif"
+              {
+                "src": "assets/images/projects/frontend-6-1.webp",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/frontend-6-2.gif",
+                "caption": ""
+              }
             ]
           }
         ]
@@ -150,8 +196,7 @@
         "skills": [
           "Illustration",
           "Graphic design",
-          "Animation",
-          "Video editing"
+          "Animation"
         ],
         "items": [
           {
@@ -163,10 +208,22 @@
             ],
             "imageAlt": "Screenshot of Neofelis nebulosa",
             "media": [
-              "assets/images/projects/visual-design-1-1.png",
-              "assets/images/projects/visual-design-1-2.png",
-              "assets/images/projects/visual-design-1-3.png",
-              "assets/images/projects/visual-design-1-4.png"
+              {
+                "src": "assets/images/projects/visual-design-1-1.png",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/visual-design-1-2.png",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/visual-design-1-3.png",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/visual-design-1-4.png",
+                "caption": ""
+              }
             ]
           },
           {
@@ -178,9 +235,18 @@
             ],
             "imageAlt": "Screenshot of Insame: Instrumental Gaming",
             "media": [
-              "assets/images/projects/visual-design-2-1.png",
-              "assets/images/projects/visual-design-2-2.png",
-              "assets/images/projects/visual-design-2-3.png"
+              {
+                "src": "assets/images/projects/visual-design-2-1.png",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/visual-design-2-2.png",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/visual-design-2-3.png",
+                "caption": ""
+              }
             ]
           },
           {
@@ -193,10 +259,22 @@
             ],
             "imageAlt": "Screenshot of Digital Portraits",
             "media": [
-              "assets/images/projects/visual-design-3-1.png",
-              "assets/images/projects/visual-design-3-2.png",
-              "assets/images/projects/visual-design-3-3.png",
-              "assets/images/projects/visual-design-3-4.png"
+              {
+                "src": "assets/images/projects/visual-design-3-1.png",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/visual-design-3-2.png",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/visual-design-3-3.png",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/visual-design-3-4.png",
+                "caption": ""
+              }
             ]
           },
           {
@@ -208,11 +286,22 @@
             ],
             "imageAlt": "Screenshot of Pixel Art",
             "media": [
-              "assets/images/projects/visual-design-4-1.webp",
-              "assets/images/projects/visual-design-4-2.webp",
-              "assets/images/projects/visual-design-4-3.webp",
-              "assets/images/projects/visual-design-4-4.webp",
-              "assets/images/projects/visual-design-4-5.webp"
+              {
+                "src": "assets/images/projects/visual-design-4-1.png",
+                "caption": "Pixel-art self-portrait, \"Meet the Artist\" style sheet"
+              },
+              {
+                "src": "assets/images/projects/visual-design-4-2.png",
+                "caption": "Early character illustrations exploring color and line work"
+              },
+              {
+                "src": "assets/images/projects/visual-design-4-3.png",
+                "caption": "Pixel-art group portrait made for Pragma's Front-end chapter"
+              },
+              {
+                "src": "assets/images/projects/visual-design-4-4.png",
+                "caption": "Fan art of Trunks (Dragon Ball), drawn in 2007"
+              }
             ]
           },
           {
@@ -226,9 +315,18 @@
             ],
             "imageAlt": "Screenshot of the project The Fay Morgana - Since the Beginning (Lyric Video)",
             "media": [
-              "assets/images/projects/visual-design-5-1.webp",
-              "assets/images/projects/visual-design-5-2.gif",
-              "https://youtu.be/DIaodt2RSrU?si=9BJq-Tb44rX5l3ti"
+              {
+                "src": "https://youtu.be/DIaodt2RSrU?si=9BJq-Tb44rX5l3ti",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/visual-design-5-1.jpg",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/visual-design-5-2.jpg",
+                "caption": ""
+              }
             ]
           },
           {
@@ -240,11 +338,26 @@
             ],
             "imageAlt": "Screenshot of A Knee's Journey",
             "media": [
-              "assets/images/projects/visual-design-6-1.png",
-              "assets/images/projects/visual-design-6-2.png",
-              "assets/images/projects/visual-design-6-3.png",
-              "assets/images/projects/visual-design-6-4.png",
-              "assets/images/projects/visual-design-6-5.gif"
+              {
+                "src": "assets/images/projects/visual-design-6-1.png",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/visual-design-6-2.png",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/visual-design-6-3.png",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/visual-design-6-4.png",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/visual-design-6-5.gif",
+                "caption": ""
+              }
             ]
           }
         ]
@@ -269,10 +382,22 @@
             ],
             "imageAlt": "Screenshot of Montaña - Alfaro",
             "media": [
-              "https://open.spotify.com/embed/track/2pE7Z4ip9obeA3posc1Guk?utm_source=generator&si=3c591bc678ab4597&theme=0",
-              "assets/images/projects/music-1-1.png",
-              "assets/images/projects/music-1-2.png",
-              "https://youtu.be/WgEdYFSknPs?si=-DCI3Cvfxqc8MQYY"
+              {
+                "src": "https://open.spotify.com/embed/track/2pE7Z4ip9obeA3posc1Guk?utm_source=generator&si=3c591bc678ab4597&theme=0",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/music-1-1.png",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/music-1-2.png",
+                "caption": ""
+              },
+              {
+                "src": "https://youtu.be/WgEdYFSknPs?si=-DCI3Cvfxqc8MQYY",
+                "caption": ""
+              }
             ]
           },
           {
@@ -285,8 +410,14 @@
             ],
             "imageAlt": "Screenshot of Sueños - Alfaro",
             "media": [
-              "https://open.spotify.com/embed/track/5jNvON8uWXeWgc9W9uXAnc?utm_source=generator&si=2f0c6c3943524f53&theme=0",
-              "assets/images/projects/music-2-1.png"
+              {
+                "src": "https://open.spotify.com/embed/track/5jNvON8uWXeWgc9W9uXAnc?utm_source=generator&si=2f0c6c3943524f53&theme=0",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/music-2-1.png",
+                "caption": ""
+              }
             ]
           },
           {
@@ -299,8 +430,14 @@
             ],
             "imageAlt": "Screenshot of Vuelta - Alfaro",
             "media": [
-              "https://open.spotify.com/embed/track/0wSNJdZbedS8uWXxruf46a?utm_source=generator&si=74855281ad4d479b&theme=0",
-              "assets/images/projects/music-3-1.png"
+              {
+                "src": "https://open.spotify.com/embed/track/0wSNJdZbedS8uWXxruf46a?utm_source=generator&si=74855281ad4d479b&theme=0",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/music-3-1.png",
+                "caption": ""
+              }
             ]
           },
           {
@@ -313,9 +450,18 @@
             ],
             "imageAlt": "Screenshot of the project Álbum Entrenando Paz",
             "media": [
-              "https://open.spotify.com/embed/album/1FMl3EYA8CdnGkScC1t0BD?utm_source=generator&si=0cde806b61f540b3&theme=0",
-              "assets/images/projects/music-4-1.png",
-              "assets/images/projects/music-4-2.png"
+              {
+                "src": "https://open.spotify.com/embed/album/1FMl3EYA8CdnGkScC1t0BD?utm_source=generator&si=0cde806b61f540b3&theme=0",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/music-4-1.png",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/music-4-2.png",
+                "caption": ""
+              }
             ]
           },
           {
@@ -328,9 +474,18 @@
             ],
             "imageAlt": "Screenshot of Alcaradio",
             "media": [
-              "https://youtu.be/X3cQQFkg3Tc?si=ny6obXi8yJXcaP8M",
-              "assets/images/projects/music-5-1.png",
-              "https://youtu.be/s4KuHcxA3AI?si=vjg27AfiLGhgQLHC"
+              {
+                "src": "https://youtu.be/X3cQQFkg3Tc?si=ny6obXi8yJXcaP8M",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/music-5-1.png",
+                "caption": ""
+              },
+              {
+                "src": "https://youtu.be/s4KuHcxA3AI?si=vjg27AfiLGhgQLHC",
+                "caption": ""
+              }
             ]
           },
           {
@@ -342,8 +497,14 @@
             ],
             "imageAlt": "Screenshot of Noche - Alfaro",
             "media": [
-              "https://open.spotify.com/embed/track/0mFQj9g8UiQbjfwZX5egg7?utm_source=generator&si=4022e879069c47b0&theme=0",
-              "assets/images/projects/music-6-1.png"
+              {
+                "src": "https://open.spotify.com/embed/track/0mFQj9g8UiQbjfwZX5egg7?utm_source=generator&si=4022e879069c47b0&theme=0",
+                "caption": ""
+              },
+              {
+                "src": "assets/images/projects/music-6-1.png",
+                "caption": ""
+              }
             ]
           }
         ]

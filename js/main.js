@@ -321,6 +321,7 @@ function initProjectModal() {
     const mediaPrevButton = document.querySelector('.project-modal__media-nav--prev');
     const mediaNextButton = document.querySelector('.project-modal__media-nav--next');
     const dotsEl = document.querySelector('.project-modal__dots');
+    const mediaCaptionEl = document.querySelector('.project-modal__media-caption');
     const prevProjectButton = document.querySelector('.project-modal__prev-project');
     const nextProjectButton = document.querySelector('.project-modal__next-project');
     const triggers = [...document.querySelectorAll('.gallery__item-trigger')];
@@ -339,7 +340,9 @@ function initProjectModal() {
     let lastTrigger = null;
 
     function showMedia() {
-        const src = media[index];
+        const entry = media[index];
+        const src = typeof entry === 'string' ? entry : entry.src;
+        const caption = typeof entry === 'string' ? '' : (entry.caption || '');
         const label = `${titleEl.textContent} ${index + 1}/${media.length}`;
         mediaEl.innerHTML = '';
         if (YOUTUBE_PATTERN.test(src)) {
@@ -363,6 +366,10 @@ function initProjectModal() {
             img.alt = label;
             img.draggable = false;
             mediaEl.appendChild(img);
+        }
+        if (mediaCaptionEl) {
+            mediaCaptionEl.textContent = caption;
+            mediaCaptionEl.hidden = !caption;
         }
         [...dotsEl.children].forEach((dot, i) => dot.classList.toggle('is-active', i === index));
     }

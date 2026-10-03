@@ -73,6 +73,7 @@
 
     <button type="button" class="gallery-open-btn" aria-label="{{nav.openGalleryLabel}}" data-open-label="{{nav.openGalleryLabel}}" data-close-label="{{nav.backLabel}}">
         <span class="gallery-open-btn__icon" aria-hidden="true"></span>
+        <span class="gallery-open-btn__label" aria-hidden="true">{{nav.galleryLabel}}</span>
     </button>
 
     <section class="pane pane--gallery" aria-label="{{projects.heading}}">
@@ -109,7 +110,10 @@
                     <button type="button" class="project-modal__media-nav project-modal__media-nav--prev" aria-label="{{projects.prevImageLabel}}">
                         <span class="project-modal__media-nav-icon project-modal__media-nav-icon--prev" aria-hidden="true"></span>
                     </button>
-                    <div class="project-modal__media"></div>
+                    <div class="project-modal__media-col">
+                        <div class="project-modal__media"></div>
+                        <p class="project-modal__media-caption" hidden></p>
+                    </div>
                     <button type="button" class="project-modal__media-nav project-modal__media-nav--next" aria-label="{{projects.nextImageLabel}}">
                         <span class="project-modal__media-nav-icon project-modal__media-nav-icon--next" aria-hidden="true"></span>
                     </button>

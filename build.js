@@ -95,7 +95,8 @@ function buildPage(content) {
     const galleryHtml = content.projects.categories.map((cat) => {
         const cardsHtml = cat.items.map((item, i) => {
             const tagsHtml = item.tags.map((t) => escapeHtml(t)).join(' • ');
-            const thumbnail = item.media.find((m) => !/^https?:\/\//.test(m)) ?? item.media[0];
+            const mediaSrc = (m) => (typeof m === 'string' ? m : m.src);
+            const thumbnail = mediaSrc(item.media.find((m) => !/^https?:\/\//.test(mediaSrc(m))) ?? item.media[0]);
             return render(partials.projectCard, {
                 ...item,
                 image: thumbnail,

@@ -82,6 +82,7 @@ a:hover {
     cursor: default;
 }
 .pane--gallery {
+    position: relative;
     flex: 15 15 0%;
     width: 15%;
     background: var(--carbon);
@@ -114,6 +115,7 @@ a:hover {
 }
 .layout.is-peek-open .pane--content {
     flex: 0 0 85%;
+    transition: none;
 }
 .layout.is-peek-open .pane--gallery {
     position: absolute;
@@ -157,15 +159,21 @@ a:hover {
     display: block;
     width: 2px;
     height: 2px;
-    background: currentColor;
-    transform: scaleX(-1) translateX(4px);
+    transform: rotate(90deg) scale(0.8) translate(-9px, -9px);
     box-shadow:
-        -6px -6px 0 0 currentColor,
-        -4px -4px 0 0 currentColor,
-        -2px -2px 0 0 currentColor,
-        -2px 2px 0 0 currentColor,
-        -4px 4px 0 0 currentColor,
-        -6px 6px 0 0 currentColor;
+        8px 2px 0 0 currentColor,
+        8px 4px 0 0 currentColor,
+        8px 6px 0 0 currentColor,
+        2px 8px 0 0 currentColor,
+        8px 8px 0 0 currentColor,
+        14px 8px 0 0 currentColor,
+        4px 10px 0 0 currentColor,
+        8px 10px 0 0 currentColor,
+        12px 10px 0 0 currentColor,
+        6px 12px 0 0 currentColor,
+        8px 12px 0 0 currentColor,
+        10px 12px 0 0 currentColor,
+        8px 14px 0 0 currentColor;
 }
 .category-nav__item {
     flex: 0 0 auto;
@@ -184,6 +192,7 @@ a:hover {
     transform: rotate(180deg);
     cursor: pointer;
     padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 .category-nav__item:hover {
     color: var(--turquoise);
@@ -218,7 +227,8 @@ a:hover {
     .layout.is-peek-open .pane--gallery,
     .layout.is-swapped.is-peek-close .pane--content,
     .layout.is-swapped.is-peek-close .pane--gallery,
-    .layout.is-swapped.is-peek-close .category-nav {
+    .layout.is-swapped.is-peek-close .category-nav,
+    .category-nav__item {
         transition: none;
     }
 }
@@ -686,7 +696,8 @@ a:hover {
 .project-modal__close {
     flex: 0 0 auto;
     border: 0;
-    padding: 4px;
+    padding: 10px;
+    margin: -6px;
     background: none;
     color: white;
     cursor: pointer;
@@ -738,11 +749,19 @@ a:hover {
     display: flex;
     align-items: center;
 }
-.project-modal__media {
+.project-modal__media-col {
     flex: 1 1 auto;
     min-width: 0;
     min-height: 0;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.project-modal__media {
+    flex: 1 1 auto;
+    min-width: 0;
+    min-height: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -813,6 +832,17 @@ a:hover {
 }
 .project-modal__media-nav-icon--prev {
     transform: scaleX(-1) translateX(4px);
+}
+.project-modal__media-caption {
+    flex: 0 0 auto;
+    margin: 0;
+    max-width: 100%;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.75rem;
+    text-align: center;
+}
+.project-modal__media-caption[hidden] {
+    display: none;
 }
 .project-modal__dots {
     flex: 0 0 auto;
@@ -1077,6 +1107,16 @@ a:hover {
     }
     .project-modal {
         align-items: flex-start;
+        overflow: hidden;
+    }
+    .project-modal__content {
+        height: 100%;
+        max-height: 100%;
+        min-height: 0;
+    }
+    .project-modal__body {
+        flex: 1 1 auto;
+        min-height: 0;
     }
     .project-modal__col--nav {
         align-self: center;
@@ -1148,31 +1188,72 @@ a:hover {
     .category-nav__item[data-category="all"] {
         display: none;
     }
+    .category-nav__item {
+        padding: 6px 2px;
+    }
     .category-nav__item:hover:not(.is-active) {
         color: var(--darkgray);
     }
+    .category-nav__item.is-active {
+        background: var(--turquoise);
+        color: var(--white);
+    }
     .gallery-open-btn {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 14px;
         position: fixed;
-        bottom: 15px;
-        left: 92.5%;
-        transform: translateX(-50%);
-        width: 36px;
-        height: 36px;
+        top: 66.6%;
+        right: -2px;
+        transform: translateY(-50%);
+        padding: 21px 8px;
         border: 2px solid var(--turquoise);
         border-radius: 2px;
         background: var(--onyx);
         color: var(--white);
         cursor: pointer;
-        z-index: 2;
+        z-index: 3;
+        width: 32px;
+    }
+    .gallery-open-btn__label {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        transform: rotate(180deg);
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        font-weight: bold;
+        letter-spacing: 0.15em;
+        white-space: nowrap;
     }
     .layout.is-swapped .gallery-open-btn {
-        left: 7.5%;
+        top: auto;
+        bottom: 15px;
+        right: auto;
+        left: -2px;
+        transform: none;
+        width: 32px;
     }
     .layout.is-swapped .gallery-open-btn__icon {
-        transform: translateX(2px);
+        transform: rotate(-90deg) scale(0.8) translate(-9px, -9px);
+    }
+    .layout.is-swapped .gallery-open-btn__label {
+        display: none;
+    }
+    .pane--gallery::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: var(--smoke);
+        background: linear-gradient(90deg,rgba(226, 226, 226, 1) 50%, rgba(226, 226, 226, 0) 100%);
+        z-index: 2;
+        transition: opacity 0.2s ease;
+    }
+    .layout.is-peek-open .pane--gallery::before,
+    .layout.is-swapped .pane--gallery::before {
+        opacity: 0;
+        pointer-events: none;
     }
 }
 
@@ -1461,10 +1542,18 @@ a:hover {
     .layout:not(.is-swapped) .gallery__item-trigger {
         cursor: default;
     }
-    .layout.is-swapped .gallery__item::before {
+    .layout.is-swapped .gallery__item::before,
+    .layout.is-peek-open .gallery__item::before {
         opacity: 0;
     }
-    .layout.is-swapped .gallery__item img {
+    /* .gallery__item::before {
+        display: none;
+    } */
+    /* .gallery__item img {
+        filter: saturate(1);
+    } */
+    .layout.is-swapped .gallery__item img,
+    .layout.is-peek-open .gallery__item img {
         transform: scale(1.06);
         filter: saturate(1);
     }
