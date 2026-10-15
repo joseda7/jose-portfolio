@@ -51,7 +51,6 @@
         "items": [
           {
             "title": "Portafolio Juan Martínez Tirado",
-            "description": "En equipo con Juan, entendimos el problema, planeamos y construimos su portafolio al servicio de otros.",
             "tags": [
               "React",
               "TypeScript",
@@ -63,7 +62,7 @@
             "media": [
               {
                 "src": "assets/images/projects/frontend-1-1.png",
-                "caption": ""
+                "caption": "En equipo con Juan, entendimos el problema, planeamos y construimos su portafolio al servicio de otros."
               },
               {
                 "src": "assets/images/projects/frontend-1-2.png",
@@ -77,7 +76,6 @@
           },
           {
             "title": "Juegos Web",
-            "description": "Desarrollé más de 20 juegos web 2D para campañas de mercadeo de diferentes empresas.",
             "tags": [
               "HTML",
               "JavaScript",
@@ -86,22 +84,21 @@
             "imageAlt": "Captura de pantalla de juegos web",
             "media": [
               {
-                "src": "assets/images/projects/frontend-2-1.webp",
+                "src": "assets/images/projects/frontend-2-1.png",
+                "caption": "Desarrollé más de 20 juegos web 2D para campañas de mercadeo de diferentes empresas."
+              },
+              {
+                "src": "assets/images/projects/frontend-2-2.png",
                 "caption": ""
               },
               {
-                "src": "assets/images/projects/frontend-2-2.webp",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/frontend-2-3.webp",
+                "src": "assets/images/projects/frontend-2-3.png",
                 "caption": ""
               }
             ]
           },
           {
             "title": "Páginas Web de primer nivel",
-            "description": "Durante 6 años, ayudé a desarrollár más de 40 sitios web profesionales para empresas medianas y grandes en América Latina",
             "tags": [
               "React",
               "Angular",
@@ -112,8 +109,8 @@
             "imageAlt": "Captura de pantalla de Páginas Web de primer nivel",
             "media": [
               {
-                "src": "assets/images/projects/frontend-3-1.webp",
-                "caption": ""
+                "src": "assets/images/projects/frontend-3-1.png",
+                "caption": "Durante 6 años, ayudé a desarrollár más de 40 sitios web profesionales para empresas medianas y grandes en América Latina"
               },
               {
                 "src": "assets/images/projects/frontend-3-2.png",
@@ -127,7 +124,6 @@
           },
           {
             "title": "7000 dots #PragmaChallenge",
-            "description": "En equipo, desarrollé la solución con la que ganamos el concurso #PragmaChallenge, que consistía en diseñar una camiseta para inspirar a la meta de 7000 personas en una empresa de tecnología",
             "tags": [
               "JavaScript",
               "SVG",
@@ -138,7 +134,7 @@
             "media": [
               {
                 "src": "assets/images/projects/frontend-4-1.png",
-                "caption": ""
+                "caption": "En equipo, desarrollé la solución con la que ganamos el concurso #PragmaChallenge, que consistía en diseñar una camiseta para inspirar a la meta de 7000 personas en una empresa de tecnología"
               },
               {
                 "src": "assets/images/projects/frontend-4-2.png",
@@ -148,9 +144,8 @@
           },
           {
             "title": "Videollamadas inmersivas 3D",
-            "description": "Ayudé a empujar el statu quo de la tecnología de videollamadas. Desarrollé la infraestructura cloud, backend y una librería en TS que extendiendó la tecnología a los navegadores web",
             "tags": [
-              "AI-coding",
+              "AI-assisted dev",
               "WebGPU",
               "TypeScript",
               "Emscripten",
@@ -161,7 +156,7 @@
             "media": [
               {
                 "src": "assets/images/projects/frontend-5-1.png",
-                "caption": ""
+                "caption": "Ayudé a empujar el statu quo de la tecnología de videollamadas. Desarrollé la infraestructura cloud, backend y una librería en TS que extendiendó la tecnología a los navegadores web"
               },
               {
                 "src": "assets/images/projects/frontend-5-2.png",
@@ -171,7 +166,6 @@
           },
           {
             "title": "3D en el navegador",
-            "description": "Desarrollé experimentos en 3D para aprender al servicio de otros.",
             "tags": [
               "JavaScript",
               "CSS"
@@ -180,7 +174,7 @@
             "media": [
               {
                 "src": "assets/images/projects/frontend-6-1.webp",
-                "caption": ""
+                "caption": "Desarrollé experimentos en 3D para aprender al servicio de otros."
               },
               {
                 "src": "assets/images/projects/frontend-6-2.gif",
@@ -201,7 +195,6 @@
         "items": [
           {
             "title": "Neofelis nebulosa",
-            "description": "-",
             "tags": [
               "Dibujo",
               "Acuarela"
@@ -228,7 +221,6 @@
           },
           {
             "title": "Insame: Instrumental Gaming",
-            "description": "-",
             "tags": [
               "Ilustración",
               "Diseño de presonajes"
@@ -251,7 +243,6 @@
           },
           {
             "title": "Retratos digitales",
-            "description": "Ilustré digitalmente a personas que admiro.",
             "tags": [
               "Dibujo",
               "Ilustración",
@@ -261,7 +252,7 @@
             "media": [
               {
                 "src": "assets/images/projects/visual-design-3-1.png",
-                "caption": ""
+                "caption": "Ilustré digitalmente a personas que admiro."
               },
               {
                 "src": "assets/images/projects/visual-design-3-2.png",
@@ -279,7 +270,6 @@
           },
           {
             "title": "Arte pixelado",
-            "description": "-",
             "tags": [
               "Ilustración",
               "Diseño"
@@ -306,7 +296,6 @@
           },
           {
             "title": "The Fay Morgana - Since the Beginning (Lyric Video)",
-            "description": "Diseñé y animé el video para un proyecto musical.",
             "tags": [
               "Ilustración",
               "Animación",
@@ -317,7 +306,7 @@
             "media": [
               {
                 "src": "https://youtu.be/DIaodt2RSrU?si=9BJq-Tb44rX5l3ti",
-                "caption": ""
+                "caption": "Diseñé y animé el video para un proyecto musical."
               },
               {
                 "src": "assets/images/projects/visual-design-5-1.jpg",
@@ -331,7 +320,6 @@
           },
           {
             "title": "Viaje de una rodilla",
-            "description": "-",
             "tags": [
               "Ilustración",
               "Diseño"
@@ -373,7 +361,6 @@
         "items": [
           {
             "title": "Montaña - Alfaro",
-            "description": "-",
             "tags": [
               "Composición",
               "Guitarra",
@@ -402,7 +389,6 @@
           },
           {
             "title": "Sueños - Alfaro",
-            "description": "-",
             "tags": [
               "Composición",
               "Guitarra",
@@ -422,7 +408,6 @@
           },
           {
             "title": "Vuelta - Alfaro",
-            "description": "-",
             "tags": [
               "Composición",
               "Guitarra",
@@ -442,7 +427,6 @@
           },
           {
             "title": "Álbum Entrenando Paz",
-            "description": "-",
             "tags": [
               "Composición",
               "Guitarra",
@@ -466,7 +450,6 @@
           },
           {
             "title": "Alcaradio",
-            "description": "-",
             "tags": [
               "Composición",
               "Guitarra",
@@ -490,7 +473,6 @@
           },
           {
             "title": "Noche - Alfaro",
-            "description": "-",
             "tags": [
               "Audio",
               "Producción"
@@ -517,7 +499,7 @@
     "visitSiteLabel": "Ver sitio",
     "prevProjectLabel": "Proyecto anterior",
     "nextProjectLabel": "Siguiente proyecto",
-    "moreProjectsLabel": "Proyectos"
+    "moreProjectsLabel": "+ Proyectos"
   },
   "achievements": {
     "nextLabel": "Siguiente logro",
@@ -534,8 +516,6 @@
     "emailLabel": "jose.david.alcaraz7@gmail.com",
     "linkedinLabel": "LinkedIn",
     "linkedinHref": "https://www.linkedin.com/in/jose-alcaraz/",
-    "spotifyLabel": "Spotify",
-    "spotifyHref": "https://open.spotify.com/artist/0nkrxajl6AFLsSWOAxo6Ye?si=EPJonJbhSdm0O516nAkXOw",
     "githubLabel": "",
     "tag": "#CodeWithPurpose",
     "tagHref": "https://github.com/joseda7",

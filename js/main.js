@@ -314,8 +314,6 @@ function initProjectModal() {
     const titleEl = document.querySelector('.project-modal__title');
     const categoryEl = document.querySelector('.project-modal__category');
     const tagsEl = document.querySelector('.project-modal__tags');
-    const descriptionEl = document.querySelector('.project-modal__description');
-    const descriptionTextEl = document.querySelector('.project-modal__description-text');
     const siteLinkEl = document.querySelector('.project-modal__site-link');
     const mediaEl = document.querySelector('.project-modal__media');
     const mediaPrevButton = document.querySelector('.project-modal__media-nav--prev');
@@ -326,7 +324,7 @@ function initProjectModal() {
     const nextProjectButton = document.querySelector('.project-modal__next-project');
     const triggers = [...document.querySelectorAll('.gallery__item-trigger')];
     const layout = document.querySelector('.layout');
-    if (!modal || !closeButton || !titleEl || !categoryEl || !tagsEl || !descriptionEl || !descriptionTextEl
+    if (!modal || !closeButton || !titleEl || !categoryEl || !tagsEl
         || !mediaEl || !mediaPrevButton || !mediaNextButton || !dotsEl
         || !prevProjectButton || !nextProjectButton || !triggers.length) return;
 
@@ -354,7 +352,6 @@ function initProjectModal() {
             mediaEl.appendChild(iframe);
         } else if (SPOTIFY_PATTERN.test(src)) {
             const iframe = document.createElement('iframe');
-            iframe.className = 'project-modal__spotify-embed';
             iframe.src = src;
             iframe.title = label;
             iframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
@@ -409,8 +406,9 @@ function initProjectModal() {
         triggerIndex = triggers.indexOf(trigger);
         titleEl.textContent = trigger.dataset.title;
         categoryEl.textContent = trigger.dataset.category;
-        descriptionTextEl.textContent = trigger.dataset.description;
-        tagsEl.textContent = JSON.parse(trigger.dataset.tags).join(' • ');
+        tagsEl.innerHTML = JSON.parse(trigger.dataset.tags)
+            .map((tag) => `<span class="project-modal__tag">${tag}</span>`)
+            .join('');
         if (siteLinkEl) {
             const siteUrl = trigger.dataset.siteUrl;
             siteLinkEl.hidden = !siteUrl;

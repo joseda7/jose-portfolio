@@ -87,7 +87,7 @@ function buildPage(content) {
         `<li><button type="button" class="category-nav__item" data-category="all">${escapeHtml(content.projects.allLabel)}</button></li>`,
         ...content.projects.categories.map((cat) => {
             const skillsHtml = (cat.skills ?? []).slice(0, 5)
-                .map((s) => escapeHtml(s)).join(' • ');
+                .map((s) => `<span class="category-nav__skill">${escapeHtml(s)}</span>`).join('');
             return `<li><button type="button" class="category-nav__item" data-category="${escapeHtml(cat.key)}">${escapeHtml(cat.label)}</button><div class="category-nav__skills">${skillsHtml}</div></li>`;
         }),
     ].join('\n');

@@ -51,7 +51,6 @@
         "items": [
           {
             "title": "Juan Martínez Tirado's Portfolio",
-            "description": "Working together with Juan, we understood the problem, planned, and built his portfolio in service of others.",
             "tags": [
               "React",
               "TypeScript",
@@ -63,7 +62,7 @@
             "media": [
               {
                 "src": "assets/images/projects/frontend-1-1.png",
-                "caption": ""
+                "caption": "Working together with Juan, we understood the problem, planned, and built his portfolio in service of others."
               },
               {
                 "src": "assets/images/projects/frontend-1-2.png",
@@ -77,7 +76,6 @@
           },
           {
             "title": "Web Games",
-            "description": "I developed more than 20 2D web games for marketing campaigns for different companies.",
             "tags": [
               "HTML",
               "JavaScript",
@@ -86,22 +84,21 @@
             "imageAlt": "Screenshot of web games",
             "media": [
               {
-                "src": "assets/images/projects/frontend-2-1.webp",
+                "src": "assets/images/projects/frontend-2-1.png",
+                "caption": "I developed more than 20 2D web games for marketing campaigns for different companies."
+              },
+              {
+                "src": "assets/images/projects/frontend-2-2.png",
                 "caption": ""
               },
               {
-                "src": "assets/images/projects/frontend-2-2.webp",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/frontend-2-3.webp",
+                "src": "assets/images/projects/frontend-2-3.png",
                 "caption": ""
               }
             ]
           },
           {
             "title": "Top-tier Websites",
-            "description": "For 6 years, I helped build more than 40 professional websites for mid-size and large companies across Latin America",
             "tags": [
               "React",
               "Angular",
@@ -112,8 +109,8 @@
             "imageAlt": "Screenshot of top-tier websites",
             "media": [
               {
-                "src": "assets/images/projects/frontend-3-1.webp",
-                "caption": ""
+                "src": "assets/images/projects/frontend-3-1.png",
+                "caption": "For 6 years, I helped build more than 40 professional websites for mid-size and large companies across Latin America"
               },
               {
                 "src": "assets/images/projects/frontend-3-2.png",
@@ -127,7 +124,6 @@
           },
           {
             "title": "7000 dots #PragmaChallenge",
-            "description": "As a team, I developed the solution that won the #PragmaChallenge contest, which involved designing a t-shirt to inspire a goal of 7,000 people at a tech company",
             "tags": [
               "JavaScript",
               "SVG",
@@ -138,7 +134,7 @@
             "media": [
               {
                 "src": "assets/images/projects/frontend-4-1.png",
-                "caption": ""
+                "caption": "As a team, I developed the solution that won the #PragmaChallenge contest, which involved designing a t-shirt to inspire a goal of 7,000 people at a tech company"
               },
               {
                 "src": "assets/images/projects/frontend-4-2.png",
@@ -148,9 +144,8 @@
           },
           {
             "title": "Immersive 3D video calls",
-            "description": "Helped push the status quo of video calling technology. Built the cloud infrastructure, backend, and a TS library that extended the technology to web browsers",
             "tags": [
-              "AI-coding",
+              "AI-assisted dev",
               "WebGPU",
               "TypeScript",
               "Emscripten",
@@ -161,7 +156,7 @@
             "media": [
               {
                 "src": "assets/images/projects/frontend-5-1.png",
-                "caption": ""
+                "caption": "Helped push the status quo of video calling technology. Built the cloud infrastructure, backend, and a TS library that extended the technology to web browsers"
               },
               {
                 "src": "assets/images/projects/frontend-5-2.png",
@@ -171,7 +166,6 @@
           },
           {
             "title": "3D in the browser",
-            "description": "I developed 3D experiments to learn, in service of others.",
             "tags": [
               "JavaScript",
               "CSS"
@@ -180,7 +174,7 @@
             "media": [
               {
                 "src": "assets/images/projects/frontend-6-1.webp",
-                "caption": ""
+                "caption": "I developed 3D experiments to learn, in service of others."
               },
               {
                 "src": "assets/images/projects/frontend-6-2.gif",
@@ -201,7 +195,6 @@
         "items": [
           {
             "title": "Neofelis nebulosa",
-            "description": "-",
             "tags": [
               "Drawing",
               "Watercolor"
@@ -228,7 +221,6 @@
           },
           {
             "title": "Insame: Instrumental Gaming",
-            "description": "-",
             "tags": [
               "Illustration",
               "Character design"
@@ -251,7 +243,6 @@
           },
           {
             "title": "Digital Portraits",
-            "description": "I digitally illustrated people I admire.",
             "tags": [
               "Drawing",
               "Illustration",
@@ -261,7 +252,7 @@
             "media": [
               {
                 "src": "assets/images/projects/visual-design-3-1.png",
-                "caption": ""
+                "caption": "I digitally illustrated people I admire."
               },
               {
                 "src": "assets/images/projects/visual-design-3-2.png",
@@ -279,7 +270,6 @@
           },
           {
             "title": "Pixel Art",
-            "description": "-",
             "tags": [
               "Illustration",
               "Design"
@@ -306,7 +296,6 @@
           },
           {
             "title": "The Fay Morgana - Since the Beginning (Lyric Video)",
-            "description": "I designed and animated the video for a music project.",
             "tags": [
               "Illustration",
               "Animation",
@@ -317,7 +306,7 @@
             "media": [
               {
                 "src": "https://youtu.be/DIaodt2RSrU?si=9BJq-Tb44rX5l3ti",
-                "caption": ""
+                "caption": "I designed and animated the video for a music project."
               },
               {
                 "src": "assets/images/projects/visual-design-5-1.jpg",
@@ -331,7 +320,6 @@
           },
           {
             "title": "A Knee's Journey",
-            "description": "-",
             "tags": [
               "Illustration",
               "Design"
@@ -373,7 +361,6 @@
         "items": [
           {
             "title": "Montaña - Alfaro",
-            "description": "-",
             "tags": [
               "Composition",
               "Guitar",
@@ -402,7 +389,6 @@
           },
           {
             "title": "Sueños - Alfaro",
-            "description": "-",
             "tags": [
               "Composition",
               "Guitar",
@@ -422,7 +408,6 @@
           },
           {
             "title": "Vuelta - Alfaro",
-            "description": "-",
             "tags": [
               "Composition",
               "Guitar",
@@ -442,7 +427,6 @@
           },
           {
             "title": "Álbum Entrenando Paz",
-            "description": "-",
             "tags": [
               "Composition",
               "Guitar",
@@ -466,7 +450,6 @@
           },
           {
             "title": "Alcaradio",
-            "description": "-",
             "tags": [
               "Composition",
               "Guitar",
@@ -490,7 +473,6 @@
           },
           {
             "title": "Noche - Alfaro",
-            "description": "-",
             "tags": [
               "Audio",
               "Production"
@@ -517,7 +499,7 @@
     "visitSiteLabel": "Visit site",
     "prevProjectLabel": "Previous project",
     "nextProjectLabel": "Next project",
-    "moreProjectsLabel": "Projects"
+    "moreProjectsLabel": "+ Projects"
   },
   "achievements": {
     "nextLabel": "Next achievement",
@@ -534,8 +516,6 @@
     "emailLabel": "jose.david.alcaraz7@gmail.com",
     "linkedinLabel": "LinkedIn",
     "linkedinHref": "https://www.linkedin.com/in/jose-alcaraz/",
-    "spotifyLabel": "Spotify",
-    "spotifyHref": "https://open.spotify.com/artist/0nkrxajl6AFLsSWOAxo6Ye?si=EPJonJbhSdm0O516nAkXOw",
     "githubLabel": "",
     "tag": "#CodeWithPurpose",
     "tagHref": "https://github.com/joseda7",
