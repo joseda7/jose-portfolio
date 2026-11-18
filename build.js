@@ -15,18 +15,6 @@ function get(obj, keyPath) {
     return keyPath.split('.').reduce((o, k) => (o == null ? o : o[k]), obj);
 }
 
-const YEARS_SINCE_TOKEN = '{{yearsSince}}';
-const YEARS_SINCE_PLACEHOLDER = 'YEARSSINCEPLACEHOLDER';
-const YEARS_SINCE_DATE = '2015-02-09';
-
-function yearsSince(dateStr, now = new Date()) {
-    const since = new Date(dateStr);
-    const years = now.getFullYear() - since.getFullYear();
-    const hadAnniversary = now.getMonth() > since.getMonth()
-        || (now.getMonth() === since.getMonth() && now.getDate() >= since.getDate());
-    return hadAnniversary ? years : years - 1;
-}
-
 function escapeHtml(value) {
     return String(value).replace(/[&<>"']/g, (c) => ({
         '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
@@ -87,12 +75,32 @@ function buildPage(content) {
         `<li><button type="button" class="category-nav__item" data-category="all">${escapeHtml(content.projects.allLabel)}</button></li>`,
         ...content.projects.categories.map((cat) => {
             const skillsHtml = (cat.skills ?? []).slice(0, 5)
-                .map((s) => `<span class="category-nav__skill">${escapeHtml(s)}</span>`).join('');
+                .map((s) => escapeHtml(s)).join(', ');
             return `<li><button type="button" class="category-nav__item" data-category="${escapeHtml(cat.key)}">${escapeHtml(cat.label)}</button><div class="category-nav__skills">${skillsHtml}</div></li>`;
         }),
     ].join('\n');
 
+    const renderMusicSection = (cat) => {
+        const { spotifyCard, videosCard } = cat;
+        const videosHtml = videosCard.videos.map((v) => `<a class="music-card__video" href="${escapeHtml(v.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(v.title)}">
+                    <img src="${escapeHtml(v.thumbnail)}" alt="${escapeHtml(v.title)}" loading="lazy">
+                    <span class="music-card__play" aria-hidden="true"><span class="music-card__play-icon"></span></span>
+                </a>`).join('');
+        return `<div class="gallery__category gallery__category--music" data-category="${escapeHtml(cat.key)}" aria-label="${escapeHtml(cat.label)}">
+            <div class="music-card music-card--spotify">
+                <iframe class="music-card__spotify-embed" src="${escapeHtml(spotifyCard.embedSrc)}" title="${escapeHtml(spotifyCard.title)}" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                ${spotifyCard.caption ? `<p class="music-card__caption">${escapeHtml(spotifyCard.caption)}</p>` : ''}
+            </div>
+            <div class="music-card music-card--videos">
+                ${videosCard.heading ? `<h3 class="music-card__heading">${escapeHtml(videosCard.heading)}</h3>` : ''}
+                <div class="music-card__videos">${videosHtml}</div>
+                ${videosCard.caption ? `<p class="music-card__caption">${escapeHtml(videosCard.caption)}</p>` : ''}
+            </div>
+        </div>`;
+    };
+
     const galleryHtml = content.projects.categories.map((cat) => {
+        if (cat.key === 'music') return renderMusicSection(cat);
         const cardsHtml = cat.items.map((item, i) => {
             const tagsHtml = item.tags.map((t) => escapeHtml(t)).join(' • ');
             const mediaSrc = (m) => (typeof m === 'string' ? m : m.src);
@@ -110,30 +118,15 @@ function buildPage(content) {
         return `<div class="gallery__category" data-category="${escapeHtml(cat.key)}" aria-label="${escapeHtml(cat.label)}">${cardsHtml}</div>`;
     }).join('\n');
 
-    const achievementsHtml = content.achievements.items.map((text, i) =>
-        `<li class="achievements__item${i === 0 ? ' is-active' : ''}">${formatInline(escapeHtml(text))}</li>`
+    const aboutParagraphsHtml = content.about.paragraphs.map((p) =>
+        `<p>${formatInline(escapeHtml(p))}</p>`
     ).join('\n');
-
-    const aboutParagraphsHtml = content.about.paragraphs.map((p) => {
-        let escaped = escapeHtml(p);
-        const hasYearsSince = escaped.includes(YEARS_SINCE_TOKEN);
-        if (hasYearsSince) {
-            escaped = escaped.replace(YEARS_SINCE_TOKEN, YEARS_SINCE_PLACEHOLDER);
-        }
-        let html = formatInline(escaped);
-        if (hasYearsSince) {
-            const cvButton = `<a class="years-since" href="${escapeHtml(content.footer.cvHref)}" download data-since="${YEARS_SINCE_DATE}">${yearsSince(YEARS_SINCE_DATE)}</a>`;
-            html = html.replace(YEARS_SINCE_PLACEHOLDER, cvButton);
-        }
-        return `<p>${html}</p>`;
-    }).join('\n');
 
     const pageData = {
         ...content,
         galleryHtml,
         categoryNavHtml,
         aboutParagraphsHtml,
-        achievementsHtml,
     };
 
     const bodyHtml = render(readText(tplPath('home.html')), pageData);

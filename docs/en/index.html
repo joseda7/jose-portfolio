@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jose Alcaraz - Visual Engineer, Designer and Music Composer with 11 years of experience</title>
-    <meta name="description" content="Jose Alcaraz is a software engineer who builds solutions through art and technology. Explore his background, experience, and projects.">
+    <title>Jose Alcaraz - Front-end Engineer and Visual Designer with 11+ years of experience</title>
+    <meta name="description" content="Jose Alcaraz helps solving problems through art and technology. Explore his stuff.">
     <base href="/jose-portfolio/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
     <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
 </head>
 <body>
-    <div class="layout">
+    <div class="layout is-gallery-closed">
     <section class="pane pane--content" aria-label="About">
         <header class="pane-header">
             <div class="pane-header__group">
@@ -31,50 +31,32 @@
                 <span class="pane-header__location fade-target">Alicante, Spain</span>
                 <a class="lang-switch fade-target" href="./">ES</a>
             </div>
+            <button type="button" class="song-play-btn song-play-btn--header fade-target" aria-label="Listen to it">
+                <span class="song-play-btn__icon" aria-hidden="true"></span>
+            </button>
         </header>
+
+        <img class="brand-mark" src="assets/images/jose-alcaraz-mark.svg" alt="">
 
         <div class="essay fade-target">
             <div class="essay-body">
+                <button type="button" class="song-play-btn song-play-btn--inline" aria-label="Listen to it">
+                    <span class="song-play-btn__icon" aria-hidden="true"></span>
+                </button>
                 <p>Hi, wherever you are on earth.</p>
 <p>Here are a few things about me, in case we ever get the chance to do something epic together… I was 6, and ever since my dad taught me to use Microsoft Paint, I haven&#39;t stopped wondering how to solve all kinds of problems through the mix of <strong><a href="#all">art and technology</a></strong>.</p>
 <p>While I was studying engineering I learned how to code in C, laying the base to later dare to program my first game in JavaScript, which by chance ended up being the entrance ticket to my first job, building games and apps for browsers. I loved it then, and I&#39;m still in love.</p>
-<p><strong><a class="years-since" href="assets/pdf/CV_JoseDavidAlcaraz_EN.pdf" download data-since="2015-02-09">11</a></strong> years later, I ask myself: why would a son, a husband, a father, a Colombian front-end and electronics engineer illustrate and design logotypes while reading about astronomy? Or write songs that no AI could ever harmonize or even feel for me?</p>
+<p><strong>11</strong> years later, I ask myself: why would a son, a husband, a father, a Colombian front-end and electronics engineer illustrate and design logotypes while reading about astronomy? Or write songs that no AI could ever harmonize or even feel for me?</p>
 <p>I think slowly, steadily, surely, sometimes out loud, and I ask for help when I&#39;m stuck, and I ask a lot of whys. I&#39;d rather fall in love with the problem than any kind of solution.</p>
 <p>You made it to the end, and I thank you for it. In case you think we have a chance to do something epic together, don&#39;t hesitate to <strong><a href="mailto:jose.david.alcaraz7@gmail.com">text me</a></strong> Now I&#39;m looking forward to hearing from you. <em>Ultreia et suseia.</em> </p>
 <p>Hugs, Jose.</p>
-                <div class="essay-body__actions">
-                    <button type="button" class="song-play-btn">
-                        <span class="song-play-btn__icon" aria-hidden="true"></span>
-                        Listen to it
-                    </button>
-                    <div class="essay-body__cta">
-                        <a class="cv-btn" href="assets/pdf/CV_JoseDavidAlcaraz_EN.pdf" download>
-                            CV
-                            <span class="cv-btn__icon" aria-hidden="true"></span>
-                        </a>
-                        <a class="main-menu__contact" href="mailto:jose.david.alcaraz7@gmail.com">Let&#39;s talk</a>
-                    </div>
-                </div>
+                <button type="button" class="essay-read-all-btn">Read all</button>
                 <audio class="song-audio" src="assets/audio/art-and-technology.m4a" preload="none" hidden></audio>
-                <div class="song-overlay__actions">
-                    <a class="main-menu__contact" href="mailto:jose.david.alcaraz7@gmail.com">Let&#39;s talk</a>
-                </div>
-                <div class="essay-achievements">
-                    <button type="button" class="achievements__star" aria-label="Next achievement">
-                        <span class="achievements__star-icon" aria-hidden="true"></span>
-                    </button>
-                    <ul class="achievements__list">
-                        <li class="achievements__item is-active">1st place, Video Game Workshop by Universidad Pontificia Bolivariana and Bancolombia, 2nd edition, 2015.</li>
-<li class="achievements__item">Adjunct professor at Universidad Pontificia Bolivariana, &#39;Advanced Web Development&#39; course for Computer Engineering, 2018.</li>
-<li class="achievements__item">Creator of a Sound Design course for Digital Entertainment Engineering, at Universidad Pontificia Bolivariana, 2015.</li>
-<li class="achievements__item">Founder of communities about front-end, music band, and drawing, at Pragma.</li>
-<li class="achievements__item">20+ publications and conferences.</li>
-                    </ul>
-                </div>
             </div>
             <footer class="pane-footer">
                 <div class="pane-footer__links">
                     <a href="mailto:jose.david.alcaraz7@gmail.com">jose.david.alcaraz7@gmail.com</a>
+                    <a class="pane-footer__cv-link" href="assets/pdf/CV_JoseDavidAlcaraz_EN.pdf" download>CV<span class="pane-footer__cv-icon" aria-hidden="true"></span></a>
                     <a href="https://www.linkedin.com/in/jose-alcaraz/" target="_blank">LinkedIn</a>
                     <a href="https://github.com/joseda7" target="_blank"> <span class="pane-footer__tag">#CodeWithPurpose</span></a>
                 </div>
@@ -83,25 +65,19 @@
         </div>
     </section>
 
+    <div class="nav-orbit" aria-hidden="true"></div>
+
     <nav class="category-nav" aria-label="Projects">
+        <button type="button" class="gallery-reopen-btn" aria-label="Open gallery" data-open-label="Open gallery" data-close-label="Back">
+            <span class="gallery-open-btn__icon" aria-hidden="true"></span>
+            <span class="gallery-reopen-btn__label">Gallery</span>
+        </button>
         <ul>
             <li><button type="button" class="category-nav__item" data-category="all">All</button></li>
-<li><button type="button" class="category-nav__item" data-category="frontend">Front-end</button><div class="category-nav__skills"><span class="category-nav__skill">TypeScript</span><span class="category-nav__skill">CSS</span><span class="category-nav__skill">AI-assisted dev</span><span class="category-nav__skill">Node.js</span></div></li>
-<li><button type="button" class="category-nav__item" data-category="visual-design">Visual design</button><div class="category-nav__skills"><span class="category-nav__skill">Illustration</span><span class="category-nav__skill">Graphic design</span><span class="category-nav__skill">Animation</span></div></li>
-<li><button type="button" class="category-nav__item" data-category="music">Music</button><div class="category-nav__skills"><span class="category-nav__skill">Composition</span><span class="category-nav__skill">Guitar</span><span class="category-nav__skill">Songwriting</span></div></li>
+<li><button type="button" class="category-nav__item" data-category="frontend">Front-end</button><div class="category-nav__skills">TypeScript, CSS, AI, +</div></li>
+<li><button type="button" class="category-nav__item" data-category="visual-design">Visual design</button><div class="category-nav__skills">Illustration, Design, Animation, +</div></li>
+<li><button type="button" class="category-nav__item" data-category="music">Music</button><div class="category-nav__skills">Songwriting, Guitar, +</div></li>
         </ul>
-        <div class="achievements">
-            <button type="button" class="achievements__star" aria-label="Next achievement">
-                <span class="achievements__star-icon" aria-hidden="true"></span>
-            </button>
-            <ul class="achievements__list">
-                <li class="achievements__item is-active">1st place, Video Game Workshop by Universidad Pontificia Bolivariana and Bancolombia, 2nd edition, 2015.</li>
-<li class="achievements__item">Adjunct professor at Universidad Pontificia Bolivariana, &#39;Advanced Web Development&#39; course for Computer Engineering, 2018.</li>
-<li class="achievements__item">Creator of a Sound Design course for Digital Entertainment Engineering, at Universidad Pontificia Bolivariana, 2015.</li>
-<li class="achievements__item">Founder of communities about front-end, music band, and drawing, at Pragma.</li>
-<li class="achievements__item">20+ publications and conferences.</li>
-            </ul>
-        </div>
     </nav>
 
     <button type="button" class="gallery-open-btn" aria-label="Open gallery" data-open-label="Open gallery" data-close-label="Back">
@@ -157,8 +133,8 @@
 </figure>
 
 <figure class="gallery__item gallery__item--s">
-    <button type="button" class="gallery__item-trigger" data-title="3D in the browser" data-category="Front-end" data-tags="[&quot;JavaScript&quot;,&quot;CSS&quot;]" data-media="[{&quot;src&quot;:&quot;assets/images/projects/frontend-6-1.webp&quot;,&quot;caption&quot;:&quot;I developed 3D experiments to learn, in service of others.&quot;},{&quot;src&quot;:&quot;assets/images/projects/frontend-6-2.gif&quot;,&quot;caption&quot;:&quot;&quot;}]" data-site-url="">
-        <img src="assets/images/projects/frontend-6-1.webp" alt="Screenshot of 3D in the browser" loading="lazy">
+    <button type="button" class="gallery__item-trigger" data-title="3D in the browser" data-category="Front-end" data-tags="[&quot;JavaScript&quot;,&quot;CSS&quot;]" data-media="[{&quot;src&quot;:&quot;assets/images/projects/frontend-6-1.png&quot;,&quot;caption&quot;:&quot;I developed 3D experiments to learn, in service of others.&quot;},{&quot;src&quot;:&quot;assets/images/projects/frontend-6-2.gif&quot;,&quot;caption&quot;:&quot;&quot;}]" data-site-url="">
+        <img src="assets/images/projects/frontend-6-1.png" alt="Screenshot of 3D in the browser" loading="lazy">
         <figcaption>
             <span class="gallery__item-title">3D in the browser</span>
         </figcaption>
@@ -219,60 +195,26 @@
     </button>
 </figure>
 </div>
-<div class="gallery__category" data-category="music" aria-label="Music"><figure class="gallery__item gallery__item--l">
-    <button type="button" class="gallery__item-trigger" data-title="Montaña - Alfaro" data-category="Music" data-tags="[&quot;Composition&quot;,&quot;Guitar&quot;,&quot;Piano&quot;,&quot;Songwriting&quot;]" data-media="[{&quot;src&quot;:&quot;https://open.spotify.com/embed/track/2pE7Z4ip9obeA3posc1Guk?utm_source=generator&amp;si=3c591bc678ab4597&amp;theme=0&quot;,&quot;caption&quot;:&quot;&quot;},{&quot;src&quot;:&quot;assets/images/projects/music-1-1.png&quot;,&quot;caption&quot;:&quot;&quot;},{&quot;src&quot;:&quot;assets/images/projects/music-1-2.png&quot;,&quot;caption&quot;:&quot;&quot;},{&quot;src&quot;:&quot;https://youtu.be/WgEdYFSknPs?si=-DCI3Cvfxqc8MQYY&quot;,&quot;caption&quot;:&quot;&quot;}]" data-site-url="">
-        <img src="assets/images/projects/music-1-1.png" alt="Screenshot of Montaña - Alfaro" loading="lazy">
-        <figcaption>
-            <span class="gallery__item-title">Montaña - Alfaro</span>
-        </figcaption>
-    </button>
-</figure>
-
-<figure class="gallery__item gallery__item--s">
-    <button type="button" class="gallery__item-trigger" data-title="Sueños - Alfaro" data-category="Music" data-tags="[&quot;Composition&quot;,&quot;Guitar&quot;,&quot;Songwriting&quot;]" data-media="[{&quot;src&quot;:&quot;https://open.spotify.com/embed/track/5jNvON8uWXeWgc9W9uXAnc?utm_source=generator&amp;si=2f0c6c3943524f53&amp;theme=0&quot;,&quot;caption&quot;:&quot;&quot;},{&quot;src&quot;:&quot;assets/images/projects/music-2-1.png&quot;,&quot;caption&quot;:&quot;&quot;}]" data-site-url="">
-        <img src="assets/images/projects/music-2-1.png" alt="Screenshot of Sueños - Alfaro" loading="lazy">
-        <figcaption>
-            <span class="gallery__item-title">Sueños - Alfaro</span>
-        </figcaption>
-    </button>
-</figure>
-
-<figure class="gallery__item gallery__item--s">
-    <button type="button" class="gallery__item-trigger" data-title="Vuelta - Alfaro" data-category="Music" data-tags="[&quot;Composition&quot;,&quot;Guitar&quot;,&quot;Songwriting&quot;]" data-media="[{&quot;src&quot;:&quot;https://open.spotify.com/embed/track/0wSNJdZbedS8uWXxruf46a?utm_source=generator&amp;si=74855281ad4d479b&amp;theme=0&quot;,&quot;caption&quot;:&quot;&quot;},{&quot;src&quot;:&quot;assets/images/projects/music-3-1.png&quot;,&quot;caption&quot;:&quot;&quot;}]" data-site-url="">
-        <img src="assets/images/projects/music-3-1.png" alt="Screenshot of Vuelta - Alfaro" loading="lazy">
-        <figcaption>
-            <span class="gallery__item-title">Vuelta - Alfaro</span>
-        </figcaption>
-    </button>
-</figure>
-
-<figure class="gallery__item gallery__item--s">
-    <button type="button" class="gallery__item-trigger" data-title="Álbum Entrenando Paz" data-category="Music" data-tags="[&quot;Composition&quot;,&quot;Guitar&quot;,&quot;Songwriting&quot;]" data-media="[{&quot;src&quot;:&quot;https://open.spotify.com/embed/album/1FMl3EYA8CdnGkScC1t0BD?utm_source=generator&amp;si=0cde806b61f540b3&amp;theme=0&quot;,&quot;caption&quot;:&quot;&quot;},{&quot;src&quot;:&quot;assets/images/projects/music-4-1.png&quot;,&quot;caption&quot;:&quot;&quot;},{&quot;src&quot;:&quot;assets/images/projects/music-4-2.png&quot;,&quot;caption&quot;:&quot;&quot;}]" data-site-url="">
-        <img src="assets/images/projects/music-4-1.png" alt="Screenshot of the project Álbum Entrenando Paz" loading="lazy">
-        <figcaption>
-            <span class="gallery__item-title">Álbum Entrenando Paz</span>
-        </figcaption>
-    </button>
-</figure>
-
-<figure class="gallery__item gallery__item--l">
-    <button type="button" class="gallery__item-trigger" data-title="Alcaradio" data-category="Music" data-tags="[&quot;Composition&quot;,&quot;Guitar&quot;,&quot;Songwriting&quot;]" data-media="[{&quot;src&quot;:&quot;https://youtu.be/X3cQQFkg3Tc?si=ny6obXi8yJXcaP8M&quot;,&quot;caption&quot;:&quot;&quot;},{&quot;src&quot;:&quot;assets/images/projects/music-5-1.png&quot;,&quot;caption&quot;:&quot;&quot;},{&quot;src&quot;:&quot;https://youtu.be/s4KuHcxA3AI?si=vjg27AfiLGhgQLHC&quot;,&quot;caption&quot;:&quot;&quot;}]" data-site-url="">
-        <img src="assets/images/projects/music-5-1.png" alt="Screenshot of Alcaradio" loading="lazy">
-        <figcaption>
-            <span class="gallery__item-title">Alcaradio</span>
-        </figcaption>
-    </button>
-</figure>
-
-<figure class="gallery__item gallery__item--s">
-    <button type="button" class="gallery__item-trigger" data-title="Noche - Alfaro" data-category="Music" data-tags="[&quot;Audio&quot;,&quot;Production&quot;]" data-media="[{&quot;src&quot;:&quot;https://open.spotify.com/embed/track/0mFQj9g8UiQbjfwZX5egg7?utm_source=generator&amp;si=4022e879069c47b0&amp;theme=0&quot;,&quot;caption&quot;:&quot;&quot;},{&quot;src&quot;:&quot;assets/images/projects/music-6-1.png&quot;,&quot;caption&quot;:&quot;&quot;}]" data-site-url="">
-        <img src="assets/images/projects/music-6-1.png" alt="Screenshot of Noche - Alfaro" loading="lazy">
-        <figcaption>
-            <span class="gallery__item-title">Noche - Alfaro</span>
-        </figcaption>
-    </button>
-</figure>
-</div>
+<div class="gallery__category gallery__category--music" data-category="music" aria-label="Music">
+            <div class="music-card music-card--spotify">
+                <iframe class="music-card__spotify-embed" src="https://open.spotify.com/embed/album/1FMl3EYA8CdnGkScC1t0BD?utm_source=generator&amp;si=0cde806b61f540b3&amp;theme=0" title="Álbum Entrenando Paz" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                
+            </div>
+            <div class="music-card music-card--videos">
+                <h3 class="music-card__heading">More to watch</h3>
+                <div class="music-card__videos"><a class="music-card__video" href="https://youtu.be/WgEdYFSknPs?si=-DCI3Cvfxqc8MQYY" target="_blank" rel="noopener noreferrer" aria-label="Montaña">
+                    <img src="assets/images/projects/music-1-1.png" alt="Montaña" loading="lazy">
+                    <span class="music-card__play" aria-hidden="true"><span class="music-card__play-icon"></span></span>
+                </a><a class="music-card__video" href="https://youtu.be/X3cQQFkg3Tc?si=ny6obXi8yJXcaP8M" target="_blank" rel="noopener noreferrer" aria-label="Contigo en la distancia">
+                    <img src="assets/images/projects/music-1-2.png" alt="Contigo en la distancia" loading="lazy">
+                    <span class="music-card__play" aria-hidden="true"><span class="music-card__play-icon"></span></span>
+                </a><a class="music-card__video" href="https://youtu.be/s4KuHcxA3AI?si=vjg27AfiLGhgQLHC" target="_blank" rel="noopener noreferrer" aria-label="Factor común">
+                    <img src="assets/images/projects/music-1-3.png" alt="Factor común" loading="lazy">
+                    <span class="music-card__play" aria-hidden="true"><span class="music-card__play-icon"></span></span>
+                </a></div>
+                
+            </div>
+        </div>
         </div>
     </section>
 

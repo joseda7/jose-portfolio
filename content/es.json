@@ -1,18 +1,18 @@
 {
   "meta": {
     "lang": "es",
-    "siteTitle": "Jose Alcaraz - Ingeniero Visual, Diseñador y Compositor Musical con 11 años de experiencia",
-    "description": "Jose Alcaraz es un ingeniero de Software que construye soluciones a través del arte y la tecnología. Conoce su trayectoria, experiencia y proyectos.",
+    "siteTitle": "Jose Alcaraz - Ingeniero Front-end y Diseñador Visual con 11+ años de experiencia",
+    "description": "Jose Alcaraz ayuda a solucionar problemas a través del arte y la tecnología. Explora sus cosas.",
     "canonicalPath": "/",
     "alternateLangPath": "en/"
   },
   "nav": {
-    "contact": "Conversemos",
     "contactEmail": "jose.david.alcaraz7@gmail.com",
     "langSwitchLabel": "EN",
     "backLabel": "Volver",
     "openGalleryLabel": "Abrir galería",
-    "galleryLabel": "Galería"
+    "galleryLabel": "Galería",
+    "readAllLabel": "Leer todo"
   },
   "hero": {
     "name": "Jose Alcaraz",
@@ -25,8 +25,8 @@
       "Hola, donde estés en la tierra.",
       "Aquí te cuento un poco sobre mí, pensando en que en cualquier momento podamos hacer algo juntos. Desde que a los 6 años me enseñó papá a usar Microsoft Paint, no he parado de solucionar problemas a través de: **[arte y tecnología](#all)**.",
       "Mientras estudiaba ingeniería aprendí lenguaje C, sentando bases para después programar mi primer juego en JS, que sin saberlo sería mi entrada a mi primer trabajo como desarrollador de aplicaciones y juegos web.",
-      "**{{yearsSince}}** años después, sigo preguntándome: ¿Por qué un hijo, esposo, padre, colombiano, ingeniero electrónico y front-end; ilustraría y diseñaría logotipos mientras lee de astronomía, o compondría canciones que no parezcan hechas por IA?",
-      "Pienso lento pero seguro, a veces en voz alta. Voy pidiendo ayuda y pregunto mucho '¿para qué...?'. Prefiero enamorarme del problema antes que de la solución.",
+      "**11** años después, sigo preguntándome: ¿Por qué un hijo, esposo, padre, colombiano, ingeniero electrónico y front-end; ilustraría y diseñaría logotipos mientras lee de astronomía, o compondría canciones que no parezcan hechas por IA?",
+      "Pienso lento pero seguro, a veces en voz alta. Voy pidiendo ayuda y pregunto mucho '¿para qué?'. Prefiero enamorarme del problema antes que de la solución.",
       "Gracias por haber llegado hasta aquí. Si crees que en cualquier momento podamos hacer algo juntos, **[escríbeme](mailto:jose.david.alcaraz7@gmail.com)** sin mente. Ahora soy yo quién quiero escuchar de ti. _Ultreia et suseia_.",
       "Abrazos, Jose."
     ],
@@ -45,8 +45,8 @@
         "skills": [
           "TypeScript",
           "CSS",
-          "AI-assisted dev",
-          "Node.js"
+          "IA",
+          "+"
         ],
         "items": [
           {
@@ -173,7 +173,7 @@
             "imageAlt": "Captura de pantalla de 3D en el navegador",
             "media": [
               {
-                "src": "assets/images/projects/frontend-6-1.webp",
+                "src": "assets/images/projects/frontend-6-1.png",
                 "caption": "Desarrollé experimentos en 3D para aprender al servicio de otros."
               },
               {
@@ -186,11 +186,12 @@
       },
       {
         "key": "visual-design",
-        "label": "Visual design",
+        "label": "Visual Design",
         "skills": [
           "Ilustración",
-          "Diseño gráfico",
-          "Animación"
+          "Diseño",
+          "Animación",
+          "+"
         ],
         "items": [
           {
@@ -356,140 +357,34 @@
         "skills": [
           "Composición",
           "Guitarra",
-          "Cantautor"
+          "+"
         ],
-        "items": [
-          {
-            "title": "Montaña - Alfaro",
-            "tags": [
-              "Composición",
-              "Guitarra",
-              "Piano",
-              "Cantautor"
-            ],
-            "imageAlt": "Captura de pantalla de Montaña - Alfaro",
-            "media": [
-              {
-                "src": "https://open.spotify.com/embed/track/2pE7Z4ip9obeA3posc1Guk?utm_source=generator&si=3c591bc678ab4597&theme=0",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/music-1-1.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/music-1-2.png",
-                "caption": ""
-              },
-              {
-                "src": "https://youtu.be/WgEdYFSknPs?si=-DCI3Cvfxqc8MQYY",
-                "caption": ""
-              }
-            ]
-          },
-          {
-            "title": "Sueños - Alfaro",
-            "tags": [
-              "Composición",
-              "Guitarra",
-              "Cantautor"
-            ],
-            "imageAlt": "Captura de pantalla de Sueños - Alfaro",
-            "media": [
-              {
-                "src": "https://open.spotify.com/embed/track/5jNvON8uWXeWgc9W9uXAnc?utm_source=generator&si=2f0c6c3943524f53&theme=0",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/music-2-1.png",
-                "caption": ""
-              }
-            ]
-          },
-          {
-            "title": "Vuelta - Alfaro",
-            "tags": [
-              "Composición",
-              "Guitarra",
-              "Cantautor"
-            ],
-            "imageAlt": "Captura de pantalla de Vuelta - Alfaro",
-            "media": [
-              {
-                "src": "https://open.spotify.com/embed/track/0wSNJdZbedS8uWXxruf46a?utm_source=generator&si=74855281ad4d479b&theme=0",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/music-3-1.png",
-                "caption": ""
-              }
-            ]
-          },
-          {
-            "title": "Álbum Entrenando Paz",
-            "tags": [
-              "Composición",
-              "Guitarra",
-              "Cantautor"
-            ],
-            "imageAlt": "Captura de pantalla del Proyecto de Álbum Entrenando Paz",
-            "media": [
-              {
-                "src": "https://open.spotify.com/embed/album/1FMl3EYA8CdnGkScC1t0BD?utm_source=generator&si=0cde806b61f540b3&theme=0",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/music-4-1.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/music-4-2.png",
-                "caption": ""
-              }
-            ]
-          },
-          {
-            "title": "Alcaradio",
-            "tags": [
-              "Composición",
-              "Guitarra",
-              "Cantautor"
-            ],
-            "imageAlt": "Captura de pantalla de Alcaradio",
-            "media": [
-              {
-                "src": "https://youtu.be/X3cQQFkg3Tc?si=ny6obXi8yJXcaP8M",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/music-5-1.png",
-                "caption": ""
-              },
-              {
-                "src": "https://youtu.be/s4KuHcxA3AI?si=vjg27AfiLGhgQLHC",
-                "caption": ""
-              }
-            ]
-          },
-          {
-            "title": "Noche - Alfaro",
-            "tags": [
-              "Audio",
-              "Producción"
-            ],
-            "imageAlt": "Captura de pantalla de Noche - Alfaro",
-            "media": [
-              {
-                "src": "https://open.spotify.com/embed/track/0mFQj9g8UiQbjfwZX5egg7?utm_source=generator&si=4022e879069c47b0&theme=0",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/music-6-1.png",
-                "caption": ""
-              }
-            ]
-          }
-        ]
+        "spotifyCard": {
+          "title": "Álbum Entrenando Paz",
+          "embedSrc": "https://open.spotify.com/embed/album/1FMl3EYA8CdnGkScC1t0BD?utm_source=generator&si=0cde806b61f540b3&theme=0",
+          "caption": ""
+        },
+        "videosCard": {
+          "videos": [
+            {
+              "title": "Montaña",
+              "url": "https://youtu.be/WgEdYFSknPs?si=-DCI3Cvfxqc8MQYY",
+              "thumbnail": "assets/images/projects/music-1-1.png"
+            },
+            {
+              "title": "Contigo en la distancia",
+              "url": "https://youtu.be/X3cQQFkg3Tc?si=ny6obXi8yJXcaP8M",
+              "thumbnail": "assets/images/projects/music-1-2.png"
+            },
+            {
+              "title": "Factor común",
+              "url": "https://youtu.be/s4KuHcxA3AI?si=vjg27AfiLGhgQLHC",
+              "thumbnail": "assets/images/projects/music-1-3.png"
+            }
+          ],
+          "caption": "",
+          "heading": "Más para ver"
+        }
       }
     ],
     "closeLabel": "Cerrar",
@@ -500,16 +395,6 @@
     "prevProjectLabel": "Proyecto anterior",
     "nextProjectLabel": "Siguiente proyecto",
     "moreProjectsLabel": "+ Proyectos"
-  },
-  "achievements": {
-    "nextLabel": "Siguiente logro",
-    "items": [
-      "1er puesto en Workshop de Videojuegos Universidad Pontificia Bolivariana y Bancolombia, 2da edición, 2015.",
-      "Profesor de cátedra en Universidad Pontificia Bolivariana, curso 'Desarrollo Web Avanzado' para Ingeniería Informática, 2018.",
-      "Creador de curso de Diseño Sonoro para Ingeniería de Entretenimiento Digital, Universidad Pontificia Bolivariana, 2015.",
-      "Fundador de comunidades de front-end, banda musical y dibujo en Pragma.",
-      "20+ publicaciones y conferencias."
-    ]
   },
   "footer": {
     "copyright": "© 2026 Jose Alcaraz",

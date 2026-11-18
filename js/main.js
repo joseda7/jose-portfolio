@@ -28,16 +28,27 @@ function initPaneSwap() {
 function initGalleryOpenLabel() {
     const layout = document.querySelector('.layout');
     const openButton = document.querySelector('.gallery-open-btn');
-    if (!layout || !openButton) return;
+    const reopenButton = document.querySelector('.gallery-reopen-btn');
+    if (!layout) return;
 
     function sync() {
-        const isOpen = layout.classList.contains('is-swapped');
-        openButton.setAttribute(
-            'aria-label',
-            isOpen ? openButton.dataset.closeLabel : openButton.dataset.openLabel,
-        );
+        if (openButton) {
+            const isOpen = layout.classList.contains('is-swapped');
+            openButton.setAttribute(
+                'aria-label',
+                isOpen ? openButton.dataset.closeLabel : openButton.dataset.openLabel,
+            );
+        }
+        if (reopenButton) {
+            const isClosed = layout.classList.contains('is-gallery-closed');
+            reopenButton.setAttribute(
+                'aria-label',
+                isClosed ? reopenButton.dataset.openLabel : reopenButton.dataset.closeLabel,
+            );
+        }
     }
 
+    sync();
     new MutationObserver(sync).observe(layout, { attributes: true, attributeFilter: ['class'] });
 }
 
@@ -161,6 +172,7 @@ function initCategoryNav() {
         if (!buttons.some((b) => b.dataset.category === key)) return;
         setActive(key);
         if (updateHash) history.replaceState(null, '', `#${key}`);
+        if (isDesktop()) layout.classList.remove('is-gallery-closed');
 
         if (key === 'all') {
             gallery.classList.add('gallery--all');
@@ -206,6 +218,7 @@ function initCategoryNav() {
     function observeActiveCategory() {
         observer?.disconnect();
         observer = new IntersectionObserver((entries) => {
+            if (isDesktop() && layout.classList.contains('is-gallery-closed')) return;
             const mostVisible = entries
                 .filter((entry) => entry.isIntersecting)
                 .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
@@ -227,43 +240,30 @@ function initCategoryNav() {
     const initialKey = location.hash.slice(1).split('?')[0];
     if (buttons.some((b) => b.dataset.category === initialKey)) {
         activate(initialKey, { updateHash: false });
-    } else if (categories[0]) {
+    } else if (categories[0] && !isDesktop()) {
         setActive(categories[0].dataset.category);
     }
-}
 
-function initAchievements() {
-    document.querySelectorAll('.achievements, .essay-achievements').forEach((container) => {
-        const items = [...container.querySelectorAll('.achievements__item')];
-        const star = container.querySelector('.achievements__star');
-        if (items.length < 2) return;
-
-        let index = 0;
-        function next() {
-            items[index].classList.remove('is-active');
-            index = (index + 1) % items.length;
-            items[index].classList.add('is-active');
+    document.querySelector('.gallery-reopen-btn')?.addEventListener('click', () => {
+        layout.classList.toggle('is-gallery-closed');
+        if (layout.classList.contains('is-gallery-closed')) {
+            setActive(null);
+            history.replaceState(null, '', location.pathname + location.search);
         }
-
-        let timer = setInterval(next, 5000);
-
-        star?.addEventListener('click', () => {
-            next();
-            clearInterval(timer);
-            timer = setInterval(next, 5000);
-        });
     });
-}
 
-function updateYearsSince() {
-    const now = new Date();
-    document.querySelectorAll('.years-since').forEach((el) => {
-        const since = new Date(el.dataset.since);
-        const years = now.getFullYear() - since.getFullYear();
-        const hadAnniversary = now.getMonth() > since.getMonth()
-            || (now.getMonth() === since.getMonth() && now.getDate() >= since.getDate());
-        const countEl = el.querySelector('.years-since__count') ?? el;
-        countEl.textContent = hadAnniversary ? years : years - 1;
+    document.querySelector('.essay-read-all-btn')?.addEventListener('click', () => {
+        layout.classList.add('is-gallery-closed');
+        setActive(null);
+        history.replaceState(null, '', location.pathname + location.search);
+    });
+
+    document.querySelectorAll('.song-play-btn').forEach((button) => {
+        button.addEventListener('click', () => {
+            layout.classList.add('is-gallery-closed');
+            setActive(null);
+            history.replaceState(null, '', location.pathname + location.search);
+        });
     });
 }
 
@@ -271,19 +271,19 @@ function initSongOverlay() {
     const audio = document.querySelector('.song-audio');
     const overlay = document.querySelector('.song-overlay');
     const essay = document.querySelector('.essay');
-    const playButton = document.querySelector('.song-play-btn');
+    const playButtons = [...document.querySelectorAll('.song-play-btn')];
     if (!audio || !overlay) return;
 
-    if (playButton) {
+    playButtons.forEach((playButton) => {
         playButton.addEventListener('click', () => {
-            playButton.hidden = true;
             audio.setAttribute('controls', '');
-            audio.play();
+            audio.play()?.catch((error) => console.error('Could not play audio:', error));
         });
-    }
+    });
 
     audio.addEventListener('play', () => {
         audio.hidden = false;
+        playButtons.forEach((btn) => { btn.hidden = true; });
         overlay.classList.add('is-active');
         if (essay && !window.matchMedia(DESKTOP_QUERY).matches) {
             essay.scrollTo({
@@ -296,15 +296,14 @@ function initSongOverlay() {
     function closeOverlay() {
         overlay.classList.remove('is-active');
         audio.hidden = true;
-        if (playButton) playButton.hidden = false;
+        playButtons.forEach((btn) => { btn.hidden = false; });
         if (!audio.paused) audio.pause();
     }
-    audio.addEventListener('pause', closeOverlay);
-    overlay.addEventListener('click', closeOverlay);
-
-    document.querySelectorAll('.song-overlay__actions a').forEach((link) => {
-        link.addEventListener('click', closeOverlay);
+    overlay.addEventListener('click', (event) => {
+        if (event.target === overlay) closeOverlay();
     });
+    document.querySelector('.song-overlay__close')?.addEventListener('click', closeOverlay);
+    document.querySelector('.song-overlay__brand-btn')?.addEventListener('click', closeOverlay);
 }
 
 function initProjectModal() {
@@ -497,7 +496,5 @@ initPaneSwap();
 initGalleryOpenLabel();
 initSwipeNav();
 initCategoryNav();
-updateYearsSince();
 initSongOverlay();
 initProjectModal();
-initAchievements();

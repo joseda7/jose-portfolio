@@ -36,13 +36,38 @@ http.createServer((req, res) => {
     if (rel === '' || rel.endsWith('/')) rel += 'index.html';
 
     const filePath = path.join(BUILD_DIR, rel);
-    fs.readFile(filePath, (err, data) => {
-        if (err) {
+    const contentType = MIME[path.extname(filePath)] || 'application/octet-stream';
+
+    fs.stat(filePath, (statErr, stats) => {
+        if (statErr || !stats.isFile()) {
             res.writeHead(404);
             return res.end('Not found');
         }
-        res.writeHead(200, { 'Content-Type': MIME[path.extname(filePath)] || 'application/octet-stream' });
-        res.end(data);
+
+        const range = req.headers.range;
+        if (range) {
+            const match = /^bytes=(\d*)-(\d*)$/.exec(range);
+            const start = match && match[1] ? Number(match[1]) : 0;
+            const end = match && match[2] ? Number(match[2]) : stats.size - 1;
+            if (!match || start > end || end >= stats.size) {
+                res.writeHead(416, { 'Content-Range': `bytes */${stats.size}` });
+                return res.end();
+            }
+            res.writeHead(206, {
+                'Content-Type': contentType,
+                'Content-Length': end - start + 1,
+                'Content-Range': `bytes ${start}-${end}/${stats.size}`,
+                'Accept-Ranges': 'bytes',
+            });
+            return fs.createReadStream(filePath, { start, end }).pipe(res);
+        }
+
+        res.writeHead(200, {
+            'Content-Type': contentType,
+            'Content-Length': stats.size,
+            'Accept-Ranges': 'bytes',
+        });
+        fs.createReadStream(filePath).pipe(res);
     });
 }).listen(PORT, () => {
     console.log(`Preview running at http://localhost:${PORT}${PREFIX}`);
