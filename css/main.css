@@ -100,37 +100,6 @@ a:hover {
     flex: 1 1 0%;
     cursor: default;
 }
-.layout.is-swapped.is-peek-close .pane--content,
-.layout.is-swapped.is-peek-close .pane--gallery {
-    transition: flex-grow 0.15s ease-out;
-}
-.layout.is-swapped.is-peek-close .pane--content {
-    flex: 20 20 0%;
-}
-.layout.is-swapped.is-peek-close .pane--gallery {
-    flex: 80 80 0%;
-}
-.layout.is-swapped.is-peek-close .category-nav {
-    opacity: 0.35;
-    transition: opacity 0.15s ease-out;
-}
-.layout.is-peek-open .pane--content .fade-target {
-    opacity: 0.35;
-    transition: opacity 0.15s ease-out;
-}
-.layout.is-peek-open .pane--content {
-    flex: 0 0 85%;
-    transition: none;
-}
-.layout.is-peek-open .pane--gallery {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 35%;
-    z-index: 3;
-    transition: width 0.15s ease-out;
-}
 .layout.is-swapped .category-nav {
     display: flex;
     flex-direction: column;
@@ -170,7 +139,7 @@ a:hover {
     display: block;
     width: 2px;
     height: 2px;
-    transform: rotate(90deg) scale(0.8) translate(-9px, -9px);
+    transform: rotate(90deg) scale(1.3) translate(-9px, -9px);
     box-shadow:
         8px 2px 0 0 currentColor,
         8px 4px 0 0 currentColor,
@@ -234,11 +203,6 @@ a:hover {
 
 @media (prefers-reduced-motion: reduce) {
     .pane, .fade-target, .layout, .essay-body,
-    .layout.is-peek-open .pane--content .fade-target,
-    .layout.is-peek-open .pane--gallery,
-    .layout.is-swapped.is-peek-close .pane--content,
-    .layout.is-swapped.is-peek-close .pane--gallery,
-    .layout.is-swapped.is-peek-close .category-nav,
     .category-nav__item {
         transition: none;
     }
@@ -770,6 +734,7 @@ a:hover {
     width: 32px;
     height: 32px;
     border: 2px solid var(--turquoise);
+    border-radius: 5px;
     background: rgba(51, 51, 51, 0.5);
     color: white;
     cursor: pointer;
@@ -1127,8 +1092,10 @@ a:hover {
     }
     .pane-footer__links {
         flex-direction: column;
-        gap: 8px;
+        gap: 20px;
         margin-bottom: 20px;
+        padding: 25px 20px;
+        font-size: 1rem;
     }
     .category-nav__item[data-category="all"] {
         display: none;
@@ -1142,25 +1109,25 @@ a:hover {
     .category-nav__item.is-active {
         background: var(--turquoise);
         color: var(--white);
+        border-radius: 5px;
     }
     .gallery-open-btn {
         display: flex;
-        flex-direction: column;
         align-items: center;
-        justify-content: center;
-        gap: 14px;
+        justify-content: flex-start;
+        padding: 0 0 0 24px;
         position: fixed;
-        top: 66.6%;
-        right: -4px;
+        top: 50%;
+        right: -70px;
         transform: translateY(-50%);
-        padding: 21px 8px;
         border: 2px solid var(--turquoise);
-        border-radius: 5px;
-        background: var(--onyx);
-        color: var(--white);
+        border-radius: 50%;
+        background: none;
+        color: var(--turquoise);
         cursor: pointer;
         z-index: 3;
-        width: 40px;
+        width: 120px;
+        height: 120px;
     }
     .gallery-open-btn__label {
         display: none;
@@ -1169,12 +1136,13 @@ a:hover {
         top: auto;
         bottom: 15px;
         right: auto;
-        left: -4px;
+        left: -70px;
         transform: none;
-        width: 40px;
+        justify-content: flex-end;
+        padding: 0 24px 0 0;
     }
     .layout.is-swapped .gallery-open-btn__icon {
-        transform: rotate(-90deg) scale(0.8) translate(-9px, -9px);
+        transform: rotate(-90deg) scale(1.3) translate(-9px, -9px);
     }
     .layout.is-swapped .gallery-open-btn__label {
         display: none;
@@ -1189,7 +1157,6 @@ a:hover {
         left:-2px;
         transition: opacity 0.2s ease;
     }
-    .layout.is-peek-open .pane--gallery::before,
     .layout.is-swapped .pane--gallery::before {
         opacity: 0;
         pointer-events: none;
@@ -1757,8 +1724,11 @@ a:hover {
     .layout:not(.is-swapped) .gallery__item-trigger {
         cursor: default;
     }
-    .layout.is-swapped .gallery__item::before,
-    .layout.is-peek-open .gallery__item::before {
+    .gallery__item::before {
+        --c1: var(--smoke);
+        --c2: var(--white);
+    }
+    .layout.is-swapped .gallery__item::before {
         opacity: 0;
     }
     /* .gallery__item::before {
@@ -1767,8 +1737,7 @@ a:hover {
     /* .gallery__item img {
         filter: saturate(1);
     } */
-    .layout.is-swapped .gallery__item img,
-    .layout.is-peek-open .gallery__item img {
+    .layout.is-swapped .gallery__item img {
         transform: scale(1.06);
         filter: saturate(1);
     }

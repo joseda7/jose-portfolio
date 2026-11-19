@@ -52,78 +52,6 @@ function initGalleryOpenLabel() {
     new MutationObserver(sync).observe(layout, { attributes: true, attributeFilter: ['class'] });
 }
 
-function initSwipeNav() {
-    const layout = document.querySelector('.layout');
-    if (!layout) return;
-
-    const isDesktop = () => window.matchMedia(DESKTOP_QUERY).matches;
-    const INTENT_THRESHOLD = 15;
-    const SWIPE_THRESHOLD = 35;
-    // Elements involving their own horizontal dragging (native audio scrubbing,
-    // the project modal) shouldn't be hijacked by the swipe-to-open/close gesture.
-    // Plain taps on buttons/links are already safe: they never cross SWIPE_THRESHOLD.
-    const IGNORE_SELECTOR = 'audio, .project-modal';
-
-    let startX = null;
-    let startY = null;
-
-    function clearPeek() {
-        layout.classList.remove('is-peek-open', 'is-peek-close');
-    }
-
-    document.addEventListener('touchstart', (event) => {
-        if (isDesktop() || event.target.closest(IGNORE_SELECTOR)) {
-            startX = null;
-            return;
-        }
-        startX = event.touches[0].clientX;
-        startY = event.touches[0].clientY;
-    }, { passive: true });
-
-    document.addEventListener('touchmove', (event) => {
-        if (startX === null || isDesktop()) return;
-        const deltaX = event.touches[0].clientX - startX;
-        const deltaY = event.touches[0].clientY - startY;
-
-        if (Math.abs(deltaX) < INTENT_THRESHOLD || Math.abs(deltaX) < Math.abs(deltaY) * 1.5) {
-            clearPeek();
-            return;
-        }
-
-        const isOpen = layout.classList.contains('is-swapped');
-        if (deltaX < 0 && !isOpen) {
-            layout.classList.add('is-peek-open');
-            layout.classList.remove('is-peek-close');
-        } else if (deltaX > 0 && isOpen) {
-            layout.classList.add('is-peek-close');
-            layout.classList.remove('is-peek-open');
-        } else {
-            clearPeek();
-        }
-    }, { passive: true });
-
-    document.addEventListener('touchend', (event) => {
-        clearPeek();
-        if (startX === null || isDesktop()) return;
-        const deltaX = event.changedTouches[0].clientX - startX;
-        const deltaY = event.changedTouches[0].clientY - startY;
-        startX = null;
-
-        if (Math.abs(deltaX) < SWIPE_THRESHOLD || Math.abs(deltaX) < Math.abs(deltaY) * 1.5) return;
-
-        if (deltaX < 0) {
-            layout.classList.add('is-swapped');
-        } else {
-            layout.classList.remove('is-swapped');
-        }
-    }, { passive: true });
-
-    document.addEventListener('touchcancel', () => {
-        clearPeek();
-        startX = null;
-    }, { passive: true });
-}
-
 function initCategoryNav() {
     const layout = document.querySelector('.layout');
     const nav = document.querySelector('.category-nav');
@@ -494,7 +422,6 @@ function initProjectModal() {
 
 initPaneSwap();
 initGalleryOpenLabel();
-initSwipeNav();
 initCategoryNav();
 initSongOverlay();
 initProjectModal();
