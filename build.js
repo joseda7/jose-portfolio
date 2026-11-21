@@ -74,8 +74,10 @@ function buildPage(content) {
     const categoryNavHtml = [
         `<li><button type="button" class="category-nav__item" data-category="all">${escapeHtml(content.projects.allLabel)}</button></li>`,
         ...content.projects.categories.map((cat) => {
-            const skillsHtml = (cat.skills ?? []).slice(0, 5)
-                .map((s) => escapeHtml(s)).join(', ');
+            const realSkills = (cat.skills ?? []).filter((s) => s !== '+').slice(0, 5);
+            const skillsHtml = realSkills.length
+                ? `${realSkills.map((s) => escapeHtml(s)).join(', ')}...`
+                : '';
             return `<li><button type="button" class="category-nav__item" data-category="${escapeHtml(cat.key)}">${escapeHtml(cat.label)}</button><div class="category-nav__skills">${skillsHtml}</div></li>`;
         }),
     ].join('\n');
@@ -103,8 +105,7 @@ function buildPage(content) {
         if (cat.key === 'music') return renderMusicSection(cat);
         const cardsHtml = cat.items.map((item, i) => {
             const tagsHtml = item.tags.map((t) => escapeHtml(t)).join(' • ');
-            const mediaSrc = (m) => (typeof m === 'string' ? m : m.src);
-            const thumbnail = mediaSrc(item.media.find((m) => !/^https?:\/\//.test(mediaSrc(m))) ?? item.media[0]);
+            const thumbnail = item.media.find((m) => !/^https?:\/\//.test(m)) ?? item.media[0];
             return render(partials.projectCard, {
                 ...item,
                 image: thumbnail,

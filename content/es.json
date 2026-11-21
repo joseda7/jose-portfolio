@@ -59,19 +59,11 @@
             ],
             "imageAlt": "Captura de pantalla Portafolio Juan Martínez Tirado",
             "siteUrl": "https://www.juanmartineztirado.com/",
+            "description": "En equipo con Juan, ilustrador científico Colombiano, construimos su portafolio al servicio de otros.",
             "media": [
-              {
-                "src": "assets/images/projects/frontend-1-1.png",
-                "caption": "En equipo con Juan, entendimos el problema, planeamos y construimos su portafolio al servicio de otros."
-              },
-              {
-                "src": "assets/images/projects/frontend-1-2.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/frontend-1-3.png",
-                "caption": ""
-              }
+              "assets/images/projects/frontend-1-1.png",
+              "assets/images/projects/frontend-1-2.png",
+              "assets/images/projects/frontend-1-3.png"
             ]
           },
           {
@@ -82,19 +74,11 @@
               "CSS"
             ],
             "imageAlt": "Captura de pantalla de juegos web",
+            "description": "Desarrollé más de 20 juegos web 2D para diferentes empresas.",
             "media": [
-              {
-                "src": "assets/images/projects/frontend-2-1.png",
-                "caption": "Desarrollé más de 20 juegos web 2D para campañas de mercadeo de diferentes empresas."
-              },
-              {
-                "src": "assets/images/projects/frontend-2-2.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/frontend-2-3.png",
-                "caption": ""
-              }
+              "assets/images/projects/frontend-2-1.png",
+              "assets/images/projects/frontend-2-2.png",
+              "assets/images/projects/frontend-2-3.png"
             ]
           },
           {
@@ -107,39 +91,26 @@
               "SEO"
             ],
             "imageAlt": "Captura de pantalla de Páginas Web de primer nivel",
+            "description": "Durante 6 años, participé en el desarrollot de más de 40 sitios web profesionales para empresas medianas y grandes en América Latina.",
             "media": [
-              {
-                "src": "assets/images/projects/frontend-3-1.png",
-                "caption": "Durante 6 años, ayudé a desarrollár más de 40 sitios web profesionales para empresas medianas y grandes en América Latina"
-              },
-              {
-                "src": "assets/images/projects/frontend-3-2.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/frontend-3-3.webp",
-                "caption": ""
-              }
+              "assets/images/projects/frontend-3-1.png",
+              "assets/images/projects/frontend-3-2.png",
+              "assets/images/projects/frontend-3-3.webp"
             ]
           },
           {
-            "title": "7000 dots #PragmaChallenge",
+            "title": "7000 dots",
             "tags": [
               "JavaScript",
               "SVG",
               "Adobe Illustrator"
             ],
-            "imageAlt": "Captura de pantalla del Proyecto de 7000 dots #PragmaChallenge",
+            "imageAlt": "Captura de pantalla del Proyecto de 7000 dots",
             "siteUrl": "https://joseda7.github.io/7000dots/",
+            "description": "En equipo, desarrollé la solución con la que ganamos un concurso bajo el reto: Diseñar una camiseta que inspire a llegar a 7000 empleados, para una empresa de tecnología",
             "media": [
-              {
-                "src": "assets/images/projects/frontend-4-1.png",
-                "caption": "En equipo, desarrollé la solución con la que ganamos el concurso #PragmaChallenge, que consistía en diseñar una camiseta para inspirar a la meta de 7000 personas en una empresa de tecnología"
-              },
-              {
-                "src": "assets/images/projects/frontend-4-2.png",
-                "caption": ""
-              }
+              "assets/images/projects/frontend-4-1.png",
+              "assets/images/projects/frontend-4-2.png"
             ]
           },
           {
@@ -153,15 +124,10 @@
               "AWS"
             ],
             "imageAlt": "Captura de pantalla de vieollamadas inmersivas 3D",
+            "description": "Ayudé retar el status-quo de la tecnología de videollamadas. Desarrollé una librería que extendiendó la tecnología a los navegadores web. También desarrollé la infraestructura cloud y backend.",
             "media": [
-              {
-                "src": "assets/images/projects/frontend-5-1.png",
-                "caption": "Ayudé a empujar el statu quo de la tecnología de videollamadas. Desarrollé la infraestructura cloud, backend y una librería en TS que extendiendó la tecnología a los navegadores web"
-              },
-              {
-                "src": "assets/images/projects/frontend-5-2.png",
-                "caption": ""
-              }
+              "assets/images/projects/frontend-5-1.png",
+              "assets/images/projects/frontend-5-2.png"
             ]
           },
           {
@@ -171,15 +137,10 @@
               "CSS"
             ],
             "imageAlt": "Captura de pantalla de 3D en el navegador",
+            "description": "Desarrollé experimentos en 3D para aprender al servicio de otros.",
             "media": [
-              {
-                "src": "assets/images/projects/frontend-6-1.png",
-                "caption": "Desarrollé experimentos en 3D para aprender al servicio de otros."
-              },
-              {
-                "src": "assets/images/projects/frontend-6-2.gif",
-                "caption": ""
-              }
+              "assets/images/projects/frontend-6-1.png",
+              "assets/images/projects/frontend-6-2.gif"
             ]
           }
         ]
@@ -201,23 +162,12 @@
               "Acuarela"
             ],
             "imageAlt": "Captura de pantalla de Neofelis nebulosa",
+            "description": "Durante la pandemia de 2020, ilustré en acuarela a 4 leopardos nebulosos, en honor a personas que admiro.",
             "media": [
-              {
-                "src": "assets/images/projects/visual-design-1-1.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/visual-design-1-2.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/visual-design-1-3.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/visual-design-1-4.png",
-                "caption": ""
-              }
+              "assets/images/projects/visual-design-1-1.png",
+              "assets/images/projects/visual-design-1-2.png",
+              "assets/images/projects/visual-design-1-3.png",
+              "assets/images/projects/visual-design-1-4.png"
             ]
           },
           {
@@ -227,19 +177,11 @@
               "Diseño de presonajes"
             ],
             "imageAlt": "Captura de pantalla de Insame: Instrumental Gaming",
+            "description": "Diseñé los personajes y la diagramación de un libro, en un proyecto en equipo para revolucionar la enseñanza y aprendizaje de la música.",
             "media": [
-              {
-                "src": "assets/images/projects/visual-design-2-1.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/visual-design-2-2.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/visual-design-2-3.png",
-                "caption": ""
-              }
+              "assets/images/projects/visual-design-2-1.png",
+              "assets/images/projects/visual-design-2-2.png",
+              "assets/images/projects/visual-design-2-3.png"
             ]
           },
           {
@@ -250,23 +192,12 @@
               "Diseño gráfico"
             ],
             "imageAlt": "Captura de pantalla de Retratos digitales",
+            "description": "Retraté a mano y digitalmente a personas que admiro.",
             "media": [
-              {
-                "src": "assets/images/projects/visual-design-3-1.png",
-                "caption": "Ilustré digitalmente a personas que admiro."
-              },
-              {
-                "src": "assets/images/projects/visual-design-3-2.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/visual-design-3-3.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/visual-design-3-4.png",
-                "caption": ""
-              }
+              "assets/images/projects/visual-design-3-1.png",
+              "assets/images/projects/visual-design-3-2.png",
+              "assets/images/projects/visual-design-3-3.png",
+              "assets/images/projects/visual-design-3-4.png"
             ]
           },
           {
@@ -276,23 +207,12 @@
               "Diseño"
             ],
             "imageAlt": "Captura de pantalla de Arte pixelado",
+            "description": "Ilustré incontables personajes, pixel a pixel.",
             "media": [
-              {
-                "src": "assets/images/projects/visual-design-4-1.png",
-                "caption": "Autorretrato en pixel art, ficha estilo \"Meet the Artist\""
-              },
-              {
-                "src": "assets/images/projects/visual-design-4-2.png",
-                "caption": "Ilustraciones de personajes de etapas tempranas, explorando color y línea"
-              },
-              {
-                "src": "assets/images/projects/visual-design-4-3.png",
-                "caption": "Retrato grupal en pixel art para el capítulo Front-end de Pragma"
-              },
-              {
-                "src": "assets/images/projects/visual-design-4-4.png",
-                "caption": "Fan art de Trunks (Dragon Ball), dibujado en 2007"
-              }
+              "assets/images/projects/visual-design-4-1.png",
+              "assets/images/projects/visual-design-4-2.png",
+              "assets/images/projects/visual-design-4-3.png",
+              "assets/images/projects/visual-design-4-4.png"
             ]
           },
           {
@@ -304,19 +224,11 @@
               "Edición de video"
             ],
             "imageAlt": "Captura de pantalla del Proyecto de The Fay Morgana - Since the Beginning (Lyric Video)",
+            "description": "Diseñé y animé el video musical del proyecto The Fay Morgana",
             "media": [
-              {
-                "src": "https://youtu.be/DIaodt2RSrU?si=9BJq-Tb44rX5l3ti",
-                "caption": "Diseñé y animé el video para un proyecto musical."
-              },
-              {
-                "src": "assets/images/projects/visual-design-5-1.jpg",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/visual-design-5-2.jpg",
-                "caption": ""
-              }
+              "https://youtu.be/DIaodt2RSrU?si=9BJq-Tb44rX5l3ti",
+              "assets/images/projects/visual-design-5-1.jpg",
+              "assets/images/projects/visual-design-5-2.jpg"
             ]
           },
           {
@@ -326,27 +238,13 @@
               "Diseño"
             ],
             "imageAlt": "Captura de pantalla de Viaje de una rodilla",
+            "description": "Durante mi recuperación de ruptura de ligamento anterior cruzado, ilustré mi avance mes a mes para compartir con quienes pasaran por retos similares.",
             "media": [
-              {
-                "src": "assets/images/projects/visual-design-6-1.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/visual-design-6-2.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/visual-design-6-3.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/visual-design-6-4.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/visual-design-6-5.gif",
-                "caption": ""
-              }
+              "assets/images/projects/visual-design-6-1.png",
+              "assets/images/projects/visual-design-6-2.png",
+              "assets/images/projects/visual-design-6-3.png",
+              "assets/images/projects/visual-design-6-4.png",
+              "assets/images/projects/visual-design-6-5.gif"
             ]
           }
         ]
@@ -393,8 +291,7 @@
     "nextImageLabel": "Imagen siguiente",
     "visitSiteLabel": "Ver sitio",
     "prevProjectLabel": "Proyecto anterior",
-    "nextProjectLabel": "Siguiente proyecto",
-    "moreProjectsLabel": "+ Proyectos"
+    "nextProjectLabel": "Siguiente proyecto"
   },
   "footer": {
     "copyright": "© 2026 Jose Alcaraz",

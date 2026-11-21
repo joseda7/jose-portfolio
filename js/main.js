@@ -3,7 +3,6 @@ const DESKTOP_QUERY = '(min-width: 900px)';
 function initPaneSwap() {
     const layout = document.querySelector('.layout');
     const gallery = document.querySelector('.pane--gallery');
-    const openButton = document.querySelector('.gallery-open-btn');
     const avatarButton = document.querySelector('.avatar-btn');
     if (!layout) return;
 
@@ -12,11 +11,6 @@ function initPaneSwap() {
     gallery?.addEventListener('click', () => {
         if (isDesktop()) return;
         layout.classList.add('is-swapped');
-    });
-
-    openButton?.addEventListener('click', () => {
-        if (isDesktop()) return;
-        layout.classList.toggle('is-swapped');
     });
 
     avatarButton?.addEventListener('click', () => {
@@ -138,7 +132,7 @@ function initCategoryNav() {
     document.querySelectorAll('a[href="#all"]').forEach((link) => {
         link.addEventListener('click', (event) => {
             event.preventDefault();
-            activate('all');
+            activate(isDesktop() ? 'all' : 'frontend');
         });
     });
 
@@ -147,6 +141,7 @@ function initCategoryNav() {
         observer?.disconnect();
         observer = new IntersectionObserver((entries) => {
             if (isDesktop() && layout.classList.contains('is-gallery-closed')) return;
+            if (!isDesktop() && !layout.classList.contains('is-swapped')) return;
             const mostVisible = entries
                 .filter((entry) => entry.isIntersecting)
                 .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
@@ -168,9 +163,23 @@ function initCategoryNav() {
     const initialKey = location.hash.slice(1).split('?')[0];
     if (buttons.some((b) => b.dataset.category === initialKey)) {
         activate(initialKey, { updateHash: false });
-    } else if (categories[0] && !isDesktop()) {
-        setActive(categories[0].dataset.category);
     }
+
+    document.querySelector('.gallery-open-btn')?.addEventListener('click', () => {
+        if (isDesktop()) return;
+        if (layout.classList.contains('is-swapped')) {
+            layout.classList.remove('is-swapped');
+            setActive(null);
+            history.replaceState(null, '', location.pathname + location.search);
+        } else {
+            activate('frontend');
+        }
+    });
+
+    document.querySelector('.avatar-btn')?.addEventListener('click', () => {
+        if (isDesktop()) return;
+        setActive(null);
+    });
 
     document.querySelector('.gallery-reopen-btn')?.addEventListener('click', () => {
         layout.classList.toggle('is-gallery-closed');
@@ -234,6 +243,17 @@ function initSongOverlay() {
     document.querySelector('.song-overlay__brand-btn')?.addEventListener('click', closeOverlay);
 }
 
+function initInlinePlayButtonVisibility() {
+    const playButton = document.querySelector('.song-play-btn--inline');
+    const essay = document.querySelector('.essay');
+    const footer = document.querySelector('.pane-footer');
+    if (!playButton || !essay || !footer) return;
+
+    new IntersectionObserver(([entry]) => {
+        playButton.classList.toggle('is-faded', entry.isIntersecting);
+    }, { root: essay, rootMargin: '0px 0px -70px 0px' }).observe(footer);
+}
+
 function initProjectModal() {
     const modal = document.querySelector('.project-modal');
     const closeButton = document.querySelector('.project-modal__close');
@@ -265,9 +285,7 @@ function initProjectModal() {
     let lastTrigger = null;
 
     function showMedia() {
-        const entry = media[index];
-        const src = typeof entry === 'string' ? entry : entry.src;
-        const caption = typeof entry === 'string' ? '' : (entry.caption || '');
+        const src = media[index];
         const label = `${titleEl.textContent} ${index + 1}/${media.length}`;
         mediaEl.innerHTML = '';
         if (YOUTUBE_PATTERN.test(src)) {
@@ -290,10 +308,6 @@ function initProjectModal() {
             img.alt = label;
             img.draggable = false;
             mediaEl.appendChild(img);
-        }
-        if (mediaCaptionEl) {
-            mediaCaptionEl.textContent = caption;
-            mediaCaptionEl.hidden = !caption;
         }
         [...dotsEl.children].forEach((dot, i) => dot.classList.toggle('is-active', i === index));
     }
@@ -341,6 +355,11 @@ function initProjectModal() {
             siteLinkEl.hidden = !siteUrl;
             siteLinkEl.href = siteUrl || '';
         }
+        if (mediaCaptionEl) {
+            const description = trigger.dataset.description || '';
+            mediaCaptionEl.textContent = description;
+            mediaCaptionEl.hidden = !description;
+        }
         media = JSON.parse(trigger.dataset.media);
         index = 0;
         renderDots();
@@ -348,7 +367,6 @@ function initProjectModal() {
 
         lastTrigger = trigger;
         modal.classList.add('is-active');
-        closeButton.focus();
 
         if (updateHash) {
             const ref = getProjectRef(trigger);
@@ -424,4 +442,5 @@ initPaneSwap();
 initGalleryOpenLabel();
 initCategoryNav();
 initSongOverlay();
+initInlinePlayButtonVisibility();
 initProjectModal();

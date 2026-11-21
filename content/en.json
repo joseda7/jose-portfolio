@@ -23,11 +23,11 @@
     "heading": "About",
     "paragraphs": [
       "Hi, wherever you are on earth.",
-      "Here are a few things about me, in case we ever get the chance to do something epic together… I was 6, and ever since my dad taught me to use Microsoft Paint, I haven't stopped wondering how to solve all kinds of problems through the mix of **[art and technology](#all)**.",
-      "While I was studying engineering I learned how to code in C, laying the base to later dare to program my first game in JavaScript, which by chance ended up being the entrance ticket to my first job, building games and apps for browsers. I loved it then, and I'm still in love.",
-      "**11** years later, I ask myself: why would a son, a husband, a father, a Colombian front-end and electronics engineer illustrate and design logotypes while reading about astronomy? Or write songs that no AI could ever harmonize or even feel for me?",
-      "I think slowly, steadily, surely, sometimes out loud, and I ask for help when I'm stuck, and I ask a lot of whys. I'd rather fall in love with the problem than any kind of solution.",
-      "You made it to the end, and I thank you for it. In case you think we have a chance to do something epic together, don't hesitate to **[text me](mailto:jose.david.alcaraz7@gmail.com)** Now I'm looking forward to hearing from you. _Ultreia et suseia._ ",
+      "Here's a bit about me, in case we ever get the chance to do something together. Ever since my dad taught me to use Microsoft Paint when I was 6, I haven't stopped solving problems through **[art and technology](#all)**.",
+      "While studying engineering I learned the C language, laying the groundwork to later program my first game in JS, which, without my knowing it, became my ticket into my first job as a web app and game developer.",
+      "**11** years later, I still ask myself: why would a son, husband, father, Colombian, electronics and front-end engineer illustrate and design logotypes while reading about astronomy, or write songs that don't sound AI-made?",
+      "I think slowly but surely, sometimes out loud. I ask for help along the way and I ask a lot of \"what for?\". I'd rather fall in love with the problem than with the solution.",
+      "Thank you for making it this far. If you think we might do something together at some point, **[text me](mailto:jose.david.alcaraz7@gmail.com)** without overthinking it. Now it's my turn to hear from you. _Ultreia et suseia_.",
       "Hugs, Jose."
     ],
     "songSrc": "assets/audio/art-and-technology.m4a",
@@ -59,19 +59,11 @@
             ],
             "imageAlt": "Screenshot of Juan Martínez Tirado's Portfolio",
             "siteUrl": "https://www.juanmartineztirado.com/",
+            "description": "Working together with Juan, a Colombian scientific illustrator, we built his portfolio in service of others.",
             "media": [
-              {
-                "src": "assets/images/projects/frontend-1-1.png",
-                "caption": "Working together with Juan, we understood the problem, planned, and built his portfolio in service of others."
-              },
-              {
-                "src": "assets/images/projects/frontend-1-2.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/frontend-1-3.png",
-                "caption": ""
-              }
+              "assets/images/projects/frontend-1-1.png",
+              "assets/images/projects/frontend-1-2.png",
+              "assets/images/projects/frontend-1-3.png"
             ]
           },
           {
@@ -82,19 +74,11 @@
               "CSS"
             ],
             "imageAlt": "Screenshot of web games",
+            "description": "I developed more than 20 2D web games for different companies.",
             "media": [
-              {
-                "src": "assets/images/projects/frontend-2-1.png",
-                "caption": "I developed more than 20 2D web games for marketing campaigns for different companies."
-              },
-              {
-                "src": "assets/images/projects/frontend-2-2.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/frontend-2-3.png",
-                "caption": ""
-              }
+              "assets/images/projects/frontend-2-1.png",
+              "assets/images/projects/frontend-2-2.png",
+              "assets/images/projects/frontend-2-3.png"
             ]
           },
           {
@@ -107,39 +91,26 @@
               "SEO"
             ],
             "imageAlt": "Screenshot of top-tier websites",
+            "description": "For 6 years, I took part in building more than 40 professional websites for mid-size and large companies across Latin America.",
             "media": [
-              {
-                "src": "assets/images/projects/frontend-3-1.png",
-                "caption": "For 6 years, I helped build more than 40 professional websites for mid-size and large companies across Latin America"
-              },
-              {
-                "src": "assets/images/projects/frontend-3-2.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/frontend-3-3.webp",
-                "caption": ""
-              }
+              "assets/images/projects/frontend-3-1.png",
+              "assets/images/projects/frontend-3-2.png",
+              "assets/images/projects/frontend-3-3.webp"
             ]
           },
           {
-            "title": "7000 dots #PragmaChallenge",
+            "title": "7000 dots",
             "tags": [
               "JavaScript",
               "SVG",
               "Adobe Illustrator"
             ],
-            "imageAlt": "Screenshot of the 7000 dots #PragmaChallenge project",
+            "imageAlt": "Screenshot of the 7000 dots project",
             "siteUrl": "https://joseda7.github.io/7000dots/",
+            "description": "As a team, I developed the winning solution for a contest: design a t-shirt to inspire a goal of reaching 7,000 employees at a tech company.",
             "media": [
-              {
-                "src": "assets/images/projects/frontend-4-1.png",
-                "caption": "As a team, I developed the solution that won the #PragmaChallenge contest, which involved designing a t-shirt to inspire a goal of 7,000 people at a tech company"
-              },
-              {
-                "src": "assets/images/projects/frontend-4-2.png",
-                "caption": ""
-              }
+              "assets/images/projects/frontend-4-1.png",
+              "assets/images/projects/frontend-4-2.png"
             ]
           },
           {
@@ -153,15 +124,10 @@
               "AWS"
             ],
             "imageAlt": "Screenshot of immersive 3D video calls",
+            "description": "Helped challenge the status quo of video calling technology. Built a library that extended the technology to web browsers. I also built the cloud infrastructure and backend.",
             "media": [
-              {
-                "src": "assets/images/projects/frontend-5-1.png",
-                "caption": "Helped push the status quo of video calling technology. Built the cloud infrastructure, backend, and a TS library that extended the technology to web browsers"
-              },
-              {
-                "src": "assets/images/projects/frontend-5-2.png",
-                "caption": ""
-              }
+              "assets/images/projects/frontend-5-1.png",
+              "assets/images/projects/frontend-5-2.png"
             ]
           },
           {
@@ -171,15 +137,10 @@
               "CSS"
             ],
             "imageAlt": "Screenshot of 3D in the browser",
+            "description": "I developed 3D experiments to learn, in service of others.",
             "media": [
-              {
-                "src": "assets/images/projects/frontend-6-1.png",
-                "caption": "I developed 3D experiments to learn, in service of others."
-              },
-              {
-                "src": "assets/images/projects/frontend-6-2.gif",
-                "caption": ""
-              }
+              "assets/images/projects/frontend-6-1.png",
+              "assets/images/projects/frontend-6-2.gif"
             ]
           }
         ]
@@ -201,23 +162,12 @@
               "Watercolor"
             ],
             "imageAlt": "Screenshot of Neofelis nebulosa",
+            "description": "During the 2020 pandemic, I illustrated 4 clouded leopards in watercolor, in honor of people I admire.",
             "media": [
-              {
-                "src": "assets/images/projects/visual-design-1-1.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/visual-design-1-2.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/visual-design-1-3.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/visual-design-1-4.png",
-                "caption": ""
-              }
+              "assets/images/projects/visual-design-1-1.png",
+              "assets/images/projects/visual-design-1-2.png",
+              "assets/images/projects/visual-design-1-3.png",
+              "assets/images/projects/visual-design-1-4.png"
             ]
           },
           {
@@ -227,19 +177,11 @@
               "Character design"
             ],
             "imageAlt": "Screenshot of Insame: Instrumental Gaming",
+            "description": "I designed the characters and book layout for a team project aiming to revolutionize how music is taught and learned.",
             "media": [
-              {
-                "src": "assets/images/projects/visual-design-2-1.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/visual-design-2-2.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/visual-design-2-3.png",
-                "caption": ""
-              }
+              "assets/images/projects/visual-design-2-1.png",
+              "assets/images/projects/visual-design-2-2.png",
+              "assets/images/projects/visual-design-2-3.png"
             ]
           },
           {
@@ -250,23 +192,12 @@
               "Graphic design"
             ],
             "imageAlt": "Screenshot of Digital Portraits",
+            "description": "I portrayed people I admire, both by hand and digitally.",
             "media": [
-              {
-                "src": "assets/images/projects/visual-design-3-1.png",
-                "caption": "I digitally illustrated people I admire."
-              },
-              {
-                "src": "assets/images/projects/visual-design-3-2.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/visual-design-3-3.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/visual-design-3-4.png",
-                "caption": ""
-              }
+              "assets/images/projects/visual-design-3-1.png",
+              "assets/images/projects/visual-design-3-2.png",
+              "assets/images/projects/visual-design-3-3.png",
+              "assets/images/projects/visual-design-3-4.png"
             ]
           },
           {
@@ -276,23 +207,12 @@
               "Design"
             ],
             "imageAlt": "Screenshot of Pixel Art",
+            "description": "I illustrated countless characters, pixel by pixel.",
             "media": [
-              {
-                "src": "assets/images/projects/visual-design-4-1.png",
-                "caption": "Pixel-art self-portrait, \"Meet the Artist\" style sheet"
-              },
-              {
-                "src": "assets/images/projects/visual-design-4-2.png",
-                "caption": "Early character illustrations exploring color and line work"
-              },
-              {
-                "src": "assets/images/projects/visual-design-4-3.png",
-                "caption": "Pixel-art group portrait made for Pragma's Front-end chapter"
-              },
-              {
-                "src": "assets/images/projects/visual-design-4-4.png",
-                "caption": "Fan art of Trunks (Dragon Ball), drawn in 2007"
-              }
+              "assets/images/projects/visual-design-4-1.png",
+              "assets/images/projects/visual-design-4-2.png",
+              "assets/images/projects/visual-design-4-3.png",
+              "assets/images/projects/visual-design-4-4.png"
             ]
           },
           {
@@ -304,19 +224,11 @@
               "Video editing"
             ],
             "imageAlt": "Screenshot of the project The Fay Morgana - Since the Beginning (Lyric Video)",
+            "description": "I designed and animated the music video for The Fay Morgana.",
             "media": [
-              {
-                "src": "https://youtu.be/DIaodt2RSrU?si=9BJq-Tb44rX5l3ti",
-                "caption": "I designed and animated the video for a music project."
-              },
-              {
-                "src": "assets/images/projects/visual-design-5-1.jpg",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/visual-design-5-2.jpg",
-                "caption": ""
-              }
+              "https://youtu.be/DIaodt2RSrU?si=9BJq-Tb44rX5l3ti",
+              "assets/images/projects/visual-design-5-1.jpg",
+              "assets/images/projects/visual-design-5-2.jpg"
             ]
           },
           {
@@ -326,27 +238,13 @@
               "Design"
             ],
             "imageAlt": "Screenshot of A Knee's Journey",
+            "description": "During my recovery from an ACL tear, I illustrated my progress month by month to share with others going through similar challenges.",
             "media": [
-              {
-                "src": "assets/images/projects/visual-design-6-1.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/visual-design-6-2.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/visual-design-6-3.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/visual-design-6-4.png",
-                "caption": ""
-              },
-              {
-                "src": "assets/images/projects/visual-design-6-5.gif",
-                "caption": ""
-              }
+              "assets/images/projects/visual-design-6-1.png",
+              "assets/images/projects/visual-design-6-2.png",
+              "assets/images/projects/visual-design-6-3.png",
+              "assets/images/projects/visual-design-6-4.png",
+              "assets/images/projects/visual-design-6-5.gif"
             ]
           }
         ]
@@ -393,8 +291,7 @@
     "nextImageLabel": "Next image",
     "visitSiteLabel": "Visit site",
     "prevProjectLabel": "Previous project",
-    "nextProjectLabel": "Next project",
-    "moreProjectsLabel": "+ Projects"
+    "nextProjectLabel": "Next project"
   },
   "footer": {
     "copyright": "© 2026 Jose Alcaraz",
